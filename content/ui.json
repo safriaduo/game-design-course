@@ -1,0 +1,167 @@
+{
+  "site.tagline": { "it": "I mattoncini del game design", "en": "The building blocks of game design" },
+
+  "nav.label": { "it": "Navigazione principale", "en": "Main navigation" },
+  "nav.topics": { "it": "Temi", "en": "Topics" },
+  "nav.games": { "it": "Giochi", "en": "Games" },
+  "nav.library": { "it": "Biblioteca", "en": "Library" },
+  "nav.showcase": { "it": "Showcase", "en": "Showcase" },
+  "nav.about": { "it": "Info", "en": "About" },
+
+  "lang.label": { "it": "Lingua", "en": "Language" },
+  "theme.toDark": { "it": "Passa al tema scuro", "en": "Switch to dark theme" },
+  "theme.toLight": { "it": "Passa al tema chiaro", "en": "Switch to light theme" },
+  "a11y.skip": { "it": "Vai al contenuto", "en": "Skip to content" },
+
+  "action.draw": { "it": "Pesca un tema", "en": "Draw a topic" },
+  "action.drawAnother": { "it": "Pesca un altro tema", "en": "Draw another topic" },
+  "action.drawHint": { "it": "Un tema a caso dal mazzo", "en": "A random topic from the deck" },
+  "action.back": { "it": "Tutti i temi", "en": "All topics" },
+  "action.reset": { "it": "Azzera i filtri", "en": "Clear filters" },
+  "action.close": { "it": "Chiudi", "en": "Close" },
+  "action.prev": { "it": "Foto precedente", "en": "Previous photo" },
+  "action.next": { "it": "Foto successiva", "en": "Next photo" },
+  "filter.all": { "it": "Tutti", "en": "All" },
+
+  "home.eyebrow": { "it": "Corso universitario · Materiale aperto", "en": "University course · Open material" },
+  "home.title": { "it": "I *mattoncini* del game design", "en": "The *building blocks* of game design" },
+  "home.lead": {
+    "it": "Tutti i temi del corso, senza un ordine obbligato: cosa leggere, quali giochi provare, quali talk guardare per approfondire. Pesca un tema e parti da lì.",
+    "en": "Every topic in the course, in no required order: what to read, which games to try, which talks to watch to go deeper. Draw a topic and start there."
+  },
+  "home.cta": { "it": "Esplora i temi", "en": "Explore the topics" },
+  "home.box.title": { "it": "Contenuto della scatola", "en": "What's in the box" },
+  "home.box.topics": { "it": "temi", "en": "topics" },
+  "home.box.games": { "it": "giochi da provare", "en": "games to try" },
+  "home.box.sources": { "it": "fonti", "en": "sources" },
+  "home.box.projects": { "it": "progetti degli studenti", "en": "student projects" },
+  "home.families.title": { "it": "Le famiglie", "en": "The suits" },
+  "home.families.lead": {
+    "it": "Ogni tema appartiene a una famiglia, come le carte ai semi di un mazzo. La famiglia dice di che tipo di conoscenza si tratta, non in che ordine leggerla.",
+    "en": "Every topic belongs to a suit, like cards in a deck. The suit tells you what kind of knowledge it is, not the order to read it in."
+  },
+  "home.start.title": { "it": "Da dove cominciare", "en": "Where to start" },
+  "home.start.lead": {
+    "it": "Se è la prima volta che passi di qui, questi quattro temi reggono tutti gli altri.",
+    "en": "If this is your first time here, these four topics hold up all the others."
+  },
+
+  "topics.title": { "it": "Temi", "en": "Topics" },
+  "topics.lead": {
+    "it": "Ogni carta è un tema del corso. Non c'è un ordine: filtra per famiglia, cerca una parola o pesca a caso.",
+    "en": "Each card is a topic from the course. There's no order: filter by suit, search for a word or draw at random."
+  },
+  "topics.search": { "it": "Cerca un tema, un concetto, un gioco…", "en": "Search a topic, a concept, a game…" },
+  "topics.count.one": { "it": "1 tema", "en": "1 topic" },
+  "topics.count.other": { "it": "{n} temi", "en": "{n} topics" },
+  "topics.empty": { "it": "Nessun tema corrisponde alla ricerca.", "en": "No topic matches your search." },
+
+  "topic.family": { "it": "Famiglia", "en": "Suit" },
+  "topic.key": { "it": "Punti chiave", "en": "Key points" },
+  "topic.mistakes": { "it": "Errori tipici", "en": "Common mistakes" },
+  "topic.games": { "it": "Giochi da provare", "en": "Games to try" },
+  "topic.sources": { "it": "Per approfondire", "en": "Go deeper" },
+  "topic.related": { "it": "Temi collegati", "en": "Related topics" },
+
+  "games.title": { "it": "Giochi da provare", "en": "Games to try" },
+  "games.lead": {
+    "it": "I giochi che usiamo in aula, e altri che vale la pena provare per capire un tema dall'interno. Giocare è la parte del corso che non si può delegare.",
+    "en": "The games we use in class, and others worth playing to understand a topic from the inside. Playing is the part of the course you can't delegate."
+  },
+  "games.count.one": { "it": "1 gioco", "en": "1 game" },
+  "games.count.other": { "it": "{n} giochi", "en": "{n} games" },
+  "games.filter": { "it": "Tipo di gioco", "en": "Kind of game" },
+  "games.kind.all": { "it": "Tutti", "en": "All" },
+  "games.kind.board": { "it": "Da tavolo", "en": "Tabletop" },
+  "games.kind.video": { "it": "Videogiochi", "en": "Video games" },
+  "games.kind.classic": { "it": "Tradizionali", "en": "Traditional" },
+  "games.kind1.board": { "it": "Gioco da tavolo", "en": "Tabletop game" },
+  "games.kind1.video": { "it": "Videogioco", "en": "Video game" },
+  "games.kind1.classic": { "it": "Gioco tradizionale", "en": "Traditional game" },
+
+  "library.title": { "it": "Biblioteca", "en": "Library" },
+  "library.lead": {
+    "it": "Libri, paper, talk e canali citati nei temi. Non tutte le fonti valgono allo stesso modo: ogni voce dice che tipo di conoscenza offre.",
+    "en": "Books, papers, talks and channels cited in the topics. Not all sources are worth the same: each entry says what kind of knowledge it offers."
+  },
+  "library.count.one": { "it": "1 fonte", "en": "1 source" },
+  "library.count.other": { "it": "{n} fonti", "en": "{n} sources" },
+  "library.evidence": { "it": "Come leggere le etichette", "en": "How to read the labels" },
+  "library.filter": { "it": "Tipo di fonte", "en": "Kind of source" },
+  "ev.research": { "it": "Ricerca empirica", "en": "Empirical research" },
+  "ev.research.desc": {
+    "it": "Studi con dati raccolti e metodo esplicito. Spesso nati fuori dai giochi: la loro applicazione al design è un'estrapolazione.",
+    "en": "Studies with collected data and an explicit method. Often born outside games: applying them to design is an extrapolation."
+  },
+  "ev.theory": { "it": "Teoria accademica", "en": "Academic theory" },
+  "ev.theory.desc": {
+    "it": "Testi e paper citabili che propongono definizioni, modelli e vocabolario. Rigorosi, ma non dimostrano che il modello funzioni.",
+    "en": "Citable books and papers that propose definitions, models and vocabulary. Rigorous, but they don't prove the model works."
+  },
+  "ev.heuristic": { "it": "Euristica di mestiere", "en": "Craft heuristic" },
+  "ev.heuristic.desc": {
+    "it": "Esperienza di chi fa giochi. Spesso è la cosa più utile in pratica, ma non è dimostrata: prendila come un attrezzo, non come una legge.",
+    "en": "Experience from people who make games. Often the most useful thing in practice, but unproven: treat it as a tool, not a law."
+  },
+  "src.book": { "it": "Libri", "en": "Books" },
+  "src.paper": { "it": "Paper e articoli", "en": "Papers & articles" },
+  "src.video": { "it": "Talk e video", "en": "Talks & videos" },
+  "src.channel": { "it": "Canali", "en": "Channels" },
+  "src.web": { "it": "Siti e strumenti", "en": "Sites & tools" },
+  "search.youtube": { "it": "ricerca YouTube", "en": "YouTube search" },
+  "search.scholar": { "it": "ricerca Scholar", "en": "Scholar search" },
+  "search.book": { "it": "Open Library", "en": "Open Library" },
+  "search.web": { "it": "ricerca web", "en": "web search" },
+  "search.hint": {
+    "it": "Il link apre una ricerca invece di una pagina specifica.",
+    "en": "The link opens a search rather than a specific page."
+  },
+
+  "showcase.eyebrow": { "it": "Fatti dagli studenti", "en": "Made by students" },
+  "showcase.title": { "it": "I giochi del corso", "en": "Games from the course" },
+  "showcase.lead": {
+    "it": "Prototipi nati durante il corso: giochi da tavolo fisici, giocabili in dieci minuti, playtestati e iterati. Ogni foto è il risultato di un processo, non solo di un'idea.",
+    "en": "Prototypes born during the course: physical tabletop games, playable in ten minutes, playtested and iterated. Every photo is the result of a process, not just an idea."
+  },
+  "showcase.example": { "it": "Esempio", "en": "Example" },
+  "showcase.empty": { "it": "Ancora nessun progetto pubblicato. Torna a fine corso!", "en": "No projects published yet. Check back at the end of the course!" },
+  "showcase.photos.one": { "it": "1 foto", "en": "1 photo" },
+  "showcase.photos.other": { "it": "{n} foto", "en": "{n} photos" },
+  "showcase.by": { "it": "di", "en": "by" },
+  "showcase.link": { "it": "Scopri di più", "en": "Learn more" },
+  "showcase.open": { "it": "Apri le foto di {title}", "en": "Open the photos of {title}" },
+  "showcase.submit": {
+    "it": "Hai seguito il corso e vuoi aggiungere il tuo gioco? Scrivimi, oppure apri una pull request sulla repository.",
+    "en": "Took the course and want your game here? Email me, or open a pull request on the repository."
+  },
+
+  "about.eyebrow": { "it": "Docente, corso, contatti", "en": "Teacher, course, contact" },
+  "about.title": { "it": "Info e contatti", "en": "About & contact" },
+  "about.teacher": { "it": "Il docente", "en": "The teacher" },
+  "about.course": { "it": "Il corso", "en": "The course" },
+  "about.exam": { "it": "L'esame", "en": "The exam" },
+  "about.syllabus": { "it": "Leggi il programma completo", "en": "Read the full syllabus" },
+  "about.syllabus.note": { "it": "", "en": "The detailed syllabus is in Italian." },
+  "about.site": { "it": "Questo sito", "en": "This site" },
+  "about.site.body": {
+    "it": "Il sito è open source. Testi, fonti e traduzioni stanno in semplici file JSON nella repository: se trovi un errore o vuoi proporre una risorsa, apri una issue o una pull request.",
+    "en": "This site is open source. Texts, sources and translations live in plain JSON files in the repository: if you find a mistake or want to suggest a resource, open an issue or a pull request."
+  },
+  "about.repo": { "it": "Codice sorgente su GitHub", "en": "Source code on GitHub" },
+  "about.contact": { "it": "Scrivimi", "en": "Get in touch" },
+  "about.contact.lead": {
+    "it": "Per domande sul corso o sui progetti, o per proporre una fonte da aggiungere, il modo più semplice è una mail.",
+    "en": "For questions about the course or your project, or to suggest a source, email is the easiest way."
+  },
+  "about.email": { "it": "Scrivi una mail", "en": "Send an email" },
+
+  "footer.license": { "it": "Contenuti {content} · Codice {code}", "en": "Content {content} · Code {code}" },
+  "footer.source": { "it": "Codice sorgente", "en": "Source code" },
+
+  "notfound.title": { "it": "Carta non trovata", "en": "Card not found" },
+  "notfound.body": {
+    "it": "Questa carta non è nel mazzo: forse è stata spostata, o il link è sbagliato.",
+    "en": "This card isn't in the deck: it may have moved, or the link is wrong."
+  },
+  "notfound.home": { "it": "Torna alla home", "en": "Back to home" }
+}

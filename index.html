@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Game Design — i mattoncini</title>
+  <meta name="description" content="Materiali aperti di un corso universitario di game design: temi, giochi da provare, libri, paper, talk e i progetti degli studenti.">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F3EFE6" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121317" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Game Design — i mattoncini">
+  <meta property="og:description" content="Materiali aperti di un corso universitario di game design.">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=DM+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <script>
+    // Apply the saved theme before first paint to avoid a flash.
+    (function () {
+      try {
+        var theme = localStorage.getItem('gd-theme');
+        if (theme === 'dark' || theme === 'light') document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) { /* storage unavailable */ }
+    })();
+  </script>
+  <script type="module" src="assets/js/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main" data-skip>Vai al contenuto</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" id="brand" href="#/">
+        <svg class="logo" viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+          <path d="M20 2 L30 19 H10 Z" style="fill:var(--c-blue)"/>
+          <rect x="3" y="22" width="16" height="16" style="fill:var(--c-red)"/>
+          <circle cx="29.5" cy="30" r="8" style="fill:var(--c-yellow)"/>
+        </svg>
+        <span class="brand-text">Game Design<small id="brand-tag">I mattoncini del game design</small></span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Navigazione principale"></nav>
+      <div class="tools">
+        <div class="lang-switch" id="lang" role="group" aria-label="Lingua"></div>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Tema"></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="loading" role="status" aria-label="Caricamento / Loading"><span></span><span></span><span></span></div>
+  </main>
+
+  <footer class="site-footer" id="footer"></footer>
+
+  <noscript>
+    <div class="wrap noscript">Questo sito ha bisogno di JavaScript. · This site needs JavaScript.</div>
+  </noscript>
+</body>
+</html>

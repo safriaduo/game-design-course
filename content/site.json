@@ -1,0 +1,70 @@
+{
+  "title": "Game Design",
+  "defaultLanguage": "it",
+  "languages": [
+    { "code": "it", "label": "IT", "name": "Italiano" },
+    { "code": "en", "label": "EN", "name": "English" }
+  ],
+  "description": {
+    "it": "Materiali aperti di un corso universitario di game design: temi, giochi da provare, libri, paper, talk e i progetti degli studenti.",
+    "en": "Open materials from a university game design course: topics, games to try, books, papers, talks and student projects."
+  },
+  "teacher": {
+    "name": "Nome Cognome",
+    "email": "nome.cognome@esempio.it",
+    "role": { "it": "Docente di Game Design", "en": "Game Design lecturer" },
+    "affiliation": { "it": "Nome dell'università", "en": "University name" },
+    "bio": {
+      "it": [
+        "Due o tre righe su di te: cosa fai, a cosa hai lavorato, perché insegni game design.",
+        "Questo testo si modifica in `content/site.json`, alla voce `teacher.bio`."
+      ],
+      "en": [
+        "Two or three lines about you: what you do, what you have worked on, why you teach game design.",
+        "Edit this text in `content/site.json`, under `teacher.bio`."
+      ]
+    },
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/safriaduo" }
+    ]
+  },
+  "course": {
+    "description": {
+      "it": [
+        "Un corso di 60 ore, circa metà lezione e metà pratica, che parte da «cos'è un gioco» e arriva a metriche, etica e industria.",
+        "Si gioca molto, si prototipa presto e si playtesta sempre: finché non hai messo le mani su un prototipo, i temi avanzati restano teoria. Per questo il sito non ha un ordine obbligato: ogni tema è una carta, e puoi pescarla quando ti serve."
+      ],
+      "en": [
+        "A 60-hour course, roughly half lectures and half practice, that starts from “what is a game” and ends with metrics, ethics and the industry.",
+        "We play a lot, prototype early and always playtest: until you've got your hands on a prototype, the advanced topics stay theory. That's why this site has no set order: every topic is a card you can draw when you need it."
+      ]
+    },
+    "exam": {
+      "it": [
+        "Un **gioco da tavolo fisico**, giocabile in 10 minuti",
+        "Un **one-pager** che lo descrive",
+        "Il **report di due playtest** documentati",
+        "Un **pitch** di 5 minuti"
+      ],
+      "en": [
+        "A **physical tabletop game**, playable in 10 minutes",
+        "A **one-pager** describing it",
+        "Reports from **two documented playtests**",
+        "A 5-minute **pitch**"
+      ]
+    },
+    "examNote": {
+      "it": "Il processo — l'ipotesi iniziale, cosa ha detto il playtest, cosa avete cambiato — conta almeno quanto il risultato. È l'unico modo per premiare il metodo invece del talento grezzo.",
+      "en": "The process — your initial hypothesis, what the playtests said, what you changed — counts at least as much as the result. It's the only way to reward method over raw talent."
+    }
+  },
+  "repository": "https://github.com/safriaduo/game-design",
+  "branch": "main",
+  "syllabus": "ProgrammaCorso.md",
+  "featured": ["what-is-a-game", "interesting-decisions", "prototyping", "playtesting"],
+  "license": {
+    "content": "CC BY-SA 4.0",
+    "contentUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "code": "MIT"
+  }
+}

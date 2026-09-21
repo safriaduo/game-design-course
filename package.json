@@ -1,0 +1,13 @@
+{
+  "name": "game-design",
+  "private": true,
+  "description": "Open materials from a university game design course — a static site for GitHub Pages.",
+  "type": "module",
+  "scripts": {
+    "check": "node tools/check-content.mjs",
+    "serve": "node tools/serve.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

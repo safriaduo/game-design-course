@@ -1,0 +1,52 @@
+{
+  "projects": [
+    {
+      "id": "esempio-cooperativo",
+      "placeholder": true,
+      "title": { "it": "Titolo del gioco", "en": "Game title" },
+      "authors": ["Nome Cognome", "Nome Cognome"],
+      "year": "2025/26",
+      "images": [],
+      "description": {
+        "it": "Una o due frasi: cosa si fa, per chi è, cosa avete scoperto nei playtest. Questa è una voce d'esempio: cancellala da `content/students.json` quando aggiungi i progetti veri.",
+        "en": "One or two sentences: what you do, who it's for, what the playtests revealed. This is an example entry: delete it from `content/students.json` once you add real projects."
+      },
+      "tags": [
+        { "it": "cooperativo", "en": "co-op" },
+        { "it": "carte", "en": "cards" },
+        "2–4"
+      ]
+    },
+    {
+      "id": "esempio-bluff",
+      "placeholder": true,
+      "title": { "it": "Titolo del gioco", "en": "Game title" },
+      "authors": ["Nome Cognome"],
+      "year": "2025/26",
+      "images": [],
+      "description": {
+        "it": "Senza foto il sito genera una copertina geometrica. Con le foto, clic per sfogliarle a tutto schermo.",
+        "en": "Without photos the site generates a geometric cover. With photos, click to browse them full screen."
+      },
+      "tags": [
+        { "it": "bluff", "en": "bluffing" },
+        { "it": "dadi", "en": "dice" }
+      ]
+    },
+    {
+      "id": "esempio-destrezza",
+      "placeholder": true,
+      "title": { "it": "Titolo del gioco", "en": "Game title" },
+      "authors": ["Nome Cognome", "Nome Cognome", "Nome Cognome"],
+      "year": "2025/26",
+      "images": [],
+      "description": {
+        "it": "Ogni progetto può avere più foto, dei tag e un link (a un video, a un itch.io, al regolamento).",
+        "en": "Each project can have several photos, tags and a link (to a video, an itch.io page, the rulebook)."
+      },
+      "tags": [
+        { "it": "destrezza", "en": "dexterity" }
+      ]
+    }
+  ]
+}

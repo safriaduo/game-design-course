@@ -1,0 +1,866 @@
+{
+  "families": [
+    {
+      "id": "foundations",
+      "shape": "square",
+      "color": "red",
+      "name": { "it": "Fondamenti", "en": "Foundations" },
+      "description": { "it": "Cos'è un gioco e di cosa è fatto.", "en": "What a game is and what it's made of." }
+    },
+    {
+      "id": "method",
+      "shape": "triangle",
+      "color": "blue",
+      "name": { "it": "Metodo", "en": "Method" },
+      "description": { "it": "Come si lavora davvero: prototipare, testare, misurare.", "en": "How the work really gets done: prototype, test, measure." }
+    },
+    {
+      "id": "lenses",
+      "shape": "circle",
+      "color": "yellow",
+      "name": { "it": "Lenti", "en": "Lenses" },
+      "description": { "it": "Vocabolari per leggere un gioco e parlarne.", "en": "Vocabularies for reading a game and talking about it." }
+    },
+    {
+      "id": "systems",
+      "shape": "rhombus",
+      "color": "green",
+      "name": { "it": "Sistemi", "en": "Systems" },
+      "description": { "it": "Come si tiene insieme un sistema di regole, numeri e incertezza.", "en": "How a system of rules, numbers and uncertainty holds together." }
+    },
+    {
+      "id": "experience",
+      "shape": "arch",
+      "color": "violet",
+      "name": { "it": "Esperienza", "en": "Experience" },
+      "description": { "it": "Le persone dentro il sistema: storie, relazioni, accesso.", "en": "The people inside the system: stories, relationships, access." }
+    },
+    {
+      "id": "craft",
+      "shape": "plus",
+      "color": "ink",
+      "name": { "it": "Mestiere", "en": "Craft" },
+      "description": { "it": "Il contesto professionale: industria, mercato, etica.", "en": "The professional context: industry, market, ethics." }
+    }
+  ],
+
+  "topics": [
+    {
+      "id": "what-is-a-game",
+      "family": "foundations",
+      "glyph": "ring",
+      "title": { "it": "Cos'è un gioco", "en": "What is a game" },
+      "lead": {
+        "it": "Nessuna definizione di gioco funziona del tutto. Sceglierne una serve a decidere: se non sai che tipo di sfida stai progettando, non sai cosa bilanciare.",
+        "en": "No definition of “game” fully works. Picking one helps you decide: if you don't know what kind of challenge you're designing, you don't know what to balance."
+      },
+      "key": {
+        "it": [
+          "Giocare è il tentativo volontario di superare ostacoli non necessari (Suits). L'obiettivo prelusorio si descrive senza nominare il gioco: *far entrare una palla in una buca*.",
+          "Le regole costitutive vietano i mezzi più efficienti a favore di quelli meno efficienti. L'atteggiamento lusorio è accettarle proprio perché rendono possibile l'attività: non le subisci, le vuoi.",
+          "Definizioni a confronto: Suits, Salen & Zimmerman (conflitto artificiale, regole, esito quantificabile), Caillois (agôn, alea, mimicry, ilinx), Huizinga (il cerchio magico).",
+          "Walking simulator, idle game e sandbox senza obiettivi sono i casi limite in cui ogni definizione si rompe. È lì che si impara di più, anche sulla differenza tra gioco e giocattolo.",
+          "Tipi di sfida: strategia, destrezza, conoscenza, deduzione, sociale, gestione di risorse, riflessi. La destrezza fisica è design quanto le regole scritte."
+        ],
+        "en": [
+          "Playing a game is the voluntary attempt to overcome unnecessary obstacles (Suits). The prelusory goal can be described without naming the game: *getting a ball into a hole*.",
+          "Constitutive rules forbid the most efficient means in favour of less efficient ones. The lusory attitude is accepting them precisely because they make the activity possible: you don't put up with them, you want them.",
+          "Definitions side by side: Suits, Salen & Zimmerman (artificial conflict, rules, quantifiable outcome), Caillois (agôn, alea, mimicry, ilinx), Huizinga (the magic circle).",
+          "Walking simulators, idle games and goal-less sandboxes are the edge cases where every definition breaks. That's where you learn the most — including the difference between a game and a toy.",
+          "Kinds of challenge: strategy, dexterity, knowledge, deduction, social, resource management, reflexes. Physical dexterity is design just as much as written rules."
+        ]
+      },
+      "mistakes": {
+        "it": [
+          "Usare «gioco» come sinonimo di «videogioco».",
+          "Pensare che i giochi astratti siano più semplici da progettare.",
+          "Usare il cerchio magico come scusa per ignorare il contesto reale di chi gioca: soldi, tempo, relazioni."
+        ],
+        "en": [
+          "Using “game” as a synonym for “video game”.",
+          "Assuming abstract games are easier to design.",
+          "Using the magic circle as an excuse to ignore the player's real context: money, time, relationships."
+        ]
+      },
+      "games": ["viking-see-saw", "rock-paper-scissors", "chess"],
+      "sources": ["grasshopper", "man-play-games", "homo-ludens", "rules-of-play", "juul-gameness", "clockwork-game-design", "ch-architect"],
+      "related": ["rules-goals-feedback", "interesting-decisions", "mda"]
+    },
+
+    {
+      "id": "rules-goals-feedback",
+      "family": "foundations",
+      "glyph": "stool",
+      "title": { "it": "Regole, obiettivi e feedback", "en": "Rules, goals and feedback" },
+      "lead": {
+        "it": "Le tre gambe di qualsiasi gioco: cosa puoi fare, cosa devi ottenere, come sai come stai andando. Togline una e il gioco non diventa difficile: diventa ingiocabile.",
+        "en": "The three legs of every game: what you can do, what you must achieve, how you know how you're doing. Take one away and the game doesn't get harder — it becomes unplayable."
+      },
+      "key": {
+        "it": [
+          "Regole costitutive, operative e implicite. Le implicite — il galateo del tavolo, il fair play online — spesso tengono in piedi il gioco, e sono le prime che si perdono quando si digitalizza un gioco da tavolo.",
+          "Vittoria, sconfitta e fine partita sono tre cose diverse: molti giochi finiscono perché si esauriscono le risorse, non perché qualcuno ha raggiunto l'obiettivo.",
+          "Feedback immediato o differito, diegetico o non diegetico: ognuno insegna cose diverse, a velocità diverse.",
+          "Leggibilità prima di tutto. Se chi gioca non capisce lo stato del sistema, ogni altra qualità del design resta inaccessibile."
+        ],
+        "en": [
+          "Constitutive, operational and implicit rules. Implicit ones — table etiquette, online fair play — often hold the game together, and they're the first thing lost when a board game goes digital.",
+          "Winning, losing and the end of the game are three different things: many games end because resources run out, not because someone reached the goal.",
+          "Immediate or delayed, diegetic or non-diegetic feedback: each teaches different things, at different speeds.",
+          "Readability first. If players can't understand the state of the system, every other quality of the design stays out of reach."
+        ]
+      },
+      "mistakes": {
+        "it": [
+          "Scrivere regolamenti ambigui, che funzionano solo se c'è chi li ha scritti a spiegarli.",
+          "Dare per scontato che chi gioca sappia già cosa fare.",
+          "Scambiare un gioco illeggibile per un gioco difficile: il primo si sistema con il feedback, non con i numeri."
+        ],
+        "en": [
+          "Writing ambiguous rulebooks that only work when their author is there to explain them.",
+          "Assuming players already know what to do.",
+          "Mistaking an unreadable game for a hard one: the first is fixed with feedback, not with numbers."
+        ]
+      },
+      "games": ["tetris", "chess", "celeste"],
+      "sources": ["half-real", "design-everyday-things", "game-feel", "juice-it", "screenshake"],
+      "related": ["what-is-a-game", "onboarding", "flow-and-fun"]
+    },
+
+    {
+      "id": "interesting-decisions",
+      "family": "foundations",
+      "glyph": "fork",
+      "title": { "it": "Decisioni interessanti e agency", "en": "Interesting decisions and agency" },
+      "lead": {
+        "it": "Una scelta è interessante se, dopo averla fatta, chi gioca riesce a immaginare come sarebbe andata l'altra strada.",
+        "en": "A choice is interesting if, after making it, the player can imagine how the other road would have gone."
+      },
+      "key": {
+        "it": [
+          "Gli ingredienti: incertezza sull'esito, conseguenze percepibili, un trade-off reale, informazione sufficiente per ragionare ma non per calcolare.",
+          "Le non-decisioni: scelte ovvie (un'opzione domina), scelte cieche (nessuna informazione per decidere), scelte irrilevanti (l'esito non cambia).",
+          "Sasso-carta-forbice: tre opzioni, zero informazione dal sistema, eppure funziona — perché l'informazione è l'avversario. Da qui parte la lettura del giocatore.",
+          "Agency percepita e agency reale non coincidono. L'illusione di scelta regge finché nessuno se ne accorge; quando succede, il danno alla fiducia è permanente.",
+          "Più opzioni non significa più agency: oltre una soglia significa paralisi."
+        ],
+        "en": [
+          "The ingredients: uncertainty about the outcome, noticeable consequences, a real trade-off, enough information to reason but not to calculate.",
+          "Non-decisions: obvious choices (one option dominates), blind choices (no information to decide with), irrelevant choices (the outcome doesn't change).",
+          "Rock-paper-scissors: three options, zero information from the system, and yet it works — because the information is your opponent. This is where reading other players begins.",
+          "Perceived agency and real agency are not the same. The illusion of choice holds until someone notices; when they do, the damage to trust is permanent.",
+          "More options don't mean more agency: past a threshold they mean paralysis."
+        ]
+      },
+      "mistakes": {
+        "it": [
+          "Alberi di scelte in cui un ramo è palesemente migliore degli altri.",
+          "Confondere «tante opzioni» con «buon design».",
+          "Offrire una scelta prima che chi gioca abbia l'informazione per capirla."
+        ],
+        "en": [
+          "Choice trees where one branch is obviously better than the others.",
+          "Confusing “lots of options” with “good design”.",
+          "Offering a choice before the player has the information to understand it."
+        ]
+      },
+      "games": ["rock-paper-scissors", "into-the-breach", "slay-the-spire"],
+      "sources": ["characteristics-of-games", "meier-psychology", "into-the-breach-postmortem", "designing-games", "costikyan-no-words"],
+      "related": ["feedback-loops", "randomness-information", "social-dynamics"]
+    },
+
+    {
+      "id": "development-process",
+      "family": "method",
+      "glyph": "steps",
+      "title": { "it": "Il processo di sviluppo", "en": "The development process" },
+      "lead": {
+        "it": "Il ciclo di vita di un progetto, in digitale e su cartone. Nel digitale puoi patchare, e quindi tendi a rimandare le decisioni; nel cartaceo no, e il design si chiude prima e meglio.",
+        "en": "The life cycle of a project, in digital and in cardboard. In digital you can patch, so you tend to postpone decisions; on paper you can't, so the design closes earlier and better."
+      },
+      "key": {
+        "it": [
+          "Videogioco: concept → pre-produzione → vertical slice → produzione → alpha → beta → gold → live ops. La vertical slice è il momento della verità del progetto.",
+          "Gioco da tavolo: concept → prototipo grezzo → blind playtest → sviluppo → pitch a un editore o autoproduzione → produzione. Una tiratura non si patcha.",
+          "Il GDD monolitico è morto: si lavora con wiki vive e specifiche per feature. One-pager e pitch restano fondamentali.",
+          "Numero di carte, colori, dimensione della scatola: nel cartaceo sono vincoli di design, non di logistica.",
+          "Iterare costa poco all'inizio e tantissimo alla fine. È il motivo per cui si prototipa su carta anche quando si fa un videogioco."
+        ],
+        "en": [
+          "Video game: concept → pre-production → vertical slice → production → alpha → beta → gold → live ops. The vertical slice is the project's moment of truth.",
+          "Board game: concept → rough prototype → blind playtest → development → pitch to a publisher or self-publish → manufacturing. A print run can't be patched.",
+          "The monolithic GDD is dead: teams work with living wikis and per-feature specs. One-pagers and pitches still matter.",
+          "Card count, colours, box size: in tabletop they're design constraints, not logistics.",
+          "Iterating is cheap at the start and very expensive at the end. That's why you prototype on paper even when making a video game."
+        ]
+      },
+      "mistakes": {
+        "it": [
+          "Scrivere un GDD di 80 pagine prima di aver testato qualcosa.",
+          "Progettare come se tempo e risorse fossero infiniti.",
+          "«Poi lo bilanciamo.»"
+        ],
+        "en": [
+          "Writing an 80-page GDD before testing anything.",
+          "Designing as if time and resources were infinite.",
+          "“We'll balance it later.”"
+        ]
+      },
+      "games": ["hades"],
+      "sources": ["librande-one-page", "blood-sweat-pixels", "art-of-game-design", "game-design-workshop", "gdc-vault", "ch-gdc"],
+      "related": ["prototyping", "playtesting", "craft-and-industry"]
+    },
+
+    {
+      "id": "prototyping",
+      "family": "method",
+      "glyph": "draft",
+      "title": { "it": "Prototipazione e iterazione", "en": "Prototyping and iteration" },
+      "lead": {
+        "it": "Ogni prototipo risponde a una domanda sola. «È divertente?» non è una domanda valida.",
+        "en": "Every prototype answers exactly one question. “Is it fun?” is not a valid question."
+      },
+      "key": {
+        "it": [
+          "Se non sai scrivere in una riga cosa vuoi scoprire, non sei pronto a costruire.",
+          "Tipi diversi per domande diverse: paper prototype, meccanica isolata, prototipo di feel, prototipo grafico. Non vanno mescolati.",
+          "Il prototipo brutto è una scelta di metodo: i tester criticano quello che vedono, e se vedono grafica criticano la grafica.",
+          "Il ciclo: ipotesi → prototipo → test → lettura dei risultati → decisione. Iterare, cambiare direzione o buttare via.",
+          "Iterare senza misurare è solo rifare. Il criterio di successo si decide prima del test, non dopo."
+        ],
+        "en": [
+          "If you can't write in one line what you want to find out, you're not ready to build.",
+          "Different types for different questions: paper prototype, isolated mechanic, feel prototype, visual prototype. Don't mix them.",
+          "The ugly prototype is a methodological choice: testers criticise what they see, and if they see art they'll criticise the art.",
+          "The loop: hypothesis → prototype → test → reading the results → decision. Iterate, pivot or kill it.",
+          "Iterating without measuring is just redoing. The success criterion is set before the test, not after."
+        ]
+      },
+      "mistakes": {
+        "it": [
+          "Innamorarsi del primo prototipo.",
+          "Rifinire prima di aver validato.",
+          "Cambiare cinque cose insieme e non sapere quale ha funzionato."
+        ],
+        "en": [
+          "Falling in love with the first prototype.",
+          "Polishing before validating.",
+          "Changing five things at once and not knowing which one worked."
+        ]
+      },
+      "games": ["baba-is-you"],
+      "sources": ["prototype-7-days", "hecker-gingold-prototyping", "challenges-for-designers", "game-design-workshop", "puzzlescript", "twine"],
+      "related": ["playtesting", "development-process", "metrics"]
+    },
+
+    {
+      "id": "playtesting",
+      "family": "method",
+      "glyph": "eye",
+      "title": { "it": "Il playtest", "en": "Playtesting" },
+      "lead": {
+        "it": "Quando un giocatore ti dice che qualcosa non va, ha quasi sempre ragione. Quando ti dice come aggiustarlo, ha quasi sempre torto.",
+        "en": "When a player tells you something is wrong, they're almost always right. When they tell you how to fix it, they're almost always wrong."
+      },
+      "key": {
+        "it": [
+          "Un playtest senza ipotesi è intrattenimento. Prima si decide la domanda, poi i tester giusti, poi cosa osservare.",
+          "Tipi diversi, scopi diversi: interno, blind, focus test, usabilità, bilanciamento.",
+          "Durante il test non spiegare, non difenderti, non suggerire. Il silenzio del designer è una competenza.",
+          "Quello che chi gioca fa conta più di quello che dice. Il think-aloud aiuta a vedere il ragionamento; il debrief serve a separare il sintomo dalla causa.",
+          "Pochi tester bastano per trovare i problemi grossi; per bilanciare ne servono moltissimi."
+        ],
+        "en": [
+          "A playtest without a hypothesis is entertainment. Decide the question first, then the right testers, then what to observe.",
+          "Different kinds, different purposes: internal, blind, focus test, usability, balance.",
+          "During the test: don't explain, don't defend, don't hint. The designer's silence is a skill.",
+          "What players do matters more than what they say. Think-aloud helps you see their reasoning; the debrief is where you separate symptom from cause.",
+          "A handful of testers is enough to find the big problems; balancing needs a great many."
+        ]
+      },
+      "mistakes": {
+        "it": [
+          "Spiegare le regole a voce invece di far leggere il regolamento — e non scoprire mai che il regolamento è illeggibile.",
+          "Intervenire appena chi gioca si blocca.",
+          "Chiedere «ti è piaciuto?»."
+        ],
+        "en": [
+          "Explaining the rules out loud instead of handing over the rulebook — and never finding out that the rulebook is unreadable.",
+          "Stepping in as soon as the player gets stuck.",
+          "Asking “did you like it?”."
+        ]
+      },
+      "games": ["portal"],
+      "sources": ["ambinder-valve", "nielsen-5-users", "game-design-workshop", "art-of-game-design"],
+      "related": ["prototyping", "metrics", "mda"]
+    },
+
+    {
+      "id": "mda",
+      "family": "lenses",
+      "glyph": "chain",
+      "title": { "it": "Il framework MDA", "en": "The MDA framework" },
+      "lead": {
+        "it": "Meccaniche, dinamiche, estetiche. Il designer progetta dalle meccaniche verso le estetiche; chi gioca le vive al contrario. È tutto qui, ed è moltissimo.",
+        "en": "Mechanics, dynamics, aesthetics. Designers work from mechanics towards aesthetics; players experience them the other way round. That's all it is — and it's a lot."
+      },
+      "key": {
+        "it": [
+          "Le meccaniche sono le regole; le dinamiche i comportamenti che emergono in partita; le estetiche le risposte emotive di chi gioca.",
+          "Il divertimento non si progetta direttamente: si progettano regole e si spera nelle dinamiche giuste. È per questo che si playtesta.",
+          "Le otto estetiche di LeBlanc — sensation, fantasy, narrative, challenge, fellowship, discovery, expression, submission — sono una tassonomia utile, mai validata empiricamente.",
+          "Poche meccaniche che generano dinamiche profonde battono quasi sempre molte meccaniche che generano poco.",
+          "MDA è descrittivo, non generativo: non ti dice come progettare, ti dà un vocabolario per parlarne."
+        ],
+        "en": [
+          "Mechanics are the rules; dynamics are the behaviours that emerge during play; aesthetics are the player's emotional responses.",
+          "You can't design fun directly: you design rules and hope for the right dynamics. That's why you playtest.",
+          "LeBlanc's eight aesthetics — sensation, fantasy, narrative, challenge, fellowship, discovery, expression, submission — are a useful taxonomy, never empirically validated.",
+          "A few mechanics that generate deep dynamics almost always beat many mechanics that generate little.",
+          "MDA is descriptive, not generative: it doesn't tell you how to design, it gives you a vocabulary to talk about it."
+        ]
+      },
+      "mistakes": {
+        "it": [
+          "Confondere dinamiche e meccaniche.",
+          "Elencare estetiche senza collegarle a una meccanica precisa."
+        ],
+        "en": [
+          "Confusing dynamics with mechanics.",
+          "Listing aesthetics without tying them to a specific mechanic."
+        ]
+      },
+      "games": ["perudo", "codenames"],
+      "sources": ["mda", "ec-aesthetics", "sicart-mechanics", "bartle", "yee-motivations", "quantic-foundry"],
+      "related": ["flow-and-fun", "emergence", "what-is-a-game"]
+    },
+
+    {
+      "id": "flow-and-fun",
+      "family": "lenses",
+      "glyph": "wave",
+      "title": { "it": "Flow e divertimento", "en": "Flow and fun" },
+      "lead": {
+        "it": "Modelli per ragionare sul divertimento, sapendo quanto valgono. Il flow spiega bene un arcade e male un gioco di strategia a turni.",
+        "en": "Models for reasoning about fun — knowing how much they're worth. Flow explains an arcade game well and a turn-based strategy game badly."
+      },
+      "key": {
+        "it": [
+          "Flow: equilibrio tra sfida percepita e abilità percepita, obiettivi chiari, feedback immediato, perdita dell'autocoscienza.",
+          "La curva di difficoltà non è una retta: serve un andamento a denti di sega, fatto di tensione e rilascio. La difficoltà costante è la peggiore.",
+          "Koster: il divertimento è il piacere di imparare, la noia è un pattern già masticato. Una proposta affascinante, non testata.",
+          "Abilità diverse, stesso gioco: difficoltà dinamica, livelli di difficoltà, difficoltà scelta da chi gioca.",
+          "«Divertimento» è una parola povera: horror, giochi sul lutto e frustrazione controllata funzionano senza essere divertenti."
+        ],
+        "en": [
+          "Flow: a balance between perceived challenge and perceived skill, clear goals, immediate feedback, loss of self-consciousness.",
+          "A difficulty curve isn't a straight line: it needs a sawtooth shape of tension and release. Constant difficulty is the worst kind.",
+          "Koster: fun is the pleasure of learning, boredom is a pattern already digested. A fascinating proposal, untested.",
+          "Different skills, same game: dynamic difficulty, difficulty settings, difficulty chosen by the player.",
+          "“Fun” is a poor word: horror, games about grief and controlled frustration work without being fun."
+        ]
+      },
+      "mistakes": {
+        "it": [
+          "Usare «flow» come sinonimo di «divertente».",
+          "Progettare curve di difficoltà che salgono e basta.",
+          "Applicare il flow a ogni genere, anche dove non spiega nulla."
+        ],
+        "en": [
+          "Using “flow” as a synonym for “fun”.",
+          "Designing difficulty curves that only go up.",
+          "Applying flow to every genre, even where it explains nothing."
+        ]
+      },
+      "games": ["tetris", "celeste", "vampire-survivors"],
+      "sources": ["flow-book", "csikszentmihalyi-ted", "chen-flow-thesis", "gameflow", "sdt-motivation", "theory-of-fun", "ch-tyroller"],
+      "related": ["core-loop", "balancing", "mda"]
+    },
+
+    {
+      "id": "core-loop",
+      "family": "lenses",
+      "glyph": "loop",
+      "title": { "it": "Game loop e core loop", "en": "Game loops and the core loop" },
+      "lead": {
+        "it": "Se il core loop non regge trenta secondi senza contenuto, nessuna quantità di contenuto lo salverà.",
+        "en": "If the core loop can't hold up for thirty seconds without content, no amount of content will save it."
+      },
+      "key": {
+        "it": [
+          "Il core loop è l'azione che chi gioca ripete, e il motivo per cui la ripete: azione → feedback → ricompensa → nuova capacità o nuova situazione.",
+          "Loop annidati a scale diverse: il secondo (input), il minuto (scontro), la sessione, la meta-progressione, il giorno (retention).",
+          "I loop lunghi danno senso a quelli brevi, non li sostituiscono.",
+          "Disegnare i loop su carta è un'attività concreta, non un esercizio teorico: fai il diagramma.",
+          "Il loop di compulsione è il punto in cui il design comincia a diventare manipolazione. Vedi il tema sull'etica."
+        ],
+        "en": [
+          "The core loop is the action the player repeats, and the reason they repeat it: action → feedback → reward → new ability or new situation.",
+          "Nested loops at different scales: the second (input), the minute (encounter), the session, meta-progression, the day (retention).",
+          "Long loops give meaning to short ones; they don't replace them.",
+          "Drawing loops on paper is concrete work, not a theoretical exercise: make the diagram.",
+          "The compulsion loop is where design starts turning into manipulation. See the ethics topic."
+        ]
+      },
+      "mistakes": {
+        "it": [
+          "Confondere il core loop con la struttura della partita.",
+          "Progettare la meta-progressione prima del loop di base."
+        ],
+        "en": [
+          "Confusing the core loop with the structure of a match.",
+          "Designing meta-progression before the base loop."
+        ]
+      },
+      "games": ["vampire-survivors", "hades", "tetris"],
+      "sources": ["cook-chemistry", "cook-loops-arcs", "game-mechanics-adams-dormans", "machinations", "ch-gmtk", "ch-sakurai"],
+      "related": ["feedback-loops", "flow-and-fun", "ethics-monetization"]
+    },
+
+    {
+      "id": "feedback-loops",
+      "family": "systems",
+      "glyph": "snowball",
+      "title": { "it": "Loop di rinforzo e dominanza", "en": "Feedback loops and dominance" },
+      "lead": {
+        "it": "La domanda da farsi su ogni sistema: cosa succede a chi vince il primo scambio? E a chi lo perde?",
+        "en": "The question to ask of every system: what happens to whoever wins the first exchange? And to whoever loses it?"
+      },
+      "key": {
+        "it": [
+          "Loop positivo: chi è avanti va più avanti. Loop negativo: chi è indietro recupera. Il positivo serve anche a chiudere le partite; il problema è quando niente lo compensa.",
+          "Runaway leader: la partita è decisa ma non è finita. È il peggior difetto strutturale possibile.",
+          "Il catch-up va dosato: se recuperare è gratis, giocare bene non conta. Kingmaking: chi non può più vincere decide chi vince.",
+          "Strategie dominanti e dominate, opzioni mai usate, giochi «risolti». Ogni opzione che nessun giocatore esperto sceglie mai è codice morto nel design.",
+          "Un po' di teoria dei giochi basta: matrice dei payoff, equilibrio di Nash, somma zero, dilemma del prigioniero. Serve il vocabolario, non la matematica."
+        ],
+        "en": [
+          "Positive loop: whoever is ahead gets further ahead. Negative loop: whoever is behind catches up. Positive loops also help end matches; the problem is when nothing counterbalances them.",
+          "Runaway leader: the match is decided but not over. It's the worst structural flaw there is.",
+          "Catch-up must be dosed: if coming back is free, playing well doesn't matter. Kingmaking: a player who can no longer win decides who does.",
+          "Dominant and dominated strategies, options nobody picks, “solved” games. Any option no expert ever chooses is dead code in the design.",
+          "A little game theory goes a long way: payoff matrix, Nash equilibrium, zero-sum, prisoner's dilemma. You need the vocabulary, not the maths."
+        ]
+      },
+      "mistakes": {
+        "it": [
+          "Aggiungere meccaniche di recupero invece di rimuovere la causa del problema.",
+          "Non accorgersi di una strategia dominante perché nessuno ha giocato abbastanza."
+        ],
+        "en": [
+          "Adding catch-up mechanics instead of removing the cause of the problem.",
+          "Missing a dominant strategy because nobody has played enough."
+        ]
+      },
+      "games": ["monopoly", "catan"],
+      "sources": ["characteristics-of-games", "game-mechanics-adams-dormans", "machinations", "game-balance-concepts", "ncase-trust", "ch-susd"],
+      "related": ["interesting-decisions", "balancing", "core-loop"]
+    },
+
+    {
+      "id": "randomness-information",
+      "family": "systems",
+      "glyph": "die",
+      "title": { "it": "Casualità e informazione", "en": "Randomness and information" },
+      "lead": {
+        "it": "La casualità in input genera decisioni, quella in output genera tensione ed esiti ingiusti. Entrambe sono valide, ma vanno scelte.",
+        "en": "Input randomness creates decisions; output randomness creates tension and unfair outcomes. Both are valid, but they have to be chosen."
+      },
+      "key": {
+        "it": [
+          "Input: la casualità arriva prima della decisione e diventa materiale su cui ragionare (la mano di carte). Output: arriva dopo e ne decide l'esito (il tiro per colpire).",
+          "2d6 non è 1d12: la forma della distribuzione rende i risultati prevedibili senza renderli certi.",
+          "Casualità percepita contro reale: gambler's fallacy, sistemi pity, il bag randomizer di Tetris. Un sistema equo che sembra ingiusto è un sistema rotto.",
+          "Un po' di fortuna permette a chi comincia di battere l'esperto ogni tanto, ed è ciò che tiene vivi i giochi sociali.",
+          "Informazione perfetta, imperfetta, nascosta, asimmetrica. Quella nascosta è il modo più economico di creare profondità: non aggiunge regole, aggiunge giocatori."
+        ],
+        "en": [
+          "Input: randomness comes before the decision and becomes material to reason with (your hand of cards). Output: it comes after and decides the result (the roll to hit).",
+          "2d6 is not 1d12: the shape of the distribution makes results predictable without making them certain.",
+          "Perceived vs actual randomness: the gambler's fallacy, pity systems, Tetris's bag randomizer. A fair system that feels unfair is a broken system.",
+          "A little luck lets a beginner beat an expert now and then — and that's what keeps social games alive.",
+          "Perfect, imperfect, hidden, asymmetric information. Hidden information is the cheapest way to create depth: it adds no rules, it adds players."
+        ]
+      },
+      "mistakes": {
+        "it": [
+          "Usare 1dN ovunque senza ragionare sulla distribuzione.",
+          "Mettere casualità in output sulle decisioni strategiche importanti: frustrazione garantita.",
+          "Nascondere informazioni che chi gioca non ha modo di dedurre: un gioco di fortuna travestito da gioco di deduzione."
+        ],
+        "en": [
+          "Using 1dN everywhere without thinking about the distribution.",
+          "Putting output randomness on major strategic decisions: guaranteed frustration.",
+          "Hiding information players have no way of deducing: a game of luck dressed up as a deduction game."
+        ]
+      },
+      "games": ["perudo", "hanabi", "love-letter", "cant-stop", "poker"],
+      "sources": ["uncertainty-in-games", "gametek", "characteristics-of-games", "building-blocks-tabletop", "yt-input-output"],
+      "related": ["interesting-decisions", "social-dynamics", "balancing"]
+    },
+
+    {
+      "id": "balancing",
+      "family": "systems",
+      "glyph": "seesaw",
+      "title": { "it": "Bilanciamento e tuning knobs", "en": "Balancing and tuning knobs" },
+      "lead": {
+        "it": "Un singolo numero può cambiare il genere di un gioco. Resident Evil e Doom hanno le stesse azioni di base; munizioni, velocità e ricarica fanno horror da una parte e power fantasy dall'altra.",
+        "en": "A single number can change a game's genre. Resident Evil and Doom share the same basic actions; ammo, speed and reload time make one horror and the other a power fantasy."
+      },
+      "key": {
+        "it": [
+          "Bilanciare non è rendere tutto uguale: è rendere ogni opzione sensata in qualche contesto. E si bilancia verso l'esperienza che vuoi, non verso un'equità astratta.",
+          "Tuning knobs: danno, punti vita, costo, cooldown, rarità, cadenza di fuoco, caricatore, velocità. Alcune manopole sono sensibili, altre quasi non si sentono.",
+          "I numeri si tunano, le regole si riprogettano. Capire quando serve l'uno o l'altro è la competenza chiave.",
+          "Economie: sink e faucet, inflazione, valute multiple e il motivo per cui esistono.",
+          "Prima di toccare un numero, scrivi cosa dovrebbe succedere se il cambiamento funziona. Altrimenti non saprai leggere il test."
+        ],
+        "en": [
+          "Balancing isn't making everything equal: it's making every option sensible in some context. And you balance towards the experience you want, not towards abstract fairness.",
+          "Tuning knobs: damage, hit points, cost, cooldown, rarity, fire rate, magazine size, speed. Some knobs are sensitive; others you barely feel.",
+          "Numbers get tuned; rules get redesigned. Knowing which one you need is the key skill.",
+          "Economies: sinks and faucets, inflation, multiple currencies and why they exist.",
+          "Before touching a number, write down what should happen if the change works. Otherwise you won't be able to read the test."
+        ]
+      },
+      "mistakes": {
+        "it": [
+          "Girare più manopole insieme.",
+          "Bilanciare sul proprio livello di abilità.",
+          "Confondere «troppo forte» con «troppo noioso da affrontare»."
+        ],
+        "en": [
+          "Turning several knobs at once.",
+          "Balancing around your own skill level.",
+          "Confusing “too strong” with “too boring to face”."
+        ]
+      },
+      "games": ["resident-evil", "doom", "slay-the-spire"],
+      "sources": ["game-balance", "ec-perfect-imbalance", "sts-metrics", "game-balance-concepts", "machinations", "ch-sakurai"],
+      "related": ["feedback-loops", "metrics", "randomness-information"]
+    },
+
+    {
+      "id": "emergence",
+      "family": "systems",
+      "glyph": "glider",
+      "title": { "it": "Emergenza e complessità", "en": "Emergence and complexity" },
+      "lead": {
+        "it": "La profondità non si aggiunge, si libera: quasi sempre togliendo regole e aumentando le interazioni fra quelle che restano.",
+        "en": "Depth isn't added, it's released: almost always by removing rules and increasing the interactions between the ones that remain."
+      },
+      "key": {
+        "it": [
+          "Complessità contro complicazione: poche regole che interagiscono molto contro molte regole che interagiscono poco.",
+          "Gli scacchi hanno sei tipi di pezzo e regole che stanno in una pagina. È l'argomento più forte contro l'istinto di aggiungere meccaniche.",
+          "Sistemi che si moltiplicano invece di sommarsi: meccaniche ortogonali, l'approccio immersive sim.",
+          "Exploit e degenerazione: a volte l'emergenza uccide il gioco, a volte diventa il gioco — combo, speedrun, tech.",
+          "Non puoi progettare l'emergenza, solo le condizioni perché accada. E se chi gioca non capisce perché è successo qualcosa, l'emergenza è rumore."
+        ],
+        "en": [
+          "Complexity vs complication: a few rules that interact a lot versus many rules that barely interact.",
+          "Chess has six kinds of piece and rules that fit on a page. It's the strongest argument against the instinct to add mechanics.",
+          "Systems that multiply rather than add up: orthogonal mechanics, the immersive sim approach.",
+          "Exploits and degeneracy: sometimes emergence kills the game, sometimes it becomes the game — combos, speedruns, tech.",
+          "You can't design emergence, only the conditions for it. And if players can't tell why something happened, emergence is just noise."
+        ]
+      },
+      "mistakes": {
+        "it": [
+          "Aggiungere meccaniche per aggiungere profondità.",
+          "Trattare ogni exploit come un bug da chiudere.",
+          "Confondere «tante possibilità» con «possibilità significative»."
+        ],
+        "en": [
+          "Adding mechanics to add depth.",
+          "Treating every exploit as a bug to close.",
+          "Confusing “many possibilities” with “meaningful possibilities”."
+        ]
+      },
+      "games": ["chess", "zelda-botw", "dwarf-fortress", "baba-is-you", "cosmic-encounter"],
+      "sources": ["botw-gdc", "emergence-in-games", "game-mechanics-adams-dormans", "designing-games", "sylvester-rimworld"],
+      "related": ["mda", "fantasy-narrative", "playtesting"]
+    },
+
+    {
+      "id": "metrics",
+      "family": "method",
+      "glyph": "chart",
+      "title": { "it": "Metriche e telemetria", "en": "Metrics and telemetry" },
+      "lead": {
+        "it": "Le metriche dicono cosa è successo, mai perché. Ti dicono che il 60% abbandona al livello 4; il perché lo scopri guardando qualcuno giocare il livello 4.",
+        "en": "Metrics tell you what happened, never why. They'll tell you 60% of players quit at level 4; you find out why by watching someone play level 4."
+      },
+      "key": {
+        "it": [
+          "Prima la domanda, poi la metrica. È lo stesso principio del prototipo e del playtest.",
+          "Cosa si misura: punti di abbandono, tempo per livello, curve di morte, uso delle opzioni, retention D1/D7/D30, funnel di onboarding.",
+          "Win rate e pick rate vanno letti insieme. E attenzione al sopravvissuto: i dati li genera chi è rimasto, non chi se n'è andato.",
+          "Vanity metric contro metrica azionabile: se un numero non cambia una decisione, non serve.",
+          "Etica dei dati: consenso, GDPR, e la differenza tra ottimizzare l'esperienza e ottimizzare l'estrazione."
+        ],
+        "en": [
+          "Question first, metric second. It's the same principle as prototypes and playtests.",
+          "What gets measured: drop-off points, time per level, death curves, option usage, D1/D7/D30 retention, onboarding funnels.",
+          "Win rate and pick rate must be read together. And beware survivorship: the data comes from those who stayed, not from those who left.",
+          "Vanity metrics vs actionable metrics: if a number doesn't change a decision, it's useless.",
+          "Data ethics: consent, GDPR, and the difference between optimising the experience and optimising extraction."
+        ]
+      },
+      "mistakes": {
+        "it": [
+          "Raccogliere tutto e non guardare niente.",
+          "Inseguire la retention senza chiedersi se il gioco è buono.",
+          "Cambiare il design per differenze statisticamente irrilevanti."
+        ],
+        "en": [
+          "Collecting everything and looking at nothing.",
+          "Chasing retention without asking whether the game is good.",
+          "Changing the design over statistically insignificant differences."
+        ]
+      },
+      "games": ["slay-the-spire"],
+      "sources": ["game-analytics", "ambinder-valve", "sts-metrics", "gdc-vault"],
+      "related": ["playtesting", "balancing", "ethics-monetization"]
+    },
+
+    {
+      "id": "social-dynamics",
+      "family": "experience",
+      "glyph": "players",
+      "title": { "it": "Dinamiche sociali e teoria dei giochi", "en": "Social dynamics and game theory" },
+      "lead": {
+        "it": "Nei giochi sociali il designer progetta le condizioni della conversazione, non la conversazione.",
+        "en": "In social games, the designer designs the conditions of the conversation, not the conversation."
+      },
+      "key": {
+        "it": [
+          "A sasso-carta-forbice l'unica strategia imbattibile è giocare a caso, e nessuno lo fa. La teoria dice cosa è ottimale; il design rende interessante il fatto che nessuno giocherà in modo ottimale.",
+          "Metagioco: la reputazione che si porta da una partita all'altra. La seconda partita con lo stesso gruppo, a regole identiche, è un gioco diverso.",
+          "Alleanze, tradimenti, negoziazione; l'alpha player che nei cooperativi gioca per tutti.",
+          "Bilanciamento asimmetrico: quando i ruoli non sono uguali, bisogna decidere cosa significa «equo».",
+          "I giochi sociali sono sensibili al gruppo: ottimi con sei amici, pessimi con sei sconosciuti. È un vincolo di design, non un difetto."
+        ],
+        "en": [
+          "In rock-paper-scissors the only unbeatable strategy is to play at random, and nobody does. Theory tells you what's optimal; design makes it interesting that nobody will play optimally.",
+          "Metagame: the reputation carried from one match to the next. The second match with the same group, under identical rules, is a different game.",
+          "Alliances, betrayals, negotiation; the alpha player who plays for everyone in co-op games.",
+          "Asymmetric balance: when roles aren't equal, you have to decide what “fair” means.",
+          "Social games are sensitive to the group: great with six friends, terrible with six strangers. That's a design constraint, not a flaw."
+        ]
+      },
+      "mistakes": {
+        "it": [
+          "Progettare giochi sociali che puniscono le persone timide.",
+          "Eliminare giocatori a metà partita senza lasciargli niente da fare."
+        ],
+        "en": [
+          "Designing social games that punish shy people.",
+          "Eliminating players mid-game and leaving them nothing to do."
+        ]
+      },
+      "games": ["avalon", "rock-paper-scissors", "secret-hitler", "pandemic", "diplomacy", "cosmic-encounter"],
+      "sources": ["ncase-trust", "building-blocks-tabletop", "yee-motivations", "art-of-game-design", "ch-susd"],
+      "related": ["randomness-information", "interesting-decisions", "fantasy-narrative"]
+    },
+
+    {
+      "id": "fantasy-narrative",
+      "family": "experience",
+      "glyph": "portal",
+      "title": { "it": "Fantasy e narrazione", "en": "Fantasy and narrative" },
+      "lead": {
+        "it": "La fantasy è la promessa che il gioco fa prima ancora delle regole. Il tema non è una vernice: cambiarlo a regole invariate cambia il gioco percepito, la difficoltà di apprendimento e il pubblico.",
+        "en": "Fantasy is the promise a game makes before its rules. Theme is not a coat of paint: change it with the same rules and you change the perceived game, the learning curve and the audience."
+      },
+      "key": {
+        "it": [
+          "Coerenza tra fantasy e meccaniche: se la fantasy è sopravvivere, ogni sistema deve costare qualcosa. Una fantasy chiara fa metà del lavoro di insegnamento.",
+          "Narrazione embedded, emergente, ambientale, retroattiva. Le storie che i giocatori raccontano agli amici quasi mai sono quelle scritte dagli sceneggiatori.",
+          "Strutture interattive: lineare, ramificata, a collo di bottiglia, a nodi, sandbox. La ramificazione costa in modo combinatorio, e servono trucchi per contenerla.",
+          "Ludonarrative dissonance: quando quello che il gioco dice e quello che il gioco ti fa fare non coincidono.",
+          "Agency narrativa e agency meccanica: vuoi cambiare la storia o sentirti dentro la storia? Non è la stessa cosa, e non costa uguale."
+        ],
+        "en": [
+          "Consistency between fantasy and mechanics: if the fantasy is survival, every system must cost something. A clear fantasy does half the teaching.",
+          "Embedded, emergent, environmental, retrospective narrative. The stories players tell their friends are almost never the ones the writers wrote.",
+          "Interactive structures: linear, branching, bottleneck, node-based, sandbox. Branching costs grow combinatorially, and you need tricks to contain them.",
+          "Ludonarrative dissonance: when what the game says and what the game makes you do don't match.",
+          "Narrative agency and mechanical agency: do you want to change the story, or feel inside it? They're not the same, and they don't cost the same."
+        ]
+      },
+      "mistakes": {
+        "it": [
+          "Scrivere la storia prima di avere il gioco.",
+          "Usare il tema come decorazione applicata alla fine.",
+          "Progettare dodici finali quando ne servivano tre buoni."
+        ],
+        "en": [
+          "Writing the story before having the game.",
+          "Using the theme as decoration applied at the end.",
+          "Designing twelve endings when three good ones were needed."
+        ]
+      },
+      "games": ["papers-please", "disco-elysium", "rimworld"],
+      "sources": ["hocking-dissonance", "levine-narrative-legos", "sylvester-rimworld", "half-real", "emily-short", "twine", "ch-fractal"],
+      "related": ["emergence", "mda", "onboarding"]
+    },
+
+    {
+      "id": "onboarding",
+      "family": "experience",
+      "glyph": "nest",
+      "title": { "it": "Insegnare a giocare", "en": "Teaching the game" },
+      "lead": {
+        "it": "Il buco più comune nei progetti degli studenti: il gioco funziona, ma nessuno capisce come si comincia.",
+        "en": "The most common gap in student projects: the game works, but nobody understands how to start."
+      },
+      "key": {
+        "it": [
+          "Una meccanica alla volta, in un contesto dove sbagliare costa poco.",
+          "Il livello che insegna giocando vale più di qualsiasi tutorial testuale.",
+          "Una fantasy coerente riduce le regole da spiegare: se sai di essere un ladro, sai già cosa provare a fare.",
+          "Nel gioco da tavolo il regolamento è il tutorial. Se non lo può seguire chi non ha mai visto il gioco, il gioco non esiste."
+        ],
+        "en": [
+          "One mechanic at a time, in a context where mistakes are cheap.",
+          "A level that teaches through play is worth more than any text tutorial.",
+          "A consistent fantasy cuts down the rules you need to explain: if you know you're a thief, you already know what to try.",
+          "In a board game, the rulebook is the tutorial. If someone who has never seen the game can't follow it, the game doesn't exist."
+        ]
+      },
+      "mistakes": {
+        "it": [
+          "Muri di testo al posto del tutorial.",
+          "Insegnare tutto subito, prima che serva.",
+          "Testare l'onboarding solo con chi conosce già il gioco."
+        ],
+        "en": [
+          "Walls of text instead of a tutorial.",
+          "Teaching everything up front, before it's needed.",
+          "Testing onboarding only with people who already know the game."
+        ]
+      },
+      "games": ["super-mario-bros", "portal", "baba-is-you"],
+      "sources": ["gmtk-3d-world", "level-up", "design-everyday-things", "ch-gmtk"],
+      "related": ["rules-goals-feedback", "accessibility", "playtesting"]
+    },
+
+    {
+      "id": "accessibility",
+      "family": "experience",
+      "glyph": "contrast",
+      "title": { "it": "Accessibilità", "en": "Accessibility" },
+      "lead": {
+        "it": "L'accessibilità non è carità, è pubblico.",
+        "en": "Accessibility isn't charity. It's audience."
+      },
+      "key": {
+        "it": [
+          "Opzioni di difficoltà, modalità per il daltonismo, dimensione del testo, input alternativi e rimappabili, sottotitoli.",
+          "Il colore non deve mai essere l'unico canale di un'informazione: vale per le interfacce come per le carte.",
+          "Molte opzioni pensate per l'accessibilità migliorano il gioco per tutti: i sottotitoli li attivano in tantissimi.",
+          "Testare con persone che hanno bisogni diversi dai tuoi è l'unico modo per scoprire chi hai escluso senza volerlo."
+        ],
+        "en": [
+          "Difficulty options, colour-blind modes, text size, alternative and remappable inputs, subtitles.",
+          "Colour must never be the only channel for a piece of information — on screens and on cards alike.",
+          "Many options designed for accessibility make the game better for everyone: huge numbers of players turn subtitles on.",
+          "Testing with people whose needs differ from yours is the only way to find out who you've shut out without meaning to."
+        ]
+      },
+      "mistakes": {
+        "it": [
+          "Pensare all'accessibilità a fine progetto, quando cambiare costa troppo.",
+          "Distinguere informazioni importanti solo con il colore."
+        ],
+        "en": [
+          "Thinking about accessibility at the end of the project, when changes cost too much.",
+          "Distinguishing important information by colour alone."
+        ]
+      },
+      "games": ["celeste", "the-last-of-us-part-ii"],
+      "sources": ["gag", "gmtk-disability", "ablegamers", "can-i-play-that"],
+      "related": ["onboarding", "flow-and-fun", "ethics-monetization"]
+    },
+
+    {
+      "id": "ethics-monetization",
+      "family": "craft",
+      "glyph": "bait",
+      "title": { "it": "Etica e monetizzazione", "en": "Ethics and monetisation" },
+      "lead": {
+        "it": "Le stesse tecniche che rendono un gioco coinvolgente possono renderlo predatorio. La differenza sta nell'intenzione e in chi ne beneficia.",
+        "en": "The same techniques that make a game engaging can make it predatory. The difference lies in the intent, and in who benefits."
+      },
+      "key": {
+        "it": [
+          "Dark pattern documentati: valute intermedie che nascondono il prezzo, scarsità artificiale, grinding che si salta pagando, pay-to-win.",
+          "Loop di compulsione, gacha e loot box: dove finisce il design persuasivo e comincia lo sfruttamento.",
+          "Premium e free-to-play non sono etici o non etici di per sé: conta cosa ottimizzi, e a spese di chi.",
+          "Se una meccanica funziona solo finché chi gioca non capisce quanto gli costa, non è design: è una trappola."
+        ],
+        "en": [
+          "Documented dark patterns: intermediate currencies that hide the price, artificial scarcity, grinding you can skip by paying, pay-to-win.",
+          "Compulsion loops, gacha and loot boxes: where persuasive design ends and exploitation begins.",
+          "Premium and free-to-play aren't ethical or unethical in themselves: what matters is what you optimise, and at whose expense.",
+          "If a mechanic only works as long as players don't realise what it costs them, it isn't design: it's a trap."
+        ]
+      },
+      "mistakes": {
+        "it": [
+          "Pensare che l'etica sia un argomento separato dal design.",
+          "Ottimizzare una metrica — tempo di gioco, spesa — senza chiedersi cosa succede alle persone dietro al numero."
+        ],
+        "en": [
+          "Thinking ethics is a separate subject from design.",
+          "Optimising a metric — play time, spending — without asking what happens to the people behind the number."
+        ]
+      },
+      "games": [],
+      "sources": ["dark-patterns", "zendle-cairns", "deterding-gamification", "schell-dice", "blow-design-reboot", "ec-skinner-box", "darkpattern-games"],
+      "related": ["core-loop", "metrics", "craft-and-industry"]
+    },
+
+    {
+      "id": "craft-and-industry",
+      "family": "craft",
+      "glyph": "tower",
+      "title": { "it": "Il mestiere e l'industria", "en": "The craft and the industry" },
+      "lead": {
+        "it": "Il design è un mestiere di decisioni tracciabili, non di ispirazione. Le idee valgono poco; l'esecuzione e l'iterazione valgono tutto.",
+        "en": "Design is a craft of traceable decisions, not inspiration. Ideas are cheap; execution and iteration are everything."
+      },
+      "key": {
+        "it": [
+          "I ruoli reali: systems, content, level, narrative e technical designer — e il punto in cui finisce il designer e comincia il producer.",
+          "Il game designer non è «quello che ha le idee», non è il creative director e non è necessariamente chi programma.",
+          "Il design è sempre design sotto vincolo. Un designer che non sa tagliare non pubblica niente.",
+          "Il gioco migliore che non trova giocatori non esiste: posizionamento, analisi dei competitor, wishlist e demo sono parte del design.",
+          "Per entrare: un portfolio di decisioni motivate, non di concept. E i design test, dove conta il ragionamento più della risposta."
+        ],
+        "en": [
+          "The real roles: systems, content, level, narrative and technical designer — and where the designer ends and the producer begins.",
+          "A game designer is not “the ideas person”, not the creative director, and not necessarily the one who codes.",
+          "Design is always design under constraints. A designer who can't cut never ships.",
+          "The best game that finds no players doesn't exist: positioning, competitor analysis, wishlists and demos are part of design.",
+          "Getting in: a portfolio of reasoned decisions, not of concepts. And design tests, where the reasoning matters more than the answer."
+        ]
+      },
+      "mistakes": {
+        "it": [
+          "Presentarsi con un'idea invece che con un prototipo.",
+          "Progettare senza sapere per chi, e contro quali altri giochi."
+        ],
+        "en": [
+          "Showing up with an idea instead of a prototype.",
+          "Designing without knowing who for, and against which other games."
+        ]
+      },
+      "games": [],
+      "sources": ["blood-sweat-pixels", "how-to-market", "level-up", "art-of-game-design", "gdc-vault", "ch-sakurai"],
+      "related": ["development-process", "ethics-monetization", "prototyping"]
+    }
+  ]
+}

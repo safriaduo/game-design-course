@@ -1,0 +1,358 @@
+{
+  "games": [
+    {
+      "id": "rock-paper-scissors",
+      "name": { "it": "Sasso-carta-forbice", "en": "Rock-paper-scissors" },
+      "kind": "classic",
+      "note": {
+        "it": "Tre regole, zero informazione dal sistema, eppure non è banale: tutta la profondità sta nella lettura dell'avversario. Prova a modificarlo per introdurre decisioni interessanti.",
+        "en": "Three rules, zero information from the system, and still not trivial: all the depth lies in reading your opponent. Try modding it to add interesting decisions."
+      }
+    },
+    {
+      "id": "viking-see-saw",
+      "name": "Viking See-Saw",
+      "kind": "board",
+      "note": {
+        "it": "Un gioco di destrezza e di equilibrio: dimostra in dieci minuti che anche la fisica degli oggetti è design.",
+        "en": "A dexterity and balancing game: it proves in ten minutes that the physics of objects is design too."
+      }
+    },
+    {
+      "id": "perudo",
+      "name": "Perudo",
+      "kind": "classic",
+      "aka": "Liar's Dice, Dudo",
+      "note": {
+        "it": "Tre regole e un bicchiere producono bluff, lettura degli avversari, gestione del rischio e metagioco. La tua mano è informazione asimmetrica, la dichiarazione è un segnale.",
+        "en": "Three rules and a cup produce bluffing, reading opponents, risk management and metagame. Your hand is asymmetric information, your bid is a signal."
+      }
+    },
+    {
+      "id": "codenames",
+      "name": "Codenames",
+      "kind": "board",
+      "year": 2015,
+      "designer": "Vlaada Chvátil",
+      "note": {
+        "it": "Estetiche completamente diverse — fellowship, discovery — con una complessità ancora più bassa. Da analizzare con MDA accanto a Perudo.",
+        "en": "Completely different aesthetics — fellowship, discovery — with even lower complexity. Analyse it with MDA next to Perudo."
+      }
+    },
+    {
+      "id": "monopoly",
+      "name": "Monopoly",
+      "kind": "board",
+      "year": 1935,
+      "designer": "Elizabeth Magie, Charles Darrow",
+      "note": {
+        "it": "Da giocare davvero per trenta minuti: loop positivo, runaway leader, non-decisioni e una partita decisa molto prima di finire. Poi riprogetta al massimo tre regole.",
+        "en": "Play it for real for thirty minutes: positive loop, runaway leader, non-decisions and a match decided long before it ends. Then redesign at most three rules."
+      }
+    },
+    {
+      "id": "avalon",
+      "name": "The Resistance: Avalon",
+      "kind": "board",
+      "year": 2012,
+      "designer": "Don Eskridge",
+      "note": {
+        "it": "Due partite di fila con lo stesso gruppo: il metagioco cambia la seconda a regole identiche. La prova che il sistema include le persone.",
+        "en": "Two matches in a row with the same group: the metagame changes the second one under identical rules. Proof that the system includes the people."
+      }
+    },
+    {
+      "id": "chess",
+      "name": { "it": "Scacchi", "en": "Chess" },
+      "kind": "classic",
+      "note": {
+        "it": "Sei tipi di pezzo, regole in una pagina, profondità quasi infinita. Prova le varianti — Chess960, King of the Hill — per vedere quanto poco basta a cambiare tutto.",
+        "en": "Six kinds of piece, rules on one page, near-infinite depth. Try variants — Chess960, King of the Hill — to see how little it takes to change everything."
+      }
+    },
+    {
+      "id": "resident-evil",
+      "name": "Resident Evil",
+      "kind": "video",
+      "year": 1996,
+      "designer": "Capcom",
+      "note": {
+        "it": "Da confrontare con Doom: munizioni scarse e movimenti lenti rendono ogni proiettile una decisione.",
+        "en": "Compare it with Doom: scarce ammo and slow movement turn every bullet into a decision."
+      }
+    },
+    {
+      "id": "doom",
+      "name": "Doom",
+      "kind": "video",
+      "year": 1993,
+      "designer": "id Software",
+      "note": {
+        "it": "Da confrontare con Resident Evil: munizioni abbondanti e velocità alta rendono il combattimento un flusso.",
+        "en": "Compare it with Resident Evil: plentiful ammo and high speed turn combat into flow."
+      }
+    },
+    {
+      "id": "hanabi",
+      "name": "Hanabi",
+      "kind": "board",
+      "year": 2010,
+      "designer": "Antoine Bauza",
+      "note": {
+        "it": "Informazione limitata e comunicazione vincolata: vedi le carte di tutti tranne le tue. Fortissimo dopo Codenames.",
+        "en": "Limited information and constrained communication: you see everyone's cards except your own. Great right after Codenames."
+      }
+    },
+    {
+      "id": "love-letter",
+      "name": "Love Letter",
+      "kind": "board",
+      "year": 2012,
+      "designer": "Seiji Kanai",
+      "note": {
+        "it": "Deduzione completa con sedici carte: un corso di informazione nascosta in cinque minuti.",
+        "en": "Full deduction with sixteen cards: a crash course in hidden information in five minutes."
+      }
+    },
+    {
+      "id": "pandemic",
+      "name": "Pandemic",
+      "kind": "board",
+      "year": 2008,
+      "designer": "Matt Leacock",
+      "note": {
+        "it": "Il cooperativo per eccellenza, e il caso di scuola del problema dell'alpha player.",
+        "en": "The archetypal co-op, and the textbook case of the alpha player problem."
+      }
+    },
+    {
+      "id": "vampire-survivors",
+      "name": "Vampire Survivors",
+      "kind": "video",
+      "year": 2022,
+      "designer": "poncle",
+      "note": {
+        "it": "Core loop e feedback allo stato puro: un solo input, e un gioco intero costruito sulla ricompensa.",
+        "en": "Core loop and feedback in their purest form: a single input and a whole game built on reward."
+      }
+    },
+    {
+      "id": "tetris",
+      "name": "Tetris",
+      "kind": "video",
+      "year": 1984,
+      "designer": "Alexey Pajitnov",
+      "note": {
+        "it": "Feedback immediato, ritmo perfetto e un generatore casuale «addomesticato»: il bag randomizer.",
+        "en": "Immediate feedback, perfect pacing and a “tamed” random generator: the bag randomizer."
+      }
+    },
+    {
+      "id": "into-the-breach",
+      "name": "Into the Breach",
+      "kind": "video",
+      "year": 2018,
+      "designer": "Subset Games",
+      "note": {
+        "it": "Tattica a informazione quasi perfetta: sai cosa farà il nemico, e ogni turno è un puzzle di scelte difficili.",
+        "en": "Near-perfect-information tactics: you know what the enemy will do, and every turn is a puzzle of hard choices."
+      }
+    },
+    {
+      "id": "slay-the-spire",
+      "name": "Slay the Spire",
+      "kind": "video",
+      "year": 2019,
+      "designer": "Mega Crit",
+      "note": {
+        "it": "Casualità in input, decisioni di costruzione del mazzo e un bilanciamento rifinito con i dati dell'accesso anticipato.",
+        "en": "Input randomness, deck-building decisions and balance refined with data from early access."
+      }
+    },
+    {
+      "id": "celeste",
+      "name": "Celeste",
+      "kind": "video",
+      "year": 2018,
+      "designer": "Maddy Thorson, Noel Berry",
+      "note": {
+        "it": "Controlli precisi, feedback impeccabile e un Assist Mode che rende la difficoltà una scelta di chi gioca.",
+        "en": "Tight controls, impeccable feedback and an Assist Mode that makes difficulty the player's choice."
+      }
+    },
+    {
+      "id": "portal",
+      "name": "Portal",
+      "kind": "video",
+      "year": 2007,
+      "designer": "Valve",
+      "note": {
+        "it": "Un corso di onboarding: ogni camera insegna una cosa sola, poi la combina con quelle già imparate.",
+        "en": "A course in onboarding: each chamber teaches one thing, then combines it with what you already know."
+      }
+    },
+    {
+      "id": "baba-is-you",
+      "name": "Baba Is You",
+      "kind": "video",
+      "year": 2019,
+      "designer": "Arvi Teikari",
+      "note": {
+        "it": "Le regole sono oggetti del gioco: si imparano, si combinano e si rompono. Nato da un prototipo per una game jam.",
+        "en": "The rules are objects in the game: you learn them, combine them and break them. It started as a game jam prototype."
+      }
+    },
+    {
+      "id": "papers-please",
+      "name": "Papers, Please",
+      "kind": "video",
+      "year": 2013,
+      "designer": "Lucas Pope",
+      "note": {
+        "it": "Le meccaniche raccontano la storia: la burocrazia diventa dilemma morale.",
+        "en": "The mechanics tell the story: bureaucracy becomes moral dilemma."
+      }
+    },
+    {
+      "id": "disco-elysium",
+      "name": "Disco Elysium",
+      "kind": "video",
+      "year": 2019,
+      "designer": "ZA/UM",
+      "note": {
+        "it": "Narrativa ramificata costruita su un sistema di abilità che ti parla.",
+        "en": "Branching narrative built on a skill system that talks back to you."
+      }
+    },
+    {
+      "id": "rimworld",
+      "name": "RimWorld",
+      "kind": "video",
+      "year": 2018,
+      "designer": "Ludeon Studios",
+      "note": {
+        "it": "Un generatore di storie: la narrazione emerge dal sistema, non dalla sceneggiatura.",
+        "en": "A story generator: narrative emerges from the system, not from a script."
+      }
+    },
+    {
+      "id": "dwarf-fortress",
+      "name": "Dwarf Fortress",
+      "kind": "video",
+      "year": 2006,
+      "designer": "Bay 12 Games",
+      "note": {
+        "it": "Simulazione profondissima, storie emergenti e il caso limite della leggibilità.",
+        "en": "Extremely deep simulation, emergent stories, and the limit case of readability."
+      }
+    },
+    {
+      "id": "catan",
+      "name": "Catan",
+      "kind": "board",
+      "year": 1995,
+      "designer": "Klaus Teuber",
+      "note": {
+        "it": "Un loop positivo mitigato dal commercio e dal ladro: chi è in testa diventa il bersaglio.",
+        "en": "A positive loop tempered by trading and the robber: whoever leads becomes the target."
+      }
+    },
+    {
+      "id": "cosmic-encounter",
+      "name": "Cosmic Encounter",
+      "kind": "board",
+      "year": 1977,
+      "designer": "Eon",
+      "note": {
+        "it": "Ogni razza aliena rompe una regola: un sistema costruito per generare eccezioni, alleanze e situazioni imprevedibili.",
+        "en": "Every alien race breaks a rule: a system built to generate exceptions, alliances and unpredictable situations."
+      }
+    },
+    {
+      "id": "cant-stop",
+      "name": "Can't Stop",
+      "kind": "board",
+      "year": 1980,
+      "designer": "Sid Sackson",
+      "note": {
+        "it": "Il push-your-luck in forma pura: rischiare o fermarsi, a ogni tiro.",
+        "en": "Push-your-luck in its purest form: risk it or stop, on every roll."
+      }
+    },
+    {
+      "id": "poker",
+      "name": "Poker",
+      "kind": "classic",
+      "note": {
+        "it": "Informazione nascosta, probabilità e lettura delle persone: la profondità è quasi tutta nei giocatori.",
+        "en": "Hidden information, probability and reading people: almost all the depth is in the players."
+      }
+    },
+    {
+      "id": "hades",
+      "name": "Hades",
+      "kind": "video",
+      "year": 2020,
+      "designer": "Supergiant Games",
+      "note": {
+        "it": "Loop annidati — la stanza, la run, la progressione — e una narrazione che dà senso al fallimento. Sviluppato in accesso anticipato, iterando con i giocatori.",
+        "en": "Nested loops — the room, the run, progression — and a narrative that gives meaning to failure. Developed in early access, iterating with players."
+      }
+    },
+    {
+      "id": "super-mario-bros",
+      "name": "Super Mario Bros.",
+      "kind": "video",
+      "year": 1985,
+      "designer": "Nintendo",
+      "note": {
+        "it": "Il livello 1-1: insegnare a giocare senza scrivere una parola.",
+        "en": "World 1-1: teaching the game without writing a single word."
+      }
+    },
+    {
+      "id": "the-last-of-us-part-ii",
+      "name": "The Last of Us Part II",
+      "kind": "video",
+      "year": 2020,
+      "designer": "Naughty Dog",
+      "note": {
+        "it": "Uno dei riferimenti per quantità e cura delle opzioni di accessibilità.",
+        "en": "A benchmark for the range and care of its accessibility options."
+      }
+    },
+    {
+      "id": "secret-hitler",
+      "name": "Secret Hitler",
+      "kind": "board",
+      "year": 2016,
+      "designer": "Mike Boxleiter, Tommy Maranges, Max Temkin",
+      "note": {
+        "it": "Deduzione sociale con informazione nascosta e voti pubblici: ogni scelta è anche un segnale.",
+        "en": "Social deduction with hidden information and public votes: every choice is also a signal."
+      }
+    },
+    {
+      "id": "zelda-botw",
+      "name": "The Legend of Zelda: Breath of the Wild",
+      "kind": "video",
+      "year": 2017,
+      "designer": "Nintendo",
+      "note": {
+        "it": "Un «motore chimico» di regole semplici che si moltiplicano: il sistema premia le soluzioni che nessuno aveva previsto.",
+        "en": "A “chemistry engine” of simple rules that multiply: the system rewards solutions nobody planned."
+      }
+    },
+    {
+      "id": "diplomacy",
+      "name": "Diplomacy",
+      "kind": "board",
+      "year": 1959,
+      "designer": "Allan B. Calhamer",
+      "note": {
+        "it": "Nessun dado, solo negoziazione e tradimento: il sistema sono le persone.",
+        "en": "No dice, only negotiation and betrayal: the people are the system."
+      }
+    }
+  ]
+}

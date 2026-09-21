@@ -1,0 +1,17 @@
+name: Check content
+
+# Validates content/*.json on every push and pull request:
+# JSON syntax, ids and references, missing translations, missing photos.
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node tools/check-content.mjs

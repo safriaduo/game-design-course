@@ -1,0 +1,746 @@
+{
+  "sources": [
+    {
+      "id": "rules-of-play",
+      "kind": "book",
+      "title": "Rules of Play: Game Design Fundamentals",
+      "by": "Katie Salen, Eric Zimmerman",
+      "year": 2003,
+      "publisher": "MIT Press",
+      "evidence": "theory",
+      "note": { "it": "Il manuale teorico di riferimento: definizioni, regole, il gioco come sistema.", "en": "The reference theory textbook: definitions, rules, games as systems." }
+    },
+    {
+      "id": "man-play-games",
+      "kind": "book",
+      "title": { "it": "I giochi e gli uomini (Les jeux et les hommes)", "en": "Man, Play and Games (Les jeux et les hommes)" },
+      "by": "Roger Caillois",
+      "year": 1958,
+      "evidence": "theory",
+      "note": { "it": "Agôn, alea, mimicry, ilinx: la tassonomia classica delle forme del gioco.", "en": "Agôn, alea, mimicry, ilinx: the classic taxonomy of forms of play." }
+    },
+    {
+      "id": "homo-ludens",
+      "kind": "book",
+      "title": "Homo Ludens",
+      "by": "Johan Huizinga",
+      "year": 1938,
+      "evidence": "theory",
+      "note": { "it": "Il gioco come fondamento della cultura, e l'origine dell'idea di «cerchio magico».", "en": "Play as a foundation of culture, and the origin of the “magic circle” idea." }
+    },
+    {
+      "id": "grasshopper",
+      "kind": "book",
+      "title": "The Grasshopper: Games, Life and Utopia",
+      "by": "Bernard Suits",
+      "year": 1978,
+      "evidence": "theory",
+      "note": { "it": "Il gioco come superamento volontario di ostacoli non necessari, in forma di dialogo filosofico.", "en": "Games as the voluntary overcoming of unnecessary obstacles, written as a philosophical dialogue." }
+    },
+    {
+      "id": "characteristics-of-games",
+      "kind": "book",
+      "title": "Characteristics of Games",
+      "by": "George Skaff Elias, Richard Garfield, K. Robert Gutschera",
+      "year": 2012,
+      "publisher": "MIT Press",
+      "evidence": "theory",
+      "note": { "it": "Il testo più rigoroso su dominanza, fortuna, catch-up, kingmaking e durata della partita.", "en": "The most rigorous text on dominance, luck, catch-up, kingmaking and game length." }
+    },
+    {
+      "id": "theory-of-fun",
+      "kind": "book",
+      "title": "A Theory of Fun for Game Design",
+      "by": "Raph Koster",
+      "year": 2004,
+      "evidence": "heuristic",
+      "note": { "it": "Il divertimento come apprendimento. Una proposta teorica illuminante, ma non testata.", "en": "Fun as learning. An illuminating theoretical proposal, but untested." }
+    },
+    {
+      "id": "flow-book",
+      "kind": "book",
+      "title": "Flow: The Psychology of Optimal Experience",
+      "by": "Mihaly Csikszentmihalyi",
+      "year": 1990,
+      "evidence": "research",
+      "note": { "it": "Psicologia con una solida base empirica, nata fuori dai giochi: applicarla al design è un'estrapolazione.", "en": "Psychology with a solid empirical base, born outside games: applying it to design is an extrapolation." }
+    },
+    {
+      "id": "game-feel",
+      "kind": "book",
+      "title": "Game Feel: A Game Designer's Guide to Virtual Sensation",
+      "by": "Steve Swink",
+      "year": 2008,
+      "evidence": "theory",
+      "note": { "it": "Il feedback al livello del singolo fotogramma: controllo, risposta, sensazione.", "en": "Feedback at the level of the single frame: control, response, sensation." }
+    },
+    {
+      "id": "art-of-game-design",
+      "kind": "book",
+      "title": "The Art of Game Design: A Book of Lenses",
+      "by": "Jesse Schell",
+      "year": 2008,
+      "evidence": "heuristic",
+      "note": { "it": "Cento «lenti» per guardare un progetto da angolazioni diverse. Da tenere sulla scrivania.", "en": "A hundred “lenses” for looking at a project from different angles. One to keep on your desk." }
+    },
+    {
+      "id": "game-design-workshop",
+      "kind": "book",
+      "title": "Game Design Workshop",
+      "by": "Tracy Fullerton",
+      "year": 2004,
+      "evidence": "heuristic",
+      "note": { "it": "Un approccio centrato su chi gioca e sul playtest, pieno di esercizi pratici. Più edizioni aggiornate.", "en": "A player-centred, playtest-driven approach, full of hands-on exercises. Several updated editions." }
+    },
+    {
+      "id": "challenges-for-designers",
+      "kind": "book",
+      "title": "Challenges for Game Designers",
+      "by": "Brenda Romero, Ian Schreiber",
+      "year": 2008,
+      "evidence": "heuristic",
+      "note": { "it": "Esercizi di design non digitale, uno per capitolo: perfetto per allenarsi.", "en": "Non-digital design exercises, one per chapter: perfect for practice." }
+    },
+    {
+      "id": "game-balance",
+      "kind": "book",
+      "title": "Game Balance",
+      "by": "Ian Schreiber, Brenda Romero",
+      "year": 2021,
+      "evidence": "heuristic",
+      "note": { "it": "Il bilanciamento, dai fogli di calcolo alle economie di gioco.", "en": "Balance, from spreadsheets to game economies." }
+    },
+    {
+      "id": "building-blocks-tabletop",
+      "kind": "book",
+      "title": "Building Blocks of Tabletop Game Design",
+      "by": "Geoffrey Engelstein, Isaac Shalev",
+      "year": 2019,
+      "evidence": "heuristic",
+      "note": { "it": "Un'enciclopedia dei meccanismi dei giochi da tavolo: i mattoncini, letteralmente.", "en": "An encyclopedia of tabletop mechanisms: the building blocks, literally." }
+    },
+    {
+      "id": "gametek",
+      "kind": "book",
+      "title": "GameTek",
+      "by": "Geoffrey Engelstein",
+      "evidence": "heuristic",
+      "note": { "it": "Matematica, probabilità e psicologia applicate ai giochi. Engelstein ha reso comune la distinzione tra casualità in input e in output.", "en": "Maths, probability and psychology applied to games. Engelstein helped popularise the input vs output randomness distinction." }
+    },
+    {
+      "id": "uncertainty-in-games",
+      "kind": "book",
+      "title": "Uncertainty in Games",
+      "by": "Greg Costikyan",
+      "year": 2013,
+      "publisher": "MIT Press",
+      "evidence": "theory",
+      "note": { "it": "Le fonti di incertezza nei giochi, ben oltre il lancio dei dadi.", "en": "The sources of uncertainty in games, well beyond rolling dice." }
+    },
+    {
+      "id": "designing-games",
+      "kind": "book",
+      "title": "Designing Games: A Guide to Engineering Experiences",
+      "by": "Tynan Sylvester",
+      "year": 2013,
+      "evidence": "heuristic",
+      "note": { "it": "Sistemi, emergenza e le esperienze che producono, dall'autore di RimWorld.", "en": "Systems, emergence and the experiences they create, by the author of RimWorld." }
+    },
+    {
+      "id": "half-real",
+      "kind": "book",
+      "title": "Half-Real: Video Games between Real Rules and Fictional Worlds",
+      "by": "Jesper Juul",
+      "year": 2005,
+      "publisher": "MIT Press",
+      "evidence": "theory",
+      "note": { "it": "Regole reali e mondi finzionali: come le due metà di un gioco si parlano.", "en": "Real rules and fictional worlds: how a game's two halves talk to each other." }
+    },
+    {
+      "id": "design-everyday-things",
+      "kind": "book",
+      "title": "The Design of Everyday Things",
+      "by": "Don Norman",
+      "year": 1988,
+      "evidence": "theory",
+      "note": { "it": "Affordance, feedback, mappature: il testo fondativo del design dell'interazione.", "en": "Affordances, feedback, mappings: the founding text of interaction design." }
+    },
+    {
+      "id": "game-analytics",
+      "kind": "book",
+      "title": "Game Analytics: Maximizing the Value of Player Data",
+      "by": "Magy Seif El-Nasr, Anders Drachen, Alessandro Canossa (eds.)",
+      "year": 2013,
+      "publisher": "Springer",
+      "evidence": "research",
+      "note": { "it": "Raccolta accademica su telemetria, metriche e analisi dei dati di gioco.", "en": "An academic collection on telemetry, metrics and game data analysis." }
+    },
+    {
+      "id": "emergence-in-games",
+      "kind": "book",
+      "title": "Emergence in Games",
+      "by": "Penny Sweetser",
+      "year": 2008,
+      "evidence": "theory",
+      "note": { "it": "Come progettare le condizioni perché l'emergenza accada.", "en": "How to design the conditions for emergence to happen." }
+    },
+    {
+      "id": "game-mechanics-adams-dormans",
+      "kind": "book",
+      "title": "Game Mechanics: Advanced Game Design",
+      "by": "Ernest Adams, Joris Dormans",
+      "year": 2012,
+      "evidence": "theory",
+      "note": { "it": "Economie interne, loop e diagrammi Machinations per ragionare sui sistemi.", "en": "Internal economies, loops and Machinations diagrams for reasoning about systems." }
+    },
+    {
+      "id": "clockwork-game-design",
+      "kind": "book",
+      "title": "Clockwork Game Design",
+      "by": "Keith Burgun",
+      "year": 2015,
+      "evidence": "heuristic",
+      "note": { "it": "Una visione netta e discutibile: giocattoli, puzzle, competizioni e giochi sono forme diverse.", "en": "A sharp, debatable view: toys, puzzles, contests and games are different forms." }
+    },
+    {
+      "id": "blood-sweat-pixels",
+      "kind": "book",
+      "title": "Blood, Sweat, and Pixels",
+      "by": "Jason Schreier",
+      "year": 2017,
+      "note": { "it": "Dieci storie di sviluppo raccontate da un giornalista: come si fanno davvero i videogiochi.", "en": "Ten development stories told by a journalist: how video games really get made." }
+    },
+    {
+      "id": "level-up",
+      "kind": "book",
+      "title": "Level Up! The Guide to Great Video Game Design",
+      "by": "Scott Rogers",
+      "year": 2010,
+      "evidence": "heuristic",
+      "note": { "it": "Un manuale pratico e leggero sul design dei videogiochi, dal concept al livello.", "en": "A practical, light-hearted guide to video game design, from concept to level." }
+    },
+
+    {
+      "id": "mda",
+      "kind": "paper",
+      "title": "MDA: A Formal Approach to Game Design and Game Research",
+      "by": "Robin Hunicke, Marc LeBlanc, Robert Zubek",
+      "year": 2004,
+      "publisher": "AAAI Workshop on Challenges in Game AI",
+      "url": "https://users.cs.northwestern.edu/~hunicke/MDA.pdf",
+      "evidence": "theory",
+      "note": { "it": "Il paper che ha dato al design un vocabolario comune: meccaniche, dinamiche, estetiche.", "en": "The paper that gave design a shared vocabulary: mechanics, dynamics, aesthetics." }
+    },
+    {
+      "id": "dark-patterns",
+      "kind": "paper",
+      "title": "Dark Patterns in the Design of Games",
+      "by": "José P. Zagal, Staffan Björk, Chris Lewis",
+      "year": 2013,
+      "publisher": "Foundations of Digital Games",
+      "evidence": "theory",
+      "note": { "it": "Paper peer-reviewed che classifica i dark pattern nei giochi: la fonte giusta per parlare di etica.", "en": "A peer-reviewed paper classifying dark patterns in games: the right source for talking about ethics." }
+    },
+    {
+      "id": "bartle",
+      "kind": "paper",
+      "title": "Hearts, Clubs, Diamonds, Spades: Players Who Suit MUDs",
+      "by": "Richard Bartle",
+      "year": 1996,
+      "url": "https://mud.co.uk/richard/hcds.htm",
+      "evidence": "heuristic",
+      "note": { "it": "La tassonomia dei giocatori più famosa. Influente, ma poco validata.", "en": "The most famous player taxonomy. Influential, but barely validated." }
+    },
+    {
+      "id": "gameflow",
+      "kind": "paper",
+      "title": "GameFlow: A Model for Evaluating Player Enjoyment in Games",
+      "by": "Penelope Sweetser, Peta Wyeth",
+      "year": 2005,
+      "publisher": "Computers in Entertainment",
+      "evidence": "research",
+      "note": { "it": "Un modello per valutare il divertimento costruito sugli elementi del flow.", "en": "A model for evaluating player enjoyment built on the elements of flow." }
+    },
+    {
+      "id": "sdt-motivation",
+      "kind": "paper",
+      "title": "The Motivational Pull of Video Games: A Self-Determination Theory Approach",
+      "by": "Richard M. Ryan, C. Scott Rigby, Andrew Przybylski",
+      "year": 2006,
+      "publisher": "Motivation and Emotion",
+      "evidence": "research",
+      "note": { "it": "Autonomia, competenza, relazione: la teoria dell'autodeterminazione applicata ai videogiochi, con dati.", "en": "Autonomy, competence, relatedness: self-determination theory applied to video games, with data." }
+    },
+    {
+      "id": "yee-motivations",
+      "kind": "paper",
+      "title": "Motivations for Play in Online Games",
+      "by": "Nick Yee",
+      "year": 2006,
+      "publisher": "CyberPsychology & Behavior",
+      "evidence": "research",
+      "note": { "it": "Uno studio empirico sulle motivazioni dei giocatori online, nato anche per mettere alla prova il modello di Bartle.", "en": "An empirical study of online players' motivations, partly born to put Bartle's model to the test." }
+    },
+    {
+      "id": "juul-gameness",
+      "kind": "paper",
+      "title": "The Game, the Player, the World: Looking for a Heart of Gameness",
+      "by": "Jesper Juul",
+      "year": 2003,
+      "evidence": "theory",
+      "note": { "it": "Un confronto tra le definizioni di gioco e una proposta in sei punti.", "en": "A comparison of definitions of “game” and a six-point proposal." }
+    },
+    {
+      "id": "sicart-mechanics",
+      "kind": "paper",
+      "title": "Defining Game Mechanics",
+      "by": "Miguel Sicart",
+      "year": 2008,
+      "publisher": "Game Studies",
+      "evidence": "theory",
+      "note": { "it": "Cosa intendiamo davvero quando diciamo «meccanica».", "en": "What we really mean when we say “mechanic”." }
+    },
+    {
+      "id": "costikyan-no-words",
+      "kind": "paper",
+      "title": "I Have No Words & I Must Design",
+      "by": "Greg Costikyan",
+      "year": 1994,
+      "search": "web",
+      "evidence": "heuristic",
+      "note": { "it": "Un saggio classico sul vocabolario del game design: decisioni, obiettivi, lotta.", "en": "A classic essay on the vocabulary of game design: decisions, goals, struggle." }
+    },
+    {
+      "id": "cook-chemistry",
+      "kind": "paper",
+      "title": "The Chemistry of Game Design",
+      "by": "Daniel Cook",
+      "year": 2007,
+      "search": "web",
+      "evidence": "heuristic",
+      "note": { "it": "Gli «skill atoms»: come si scompone un gioco in cicli di apprendimento.", "en": "“Skill atoms”: breaking a game down into learning loops." }
+    },
+    {
+      "id": "cook-loops-arcs",
+      "kind": "paper",
+      "title": "Loops and Arcs",
+      "by": "Daniel Cook",
+      "year": 2012,
+      "search": "web",
+      "evidence": "heuristic",
+      "note": { "it": "La differenza tra loop che si ripetono e archi che si consumano.", "en": "The difference between loops that repeat and arcs that get used up." }
+    },
+    {
+      "id": "hocking-dissonance",
+      "kind": "paper",
+      "title": "Ludonarrative Dissonance in Bioshock",
+      "by": "Clint Hocking",
+      "year": 2007,
+      "search": "web",
+      "evidence": "heuristic",
+      "note": { "it": "Il post che ha coniato «ludonarrative dissonance».", "en": "The blog post that coined “ludonarrative dissonance”." }
+    },
+    {
+      "id": "nielsen-5-users",
+      "kind": "paper",
+      "title": "Why You Only Need to Test with 5 Users",
+      "by": "Jakob Nielsen",
+      "year": 2000,
+      "url": "https://www.nngroup.com/articles/why-you-only-need-to-test-with-5-users/",
+      "evidence": "research",
+      "note": { "it": "Perché pochi tester trovano la maggior parte dei problemi di usabilità — e perché per bilanciare non basta.", "en": "Why a few testers find most usability problems — and why that isn't enough for balancing." }
+    },
+    {
+      "id": "deterding-gamification",
+      "kind": "paper",
+      "title": "From Game Design Elements to Gamefulness: Defining “Gamification”",
+      "by": "Sebastian Deterding, Dan Dixon, Rilla Khaled, Lennart Nacke",
+      "year": 2011,
+      "evidence": "theory",
+      "note": { "it": "Cos'è (e cosa non è) la gamification: una definizione accademica.", "en": "What gamification is (and isn't): an academic definition." }
+    },
+    {
+      "id": "zendle-cairns",
+      "kind": "paper",
+      "title": "Video game loot boxes are linked to problem gambling: Results of a large-scale survey",
+      "by": "David Zendle, Paul Cairns",
+      "year": 2018,
+      "publisher": "PLOS ONE",
+      "evidence": "research",
+      "note": { "it": "Uno studio su larga scala sul legame tra loot box e gioco d'azzardo problematico.", "en": "A large-scale study on the link between loot boxes and problem gambling." }
+    },
+    {
+      "id": "chen-flow-thesis",
+      "kind": "paper",
+      "title": "Flow in Games",
+      "by": "Jenova Chen",
+      "year": 2006,
+      "evidence": "theory",
+      "note": { "it": "Una tesi che porta il flow nel design, con l'idea di una difficoltà scelta da chi gioca.", "en": "A thesis that brings flow into design, with the idea of player-chosen difficulty." }
+    },
+    {
+      "id": "prototype-7-days",
+      "kind": "paper",
+      "title": "How to Prototype a Game in Under 7 Days",
+      "by": "Kyle Gabler, Kyle Gray, Matt Kucic, Shalin Shodhan",
+      "year": 2005,
+      "search": "web",
+      "evidence": "heuristic",
+      "note": { "it": "Il manifesto dell'Experimental Gameplay Project: prototipi rapidi, brutti e tanti.", "en": "The Experimental Gameplay Project manifesto: fast, ugly, numerous prototypes." }
+    },
+
+    {
+      "id": "meier-psychology",
+      "kind": "video",
+      "title": "The Psychology of Game Design (Everything You Know Is Wrong)",
+      "by": "Sid Meier",
+      "year": 2010,
+      "publisher": "GDC",
+      "evidence": "heuristic",
+      "note": { "it": "Come i giocatori percepiscono probabilità ed equità. «Una serie di decisioni interessanti» è un aforisma di Meier, non un risultato di ricerca.", "en": "How players perceive probability and fairness. “A series of interesting decisions” is Meier's aphorism, not a research finding." }
+    },
+    {
+      "id": "juice-it",
+      "kind": "video",
+      "title": "Juice it or lose it",
+      "by": "Martin Jonasson, Petri Purho",
+      "year": 2012,
+      "evidence": "heuristic",
+      "note": { "it": "Lo stesso gioco prima e dopo il feedback: la dimostrazione più famosa del «juice».", "en": "The same game before and after feedback: the most famous demonstration of “juice”." }
+    },
+    {
+      "id": "screenshake",
+      "kind": "video",
+      "title": "The Art of Screenshake",
+      "by": "Jan Willem Nijman",
+      "year": 2013,
+      "evidence": "heuristic",
+      "note": { "it": "Piccoli trucchi di feedback che cambiano completamente la sensazione di un gioco.", "en": "Small feedback tricks that completely change how a game feels." }
+    },
+    {
+      "id": "schell-dice",
+      "kind": "video",
+      "title": "Design Outside the Box",
+      "by": "Jesse Schell",
+      "year": 2010,
+      "publisher": "DICE",
+      "evidence": "heuristic",
+      "note": { "it": "Il talk che ha acceso il dibattito sulla gamification della vita quotidiana.", "en": "The talk that sparked the debate on gamifying everyday life." }
+    },
+    {
+      "id": "blow-design-reboot",
+      "kind": "video",
+      "title": "Design Reboot",
+      "by": "Jonathan Blow",
+      "year": 2007,
+      "evidence": "heuristic",
+      "note": { "it": "Una critica dei sistemi di ricompensa, e di cosa i giochi insegnano a chi li gioca.", "en": "A critique of reward systems, and of what games teach the people who play them." }
+    },
+    {
+      "id": "librande-one-page",
+      "kind": "video",
+      "title": "One-Page Designs",
+      "by": "Stone Librande",
+      "year": 2010,
+      "publisher": "GDC",
+      "evidence": "heuristic",
+      "note": { "it": "Documenti di design visivi, in una sola pagina: l'alternativa al GDD monolitico.", "en": "Visual, one-page design documents: the alternative to the monolithic GDD." }
+    },
+    {
+      "id": "ambinder-valve",
+      "kind": "video",
+      "title": "Valve's Approach to Playtesting: The Application of Empiricism",
+      "by": "Mike Ambinder",
+      "year": 2009,
+      "publisher": "GDC",
+      "evidence": "heuristic",
+      "note": { "it": "Come Valve usa playtest e dati: ipotesi, osservazione, misura.", "en": "How Valve uses playtests and data: hypothesis, observation, measurement." }
+    },
+    {
+      "id": "botw-gdc",
+      "kind": "video",
+      "title": "Breaking Conventions with The Legend of Zelda: Breath of the Wild",
+      "by": "Hidemaro Fujibayashi, Satoru Takizawa, Takuhiro Dohta",
+      "year": 2017,
+      "publisher": "GDC",
+      "evidence": "heuristic",
+      "note": { "it": "Il «motore chimico» di Breath of the Wild: regole semplici che interagiscono tra loro.", "en": "Breath of the Wild's “chemistry engine”: simple rules that interact with each other." }
+    },
+    {
+      "id": "levine-narrative-legos",
+      "kind": "video",
+      "title": "Narrative Legos",
+      "by": "Ken Levine",
+      "year": 2014,
+      "publisher": "GDC",
+      "evidence": "heuristic",
+      "note": { "it": "Mattoncini narrativi: personaggi e passioni come sistema, per storie che si ricombinano.", "en": "Narrative building blocks: characters and passions as a system, for stories that recombine." }
+    },
+    {
+      "id": "sylvester-rimworld",
+      "kind": "video",
+      "title": "RimWorld: Contrarian, Ridiculous, and Impossible Game Design Methods",
+      "by": "Tynan Sylvester",
+      "year": 2017,
+      "publisher": "GDC",
+      "evidence": "heuristic",
+      "note": { "it": "Metodi di design controcorrente dal creatore di un generatore di storie.", "en": "Contrarian design methods from the creator of a story generator." }
+    },
+    {
+      "id": "into-the-breach-postmortem",
+      "kind": "video",
+      "title": "Into the Breach Design Postmortem",
+      "by": "Matthew Davis, Justin Ma",
+      "year": 2019,
+      "publisher": "GDC",
+      "evidence": "heuristic",
+      "note": { "it": "Come si progetta una tattica a informazione quasi perfetta, e cosa si è dovuto tagliare.", "en": "How to design near-perfect-information tactics, and what had to be cut." }
+    },
+    {
+      "id": "sts-metrics",
+      "kind": "video",
+      "title": "Slay the Spire: Metrics Driven Design and Balance",
+      "by": "Anthony Giovannetti",
+      "year": 2019,
+      "publisher": "GDC",
+      "evidence": "heuristic",
+      "note": { "it": "Come Slay the Spire ha usato i dati dei giocatori per bilanciare carte e personaggi.", "en": "How Slay the Spire used player data to balance cards and characters." }
+    },
+    {
+      "id": "hecker-gingold-prototyping",
+      "kind": "video",
+      "title": "Advanced Prototyping",
+      "by": "Chris Hecker, Chaim Gingold",
+      "year": 2006,
+      "publisher": "GDC",
+      "evidence": "heuristic",
+      "note": { "it": "Come e perché prototipare velocemente, con esempi dallo sviluppo di Spore.", "en": "How and why to prototype fast, with examples from Spore's development." }
+    },
+    {
+      "id": "gmtk-3d-world",
+      "kind": "video",
+      "title": "Super Mario 3D World's 4 Step Level Design",
+      "by": "Game Maker's Toolkit",
+      "evidence": "heuristic",
+      "note": { "it": "Introduzione, sviluppo, svolta, conclusione: come un livello insegna una meccanica.", "en": "Introduction, development, twist, conclusion: how a level teaches a mechanic." }
+    },
+    {
+      "id": "gmtk-disability",
+      "kind": "video",
+      "title": "Designing for Disability",
+      "by": "Game Maker's Toolkit",
+      "evidence": "heuristic",
+      "note": { "it": "Una serie che analizza l'accessibilità per tipo di disabilità, con esempi concreti.", "en": "A series that looks at accessibility by type of disability, with concrete examples." }
+    },
+    {
+      "id": "ec-aesthetics",
+      "kind": "video",
+      "title": "Aesthetics of Play",
+      "by": "Extra Credits",
+      "evidence": "heuristic",
+      "note": { "it": "Le estetiche di MDA spiegate in pochi minuti, e perché potrebbero sostituire i generi.", "en": "MDA's aesthetics explained in a few minutes, and why they could replace genres." }
+    },
+    {
+      "id": "ec-perfect-imbalance",
+      "kind": "video",
+      "title": "Perfect Imbalance",
+      "by": "Extra Credits",
+      "evidence": "heuristic",
+      "note": { "it": "Perché uno sbilanciamento controllato può rendere un gioco più vivo.", "en": "Why controlled imbalance can make a game more alive." }
+    },
+    {
+      "id": "ec-skinner-box",
+      "kind": "video",
+      "title": "The Skinner Box",
+      "by": "Extra Credits",
+      "evidence": "heuristic",
+      "note": { "it": "Condizionamento operante e ricompense: il meccanismo dietro i loop di compulsione.", "en": "Operant conditioning and rewards: the mechanism behind compulsion loops." }
+    },
+    {
+      "id": "csikszentmihalyi-ted",
+      "kind": "video",
+      "title": "Flow, the secret to happiness",
+      "by": "Mihaly Csikszentmihalyi",
+      "year": 2004,
+      "publisher": "TED",
+      "url": "https://www.ted.com/talks/mihaly_csikszentmihalyi_flow_the_secret_to_happiness",
+      "evidence": "research",
+      "note": { "it": "Il flow raccontato da chi l'ha studiato: venti minuti, nessun gioco, molto utile.", "en": "Flow explained by the person who studied it: twenty minutes, no games, very useful." }
+    },
+    {
+      "id": "yt-input-output",
+      "kind": "video",
+      "title": "Input vs output randomness",
+      "evidence": "heuristic",
+      "note": { "it": "Una ricerca: molti designer e canali spiegano la distinzione tra casualità in input e in output. Parti da qui.", "en": "A search: many designers and channels explain the difference between input and output randomness. Start here." }
+    },
+
+    {
+      "id": "ch-gmtk",
+      "kind": "channel",
+      "title": "Game Maker's Toolkit",
+      "by": "Mark Brown",
+      "url": "https://www.youtube.com/@GMTK",
+      "note": { "it": "Analisi chiare e ben documentate di meccaniche, livelli e accessibilità.", "en": "Clear, well-researched breakdowns of mechanics, levels and accessibility." }
+    },
+    {
+      "id": "ch-gdc",
+      "kind": "channel",
+      "title": "GDC",
+      "by": "Game Developers Conference",
+      "url": "https://www.youtube.com/@Gdconf",
+      "note": { "it": "Centinaia di talk della Game Developers Conference, postmortem compresi.", "en": "Hundreds of talks from the Game Developers Conference, postmortems included." }
+    },
+    {
+      "id": "ch-tyroller",
+      "kind": "channel",
+      "title": "Jonas Tyroller",
+      "url": "https://www.youtube.com/@JonasTyroller",
+      "note": { "it": "Sviluppo indie raccontato da dentro: iterazione, difficoltà, playtest.", "en": "Indie development from the inside: iteration, difficulty, playtesting." }
+    },
+    {
+      "id": "ch-sakurai",
+      "kind": "channel",
+      "title": "Masahiro Sakurai on Creating Games",
+      "by": "Masahiro Sakurai",
+      "url": "https://www.youtube.com/@sora_sakurai_en",
+      "note": { "it": "Brevi lezioni dal creatore di Kirby e Smash Bros. su bilanciamento, rischio e ricompensa, mestiere.", "en": "Short lessons from the creator of Kirby and Smash Bros. on balance, risk and reward, craft." }
+    },
+    {
+      "id": "ch-extra-credits",
+      "kind": "channel",
+      "title": "Extra Credits",
+      "url": "https://www.youtube.com/@extracredits",
+      "note": { "it": "Concetti di design spiegati in pochi minuti: ottimi come punto di partenza.", "en": "Design concepts explained in a few minutes: great as a starting point." }
+    },
+    {
+      "id": "ch-fractal",
+      "kind": "channel",
+      "title": "Fractal Philosophy",
+      "note": { "it": "Video di analisi del game design, utili per ragionare su fantasy, tema e sistemi.", "en": "Game design analysis videos, useful for thinking about fantasy, theme and systems." }
+    },
+    {
+      "id": "ch-architect",
+      "kind": "channel",
+      "title": "Architect of Games",
+      "by": "Adam Millard",
+      "note": { "it": "Saggi video su design e teoria del gioco.", "en": "Video essays on game design and game theory." }
+    },
+    {
+      "id": "ch-susd",
+      "kind": "channel",
+      "title": "Shut Up & Sit Down",
+      "note": { "it": "Recensioni di giochi da tavolo divertenti e lucide: un buon modo per scoprire cosa provare.", "en": "Funny, sharp board game reviews: a good way to find what to try next." }
+    },
+
+    {
+      "id": "ncase-trust",
+      "kind": "web",
+      "title": "The Evolution of Trust",
+      "by": "Nicky Case",
+      "year": 2017,
+      "url": "https://ncase.me/trust/",
+      "evidence": "theory",
+      "note": { "it": "Un gioco interattivo sulla teoria dei giochi e sulla fiducia. Mezz'ora ben spesa.", "en": "An interactive game about game theory and trust. Half an hour well spent." }
+    },
+    {
+      "id": "gag",
+      "kind": "web",
+      "title": "Game Accessibility Guidelines",
+      "url": "https://gameaccessibilityguidelines.com/",
+      "note": { "it": "Linee guida pratiche, divise per livello di impegno e tipo di disabilità.", "en": "Practical guidelines, organised by effort level and type of disability." }
+    },
+    {
+      "id": "ablegamers",
+      "kind": "web",
+      "title": "AbleGamers",
+      "url": "https://ablegamers.org/",
+      "note": { "it": "Un'associazione che lavora per rendere i giochi accessibili, con risorse per chi sviluppa.", "en": "A charity working to make games accessible, with resources for developers." }
+    },
+    {
+      "id": "can-i-play-that",
+      "kind": "web",
+      "title": "Can I Play That?",
+      "url": "https://caniplaythat.com/",
+      "note": { "it": "Recensioni di giochi dal punto di vista dell'accessibilità.", "en": "Game reviews from an accessibility perspective." }
+    },
+    {
+      "id": "quantic-foundry",
+      "kind": "web",
+      "title": "Quantic Foundry — Gamer Motivation Model",
+      "url": "https://quanticfoundry.com/",
+      "evidence": "research",
+      "note": { "it": "Una tassonomia delle motivazioni con alle spalle un'analisi fattoriale su larga scala: l'alternativa seria a Bartle.", "en": "A taxonomy of motivations backed by a large-scale factor analysis: the serious alternative to Bartle." }
+    },
+    {
+      "id": "bgg",
+      "kind": "web",
+      "title": "BoardGameGeek",
+      "url": "https://boardgamegeek.com/",
+      "note": { "it": "Il database dei giochi da tavolo: regolamenti, recensioni, forum.", "en": "The board game database: rulebooks, reviews, forums." }
+    },
+    {
+      "id": "gdc-vault",
+      "kind": "web",
+      "title": "GDC Vault",
+      "url": "https://gdcvault.com/",
+      "note": { "it": "L'archivio ufficiale dei talk GDC, molti gratuiti.", "en": "The official archive of GDC talks, many of them free." }
+    },
+    {
+      "id": "machinations",
+      "kind": "web",
+      "title": "Machinations",
+      "url": "https://machinations.io/",
+      "note": { "it": "Uno strumento per simulare economie e loop prima di costruirli.", "en": "A tool for simulating economies and loops before you build them." }
+    },
+    {
+      "id": "twine",
+      "kind": "web",
+      "title": "Twine",
+      "url": "https://twinery.org/",
+      "note": { "it": "Lo strumento più semplice per prototipare storie interattive.", "en": "The simplest tool for prototyping interactive stories." }
+    },
+    {
+      "id": "puzzlescript",
+      "kind": "web",
+      "title": "PuzzleScript",
+      "url": "https://www.puzzlescript.net/",
+      "note": { "it": "Un motore minimale per prototipare giochi a griglia in poche ore, dal browser.", "en": "A minimal engine for prototyping grid-based games in a few hours, in the browser." }
+    },
+    {
+      "id": "game-balance-concepts",
+      "kind": "web",
+      "title": "Game Balance Concepts",
+      "by": "Ian Schreiber",
+      "year": 2010,
+      "url": "https://gamebalanceconcepts.wordpress.com/",
+      "evidence": "heuristic",
+      "note": { "it": "Un corso online gratuito sul bilanciamento, lezione per lezione.", "en": "A free online course on game balance, lesson by lesson." }
+    },
+    {
+      "id": "how-to-market",
+      "kind": "web",
+      "title": "How To Market A Game",
+      "by": "Chris Zukowski",
+      "url": "https://howtomarketagame.com/",
+      "evidence": "heuristic",
+      "note": { "it": "Marketing per giochi indipendenti basato sui dati: wishlist, Steam, pagine del negozio.", "en": "Data-driven marketing for indie games: wishlists, Steam, store pages." }
+    },
+    {
+      "id": "emily-short",
+      "kind": "web",
+      "title": "Emily Short's Interactive Storytelling",
+      "by": "Emily Short",
+      "url": "https://emshort.blog/",
+      "evidence": "heuristic",
+      "note": { "it": "Il blog di riferimento sulla narrativa interattiva.", "en": "The reference blog on interactive fiction and narrative." }
+    },
+    {
+      "id": "darkpattern-games",
+      "kind": "web",
+      "title": "DarkPattern.games",
+      "url": "https://www.darkpattern.games/",
+      "note": { "it": "Un catalogo di dark pattern nei giochi mobile, con esempi.", "en": "A catalogue of dark patterns in mobile games, with examples." }
+    }
+  ]
+}

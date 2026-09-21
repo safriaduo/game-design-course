@@ -1,0 +1,15 @@
+# OS / OneDrive
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+*.tmp
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Node (no dependencies are needed, but just in case)
+node_modules/
+npm-debug.log*
