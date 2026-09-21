@@ -113,6 +113,17 @@ for (const [id, topic] of topics) {
   if (!GLYPHS[topic.glyph]) error(where, `unknown glyph "${topic.glyph}" (use: ${Object.keys(GLYPHS).join(', ')})`);
   for (const field of ['title', 'lead']) if (!topic[field]) error(where, `missing "${field}"`);
   (topic.games || []).forEach((g) => games.has(g) || error(where, `unknown game "${g}" (add it to games.json)`));
+  (topic.examples || []).forEach((ex, i) => {
+    const at = `${where} › examples[${i}]`;
+    if (ex.game && !games.has(ex.game)) error(at, `unknown game "${ex.game}" (add it to games.json)`);
+    if (!ex.game && !ex.title) error(at, 'needs a "game" id or a "title"');
+    if (!ex.text && !ex.game) error(at, 'missing "text"');
+  });
+  (topic.exercises || []).forEach((ex, i) => {
+    if (!ex.text) error(`${where} › exercises[${i}]`, 'missing "text"');
+  });
+  if (!topic.examples?.length && !topic.games?.length) warn(where, 'no examples');
+  if (!topic.exercises?.length) warn(where, 'no exercises');
   (topic.sources || []).forEach((s) => sources.has(s) || error(where, `unknown source "${s}" (add it to library.json)`));
   (topic.related || []).forEach((r) => {
     if (r === id) warn(where, 'a topic is related to itself');
@@ -122,12 +133,10 @@ for (const [id, topic] of topics) {
 
 /* ---------- games & sources ---------- */
 
-const referencedGames = new Set(topicsFile.topics.flatMap((t) => t.games || []));
 for (const [id, game] of games) {
   const where = `games.json › ${id}`;
   if (!game.name) error(where, 'missing "name"');
   if (!GAME_KINDS.includes(game.kind)) error(where, `unknown kind "${game.kind}" (use: ${GAME_KINDS.join(', ')})`);
-  if (!referencedGames.has(id)) warn(where, 'not used by any topic (it still appears on the Games page)');
 }
 
 for (const [id, src] of sources) {
@@ -177,7 +186,7 @@ const dynamic = [
   ...['all', ...GAME_KINDS].map((k) => `games.kind.${k}`),
   ...GAME_KINDS.map((k) => `games.kind1.${k}`),
   ...['topics', 'games', 'sources', 'projects'].map((k) => `home.box.${k}`),
-  ...['key', 'mistakes', 'games', 'sources', 'related'].map((k) => `topic.${k}`),
+  ...['key', 'mistakes', 'examples', 'exercises', 'sources', 'related'].map((k) => `topic.${k}`),
 ];
 for (const key of dynamic) if (!(key in ui)) error('ui.json', `missing key "${key}"`);
 

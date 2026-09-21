@@ -553,6 +553,37 @@ a.card:hover .card-art .glyph { transform: scale(1.07) rotate(-4deg); }
 .token strong { font-family: var(--font-display); font-weight: 700; font-size: 1.08rem; letter-spacing: -.01em; }
 .token small { display: block; margin-top: 4px; font-size: .88rem; line-height: 1.45; color: var(--ink-2); }
 
+.exercises { list-style: none; margin: 0; padding: 0 var(--shadow) var(--shadow) 0; display: grid; gap: 18px; }
+.exercise {
+  padding: 18px 20px 20px;
+  border: 1.5px solid var(--line); border-radius: var(--radius); background: var(--paper-2);
+  box-shadow: 4px 4px 0 var(--fam);
+}
+.exercise-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 4px 11px; border-radius: 999px; background: var(--ink); color: var(--paper);
+  font-family: var(--font-mono); font-size: .72rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase;
+}
+.exercise-badge .icon { width: 14px; height: 14px; }
+.exercise p { margin: 12px 0 0; }
+.exercise ul { margin: 10px 0 0; padding-left: 22px; }
+.exercise ul li { margin: 2px 0; }
+.exercise .bonus {
+  display: flex; align-items: baseline; gap: 10px;
+  margin-top: 16px; padding-top: 14px; border-top: 1.5px dashed var(--line-soft); color: var(--ink-2);
+}
+.bonus-tag {
+  flex: none; padding: 2px 8px; border-radius: 4px; background: #F0AC16; color: #16171B;
+  font-family: var(--font-mono); font-size: .68rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase;
+}
+
+.deeper-title {
+  display: flex; align-items: center; gap: 9px; margin: 28px 0 4px;
+  font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; letter-spacing: -.01em;
+}
+.section-title + .deeper-title { margin-top: 0; }
+.deeper-title .icon { width: 18px; height: 18px; color: var(--fam); }
+
 /* ---------- sources ---------- */
 
 .sources { list-style: none; margin: 0; padding: 0; border-top: 1.5px solid var(--line-soft); }

@@ -53,6 +53,16 @@ export const GLYPHS = {
   // a coin on a line: the bait
   bait: '<path d="M60 4 V28" class="sb" style="stroke-width:3"/><circle cx="60" cy="68" r="40" class="a"/><circle cx="60" cy="68" r="30" class="sb" style="stroke-width:2;opacity:.3"/><rect x="48" y="56" width="24" height="24" class="c"/>',
   tower: '<rect x="16" y="82" width="88" height="24" class="b"/><rect x="32" y="56" width="56" height="24" class="a"/><path d="M60 10 L86 54 L34 54 Z" class="a" style="opacity:.6"/>',
+  // an idea: a bulb with a remixed block inside
+  spark: '<path d="M60 4 V13 M21 19 L28 26 M99 19 L92 26 M8 52 H17 M103 52 H112" class="sb" style="stroke-width:4"/><circle cx="60" cy="52" r="29" class="a"/><rect x="49" y="41" width="22" height="22" class="c" transform="rotate(45 60 52)"/><rect x="46" y="85" width="28" height="10" rx="2" class="b"/><rect x="51" y="99" width="18" height="9" rx="2" class="b"/>',
+  // four areas of the mind: two in flow, two at rest
+  zones: '<path d="M56 56 H14 A42 42 0 0 1 56 14 Z" class="a"/><path d="M64 56 V14 A42 42 0 0 1 106 56 Z" class="g0"/><path d="M64 64 H106 A42 42 0 0 1 64 106 Z" class="b"/><path d="M56 64 V106 A42 42 0 0 1 14 64 Z" class="g0"/>',
+  // a level: start, a telegraphed hazard, the goal
+  map: '<path d="M25 80 V56 H62 V27 H80" class="sb" stroke-dasharray="7 7"/><rect x="10" y="80" width="30" height="30" class="b"/><path d="M76 66 L90 90 H62 Z" class="a" style="opacity:.55"/><rect x="80" y="12" width="30" height="30" class="a"/>',
+  // a speech bubble: the pitch
+  bubble: '<path d="M12 16 H108 V80 H52 L30 104 V80 H12 Z" class="a"/><rect x="26" y="32" width="68" height="9" class="c"/><rect x="26" y="52" width="44" height="9" class="c"/><circle cx="96" cy="100" r="9" class="b"/>',
+  // a tank with a tap and a drain: taps and sinks
+  tank: '<path d="M18 12 H54 V28" class="sb" style="stroke-width:7"/><circle cx="54" cy="40" r="5" class="a"/><path d="M22 48 V100 H98 V48" class="sb"/><rect x="25" y="68" width="70" height="30" class="a"/><path d="M60 100 V114" class="sb" style="stroke-width:7"/>',
   square: '<rect x="24" y="24" width="72" height="72" class="a"/>',
 };
 
@@ -115,7 +125,10 @@ const ICONS = {
   arrow: '<path d="M4 12 H20 M14 6 L20 12 L14 18"/>',
   back: '<path d="M20 12 H4 M10 6 L4 12 L10 18"/>',
   external: '<path d="M14 4 H20 V10 M20 4 L11 13 M18 14 V20 H4 V6 H10"/>',
-  github: '<path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/>',
+  pencil: '<path d="M4 20 L5 15 L16 4 L20 8 L9 19 Z"/><path d="M14 6 L18 10"/>',
+  book: '<path d="M4 5 A2 2 0 0 1 6 3 H20 V17 H6 A2 2 0 0 0 4 19 Z"/><path d="M4 19 A2 2 0 0 0 6 21 H20 V17"/>',
+  play: '<rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M10 9 L15 12 L10 15 Z"/>',
+  github:'<path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/>',
 };
 
 export function icon(name) {

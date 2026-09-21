@@ -63,11 +63,15 @@ Nei testi puoi usare un po' di Markdown: `*corsivo*`, `**grassetto**`, `` `codic
 | `id` | identificativo nell'URL, minuscolo-con-trattini |
 | `family` | la famiglia (il "seme"): `foundations`, `method`, `lenses`, `systems`, `experience`, `craft` |
 | `glyph` | la forma disegnata sulla carta (vedi `GLYPHS` in `assets/js/glyphs.js`) |
-| `title`, `lead` | titolo e frase d'apertura |
-| `key`, `mistakes` | punti chiave ed errori tipici (liste) |
-| `games` | id dei giochi da `games.json` |
-| `sources` | id delle fonti da `library.json` |
+| `title`, `lead` | titolo e introduzione (2 frasi) |
+| `key` | punti chiave: 3–5, un'idea per punto, parole semplici |
+| `mistakes` | errori tipici: 2–3, brevi |
+| `examples` | esempi: `{ "game": "<id da games.json>", "text": … }`, oppure `{ "title": …, "text": … }` se non è un gioco |
+| `exercises` | esercizi: `{ "text": …, "list": [ … ], "bonus": … }` (`list` e `bonus` sono facoltativi) |
+| `sources` | id delle fonti da `library.json`: al massimo 2 da leggere e 3 da guardare. Il sito le divide da solo in "Da leggere" (libri, articoli, siti) e "Da guardare" (video, canali) |
 | `related` | id di altri temi |
+
+Stile: niente nomi di autori nei punti chiave, e un termine tecnico solo se si usa davvero nel mestiere, spiegato la prima volta tra parentesi. Tutto il resto sta nella Biblioteca.
 
 **Una fonte** (libro, paper, video…): aggiungila a `content/library.json` e metti il suo `id` nei `sources` dei temi. Campi utili:
 
@@ -75,7 +79,7 @@ Nei testi puoi usare un po' di Markdown: `*corsivo*`, `**grassetto**`, `` `codic
 - `evidence`: che tipo di conoscenza è — `research` (ricerca empirica), `theory` (teoria accademica), `heuristic` (euristica di mestiere). Si può omettere.
 - `url`: il link diretto. **Se manca**, il sito crea un link di ricerca (YouTube per i video, Google Scholar per i paper, Open Library per i libri) e lo segnala con una lente. Per molti talk il link è una ricerca: quando trovi il video giusto, basta aggiungere `"url"`.
 
-**Un gioco**: `content/games.json`, con `kind` = `board`, `video` o `classic`, e una `note` su cosa insegna. Poi aggiungi l'`id` ai `games` dei temi.
+**Un gioco**: `content/games.json`, con `kind` = `board`, `video` o `classic`, e una `note` su cosa insegna. Per citarlo in un tema, aggiungi un esempio con `"game": "<id>"` negli `examples` del tema: la pagina Giochi mostrerà da sola in quali temi compare.
 
 **Un progetto degli studenti**:
 
@@ -148,7 +152,7 @@ Any text in `content/*.json` is either a plain string (same in every language) o
 ### Editing content
 
 - **Teacher details:** `content/site.json` → `teacher`.
-- **Topics:** `content/topics.json` (fields described in the Italian section above: `family`, `glyph`, `key`, `mistakes`, `games`, `sources`, `related`).
+- **Topics:** `content/topics.json`. Each page is intro (`lead`), key points (`key`), common mistakes (`mistakes`), examples (`examples`, each pointing at a game in `games.json`), exercises (`exercises`, with optional `list` and `bonus`), sources (`sources`, split automatically into "Read" and "Watch") and `related` topics. Keep it plain: 3–5 key points, no author names, jargon only when it's real industry vocabulary.
 - **Sources:** `content/library.json`. `kind` is `book`, `paper`, `video`, `channel` or `web`; `evidence` is `research`, `theory` or `heuristic`. Without a `url`, the site links to a search (YouTube, Google Scholar or Open Library) and marks it with a magnifier — add a `url` once you have the exact link.
 - **Games:** `content/games.json` (`kind`: `board`, `video`, `classic`).
 - **Student projects:** photos in `assets/img/showcase/`, entry in `content/students.json` (example above). Entries with `"placeholder": true` are samples to delete.

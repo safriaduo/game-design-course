@@ -364,6 +364,182 @@
         "it": "Nessun dado, solo negoziazione e tradimento: il sistema sono le persone.",
         "en": "No dice, only negotiation and betrayal: the people are the system."
       }
+    },
+    {
+      "id": "connect-four",
+      "name": { "it": "Forza 4", "en": "Connect Four" },
+      "kind": "board",
+      "year": 1974,
+      "designer": "Howard Wexler, Ned Strongin",
+      "note": {
+        "it": "Regole che si spiegano in dieci secondi e una profondità sorprendente.",
+        "en": "Rules you can explain in ten seconds, and surprising depth."
+      }
+    },
+    {
+      "id": "uno",
+      "name": "Uno",
+      "kind": "board",
+      "year": 1971,
+      "designer": "Merle Robbins",
+      "note": {
+        "it": "Scelte semplici su colore e numero, e carte speciali che cambiano la partita in un attimo: un feedback fortissimo.",
+        "en": "Simple choices about colour and number, and special cards that change the game in an instant: very strong feedback."
+      }
+    },
+    {
+      "id": "ticket-to-ride",
+      "name": "Ticket to Ride",
+      "kind": "board",
+      "year": 2004,
+      "designer": "Alan R. Moon",
+      "note": {
+        "it": "Colori e icone leggibilissimi: si impara guardando la plancia.",
+        "en": "Extremely readable colours and icons: you learn it by looking at the board."
+      }
+    },
+    {
+      "id": "power-grid",
+      "name": "Power Grid",
+      "kind": "board",
+      "year": 2004,
+      "designer": "Friedemann Friese",
+      "note": {
+        "it": "Aste e tempismo: ogni soldo speso in un posto manca da un'altra parte.",
+        "en": "Auctions and timing: every coin spent in one place is missing somewhere else."
+      }
+    },
+    {
+      "id": "dominion",
+      "name": "Dominion",
+      "kind": "board",
+      "year": 2008,
+      "designer": "Donald X. Vaccarino",
+      "note": {
+        "it": "Il primo deckbuilding: costruisci il tuo mazzo mentre giochi.",
+        "en": "The first deck-builder: you build your deck while you play."
+      }
+    },
+    {
+      "id": "league-of-legends",
+      "name": "League of Legends",
+      "kind": "video",
+      "year": 2009,
+      "designer": "Riot Games",
+      "note": {
+        "it": "Chi vince gli scontri guadagna oro e diventa più forte: l'effetto valanga in azione.",
+        "en": "Whoever wins fights earns gold and gets stronger: the snowball effect in action."
+      }
+    },
+    {
+      "id": "mario-kart",
+      "name": "Mario Kart",
+      "kind": "video",
+      "year": 1992,
+      "designer": "Nintendo",
+      "note": {
+        "it": "Chi è indietro riceve gli oggetti migliori: l'elastico che tiene tutti in gara.",
+        "en": "Whoever is behind gets the best items: the rubber band that keeps everyone in the race."
+      }
+    },
+    {
+      "id": "street-fighter-iv",
+      "name": "Street Fighter IV",
+      "kind": "video",
+      "year": 2008,
+      "designer": "Capcom",
+      "note": {
+        "it": "La barra Ultra si carica subendo colpi: chi è in svantaggio ha un'arma per rimontare.",
+        "en": "The Ultra meter fills as you take hits: whoever is losing gets a tool for a comeback."
+      }
+    },
+    {
+      "id": "xcom",
+      "name": "XCOM: Enemy Unknown",
+      "kind": "video",
+      "year": 2012,
+      "designer": "Firaxis Games",
+      "note": {
+        "it": "Scegli il bersaglio, poi decide la percentuale: casualità dopo la scelta, tensione altissima.",
+        "en": "You pick the target, then the percentage decides: randomness after the choice, very high tension."
+      }
+    },
+    {
+      "id": "dead-of-winter",
+      "name": "Dead of Winter",
+      "kind": "board",
+      "year": 2014,
+      "designer": "Jonathan Gilmour, Isaac Vega",
+      "note": {
+        "it": "Le carte crocevia raccontano piccole storie che obbligano a scegliere.",
+        "en": "Crossroads cards tell small stories that force you to choose."
+      }
+    },
+    {
+      "id": "dark-souls",
+      "name": "Dark Souls",
+      "kind": "video",
+      "year": 2011,
+      "designer": "FromSoftware",
+      "note": {
+        "it": "Combattimenti che chiedono tutta la tua attenzione, e una storia che si trova nei momenti di calma.",
+        "en": "Fights that demand all your attention, and a story you find in the quiet moments."
+      }
+    },
+    {
+      "id": "minecraft",
+      "name": "Minecraft",
+      "kind": "video",
+      "year": 2011,
+      "designer": "Mojang",
+      "note": {
+        "it": "In modalità creativa è un giocattolo, in sopravvivenza diventa un gioco.",
+        "en": "In creative mode it's a toy; in survival it becomes a game."
+      }
+    },
+    {
+      "id": "balatro",
+      "name": "Balatro",
+      "kind": "video",
+      "year": 2024,
+      "designer": "LocalThunk",
+      "note": {
+        "it": "Il poker trasformato in un roguelike: un gioco che tutti conoscono, su un altro medium e mescolato con un altro genere.",
+        "en": "Poker turned into a roguelike: a game everyone knows, moved to another medium and mixed with another genre."
+      }
+    },
+    {
+      "id": "powerwash-simulator",
+      "name": "PowerWash Simulator",
+      "kind": "video",
+      "year": 2022,
+      "designer": "FuturLab",
+      "note": {
+        "it": "Una fantasy insolita e soddisfacente: pulire. Il gioco nasce dalla sensazione.",
+        "en": "An unusual, satisfying fantasy: cleaning. The game grows out of the feeling."
+      }
+    },
+    {
+      "id": "untitled-goose-game",
+      "name": "Untitled Goose Game",
+      "kind": "video",
+      "year": 2019,
+      "designer": "House House",
+      "note": {
+        "it": "Un gancio che sta in una riga: sei un'oca dispettosa in un paesino inglese.",
+        "en": "A hook that fits in one line: you're a troublemaking goose in an English village."
+      }
+    },
+    {
+      "id": "gloomhaven",
+      "name": "Gloomhaven",
+      "kind": "board",
+      "year": 2017,
+      "designer": "Isaac Childres",
+      "note": {
+        "it": "Un gioco da tavolo a scenari: ogni scenario è un livello, con obiettivi, nemici e regole speciali.",
+        "en": "A scenario-based board game: each scenario is a level, with goals, enemies and special rules."
+      }
     }
   ]
 }

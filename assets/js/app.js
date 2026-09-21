@@ -121,10 +121,17 @@ function indexContent(data) {
     map.get(key).push(topic);
   };
   for (const topic of data.topics.topics) {
-    (topic.games || []).forEach((id) => add(idx.topicsByGame, id, topic));
+    const games = new Set(examplesOf(topic).map((ex) => ex.game).filter(Boolean));
+    games.forEach((id) => add(idx.topicsByGame, id, topic));
     (topic.sources || []).forEach((id) => add(idx.topicsBySource, id, topic));
   }
   return idx;
+}
+
+/** A topic's examples. Older content may still list plain game ids in "games". */
+function examplesOf(topic) {
+  if (topic.examples) return topic.examples;
+  return (topic.games || []).map((game) => ({ game }));
 }
 
 const familyOf = (topic) => state.idx.families.get(topic?.family) || { shape: 'square', color: 'ink', name: '' };
@@ -403,8 +410,9 @@ function viewHome() {
 
 function topicHaystack(topic) {
   const fam = familyOf(topic);
-  const games = (topic.games || []).map((id) => L(state.idx.games.get(id)?.name));
-  return norm([L(topic.title), L(topic.lead), ...list(topic.key), ...list(topic.mistakes), L(fam.name), ...games].join(' '));
+  const examples = examplesOf(topic).flatMap((ex) => [L(state.idx.games.get(ex.game)?.name), L(ex.title), L(ex.text)]);
+  const exercises = (topic.exercises || []).flatMap((ex) => [L(ex.text), L(ex.bonus)]);
+  return norm([L(topic.title), L(topic.lead), ...list(topic.key), ...list(topic.mistakes), L(fam.name), ...examples, ...exercises].join(' '));
 }
 
 function viewTopics(_, params) {
@@ -469,10 +477,36 @@ function viewTopic(id) {
   const fam = familyOf(topic);
   const key = list(topic.key);
   const mistakes = list(topic.mistakes);
-  const games = (topic.games || []).map((g) => state.idx.games.get(g)).filter(Boolean);
+  const examples = examplesOf(topic);
+  const exercises = topic.exercises || [];
   const sources = (topic.sources || []).map((s) => state.idx.sources.get(s)).filter(Boolean);
+  const toRead = sources.filter((s) => !['video', 'channel'].includes(s.kind));
+  const toWatch = sources.filter((s) => ['video', 'channel'].includes(s.kind));
   const related = (topic.related || []).map((r) => state.idx.topics.get(r)).filter(Boolean);
   const section = (name, body) => `<section class="section"><h2 class="section-title">${esc(t(`topic.${name}`))}</h2>${body}</section>`;
+
+  const example = (ex) => {
+    const game = ex.game ? state.idx.games.get(ex.game) : null;
+    const text = L(ex.text) || L(game?.note);
+    const body = `${game ? gameIcon(game.kind) : '<span></span>'}
+      <span><strong>${esc(game ? L(game.name) : L(ex.title))}</strong>${game && gameMeta(game) ? ` <span class="meta">${gameMeta(game)}</span>` : ''}
+      <small>${md(text, { links: !game })}</small></span>`;
+    return game
+      ? `<li><a class="token" href="${href('games', '', { focus: game.id })}">${body}</a></li>`
+      : `<li><div class="token">${body}</div></li>`;
+  };
+
+  const exercise = (ex, i) => `<li class="exercise">
+    <span class="exercise-badge">${icon('pencil')}${esc(t('topic.exercise'))}${exercises.length > 1 ? ` ${i + 1}` : ''}</span>
+    ${list(ex.text).map((p) => `<p>${md(p)}</p>`).join('')}
+    ${ex.list ? `<ul>${list(ex.list).map((item) => `<li>${md(item)}</li>`).join('')}</ul>` : ''}
+    ${ex.bonus ? `<p class="bonus"><span class="bonus-tag">${esc(t('topic.bonus'))}</span><span>${md(L(ex.bonus))}</span></p>` : ''}
+  </li>`;
+
+  const deeper = [
+    toRead.length ? `<h3 class="deeper-title">${icon('book')}${esc(t('topic.read'))}</h3><ul class="sources">${toRead.map((s) => sourceItem(s)).join('')}</ul>` : '',
+    toWatch.length ? `<h3 class="deeper-title">${icon('play')}${esc(t('topic.watch'))}</h3><ul class="sources">${toWatch.map((s) => sourceItem(s)).join('')}</ul>` : '',
+  ].join('');
 
   const html = `
   <div class="wrap">
@@ -497,14 +531,11 @@ function viewTopic(id) {
         ${mistakes.length ? `<section class="section pitfalls"><h2 class="section-title">${esc(t('topic.mistakes'))}</h2>
           <ul>${mistakes.map((m) => `<li><span>${md(m)}</span></li>`).join('')}</ul></section>` : ''}
 
-        ${games.length ? section('games', `<ul class="tokens">${games.map((g) => `<li>
-          <a class="token" href="${href('games', '', { focus: g.id })}">
-            ${gameIcon(g.kind)}
-            <span><strong>${esc(L(g.name))}</strong>${gameMeta(g) ? ` <span class="meta">${gameMeta(g)}</span>` : ''}
-            <small>${md(L(g.note), { links: false })}</small></span>
-          </a></li>`).join('')}</ul>`) : ''}
+        ${examples.length ? section('examples', `<ul class="tokens">${examples.map(example).join('')}</ul>`) : ''}
 
-        ${sources.length ? section('sources', `<ul class="sources">${sources.map((s) => sourceItem(s)).join('')}</ul>`) : ''}
+        ${exercises.length ? section('exercises', `<ol class="exercises">${exercises.map(exercise).join('')}</ol>`) : ''}
+
+        ${deeper ? section('sources', deeper) : ''}
 
         ${related.length ? section('related', `<ul class="deck deck--mini">${related.map(card).join('')}</ul>`) : ''}
       </div>

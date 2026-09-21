@@ -203,6 +203,15 @@
       "note": { "it": "Una visione netta e discutibile: giocattoli, puzzle, competizioni e giochi sono forme diverse.", "en": "A sharp, debatable view: toys, puzzles, contests and games are different forms." }
     },
     {
+      "id": "totten-level-design",
+      "kind": "book",
+      "title": "An Architectural Approach to Level Design",
+      "by": "Christopher W. Totten",
+      "year": 2014,
+      "evidence": "heuristic",
+      "note": { "it": "Il level design visto con gli occhi di un architetto: spazi, percorsi, ritmo.", "en": "Level design through an architect's eyes: spaces, paths, pacing." }
+    },
+    {
       "id": "blood-sweat-pixels",
       "kind": "book",
       "title": "Blood, Sweat, and Pixels",
@@ -220,6 +229,16 @@
       "note": { "it": "Un manuale pratico e leggero sul design dei videogiochi, dal concept al livello.", "en": "A practical, light-hearted guide to video game design, from concept to level." }
     },
 
+    {
+      "id": "door-problem",
+      "kind": "paper",
+      "title": "The Door Problem",
+      "by": "Liz England",
+      "year": 2014,
+      "url": "https://lizengland.com/blog/the-door-problem/",
+      "evidence": "heuristic",
+      "note": { "it": "Cosa fa un game designer, spiegato con una porta: la lettura più semplice per capirlo.", "en": "What a game designer does, explained with a door: the easiest read on the subject." }
+    },
     {
       "id": "mda",
       "kind": "paper",
@@ -549,6 +568,140 @@
       }
     },
     {
+      "id": "gmtk-job",
+      "kind": "video",
+      "title": "How to Get a Job as a Game Designer",
+      "by": "Game Maker's Toolkit",
+      "url": "https://www.youtube.com/watch?v=PMXf0e8n2Oc",
+      "evidence": "heuristic",
+      "note": { "it": "Come si entra nel mestiere e quali tipi di game designer esistono.", "en": "How to get into the job, and what kinds of game designer there are." }
+    },
+    {
+      "id": "gmtk-ico",
+      "kind": "video",
+      "title": "Ico, and Design by Subtraction",
+      "by": "Game Maker's Toolkit",
+      "url": "https://www.youtube.com/watch?v=AmSBIyT0ih0",
+      "evidence": "heuristic",
+      "note": { "it": "Meno meccaniche, più dinamiche: cosa succede quando un gioco toglie invece di aggiungere.", "en": "Fewer mechanics, more dynamics: what happens when a game takes away instead of adding." }
+    },
+    {
+      "id": "gmtk-feedback-loops",
+      "kind": "video",
+      "title": "How Games Use Feedback Loops",
+      "by": "Game Maker's Toolkit",
+      "url": "https://www.youtube.com/watch?v=H4kbJObhcHw",
+      "evidence": "heuristic",
+      "note": { "it": "Loop positivi e negativi spiegati con esempi di giochi famosi.", "en": "Positive and negative loops explained through well-known games." }
+    },
+    {
+      "id": "gmtk-engaged",
+      "kind": "video",
+      "title": "How to Keep Players Engaged (Without Being Evil)",
+      "by": "Game Maker's Toolkit",
+      "url": "https://www.youtube.com/watch?v=hbzGO_Qonu0",
+      "evidence": "heuristic",
+      "note": { "it": "Come tenere i giocatori coinvolti senza trucchi manipolatori: loop, obiettivi, ricompense.", "en": "How to keep players hooked without manipulative tricks: loops, goals, rewards." }
+    },
+    {
+      "id": "gmtk-balanced",
+      "kind": "video",
+      "title": "How Games Get Balanced",
+      "by": "Game Maker's Toolkit",
+      "url": "https://www.youtube.com/watch?v=WXQzdXPTb2A",
+      "evidence": "heuristic",
+      "note": { "it": "Come si bilancia davvero un gioco: numeri, test, dati.", "en": "How games actually get balanced: numbers, testing, data." }
+    },
+    {
+      "id": "gmtk-random",
+      "kind": "video",
+      "title": "The Two Types of Random in Game Design",
+      "by": "Game Maker's Toolkit",
+      "url": "https://www.youtube.com/watch?v=dwI5b-wRLic",
+      "evidence": "heuristic",
+      "note": { "it": "Casualità prima e dopo la scelta: la distinzione più utile per progettare l'incertezza.", "en": "Randomness before and after the choice: the most useful distinction for designing uncertainty." }
+    },
+    {
+      "id": "gmtk-negative-feedback",
+      "kind": "video",
+      "title": "Should Designers Listen to Negative Feedback?",
+      "by": "Game Maker's Toolkit",
+      "url": "https://www.youtube.com/watch?v=P05ONfLOqmY",
+      "evidence": "heuristic",
+      "note": { "it": "Come leggere le critiche dei giocatori senza farsi travolgere, e cosa farne.", "en": "How to read player criticism without being overwhelmed, and what to do with it." }
+    },
+    {
+      "id": "tyroller-perspective",
+      "kind": "video",
+      "title": "This Problem Changes Your Perspective On Game Dev",
+      "by": "Jonas Tyroller",
+      "url": "https://www.youtube.com/watch?v=o5K0uqhxgsE",
+      "evidence": "heuristic",
+      "note": { "it": "Un modo diverso di guardare allo sviluppo di un gioco, raccontato da uno sviluppatore indie.", "en": "A different way of looking at game development, from an indie developer." }
+    },
+    {
+      "id": "tyroller-button",
+      "kind": "video",
+      "title": "Can We Make This Button Fun To Press?",
+      "by": "Jonas Tyroller",
+      "url": "https://www.youtube.com/watch?v=7L1B5YaxxoA",
+      "evidence": "heuristic",
+      "note": { "it": "Quanto conta il feedback: un semplice pulsante diventa piacevole da premere.", "en": "How much feedback matters: a simple button becomes satisfying to press." }
+    },
+    {
+      "id": "veritasium-game-theory",
+      "kind": "video",
+      "title": "This game theory problem will change the way you see the world",
+      "by": "Veritasium",
+      "url": "https://www.youtube.com/watch?v=mScpHTIi-kM",
+      "evidence": "theory",
+      "note": { "it": "Il dilemma del prigioniero e perché conviene cooperare quando ci si rivede.", "en": "The prisoner's dilemma, and why cooperating pays off when you'll meet again." }
+    },
+    {
+      "id": "yee-motivations-gdc",
+      "kind": "video",
+      "title": "A Deep Dive into the 12 Motivations: Findings from 400,000+ Gamers",
+      "by": "Nick Yee",
+      "year": 2019,
+      "publisher": "GDC",
+      "url": "https://www.youtube.com/watch?v=gxJUPfKtg_Q",
+      "evidence": "research",
+      "note": { "it": "Perché le persone giocano, dai dati di centinaia di migliaia di giocatori.", "en": "Why people play, from the data of hundreds of thousands of players." }
+    },
+    {
+      "id": "taylor-level-design",
+      "kind": "video",
+      "title": "Ten Principles for Good Level Design",
+      "by": "Dan Taylor",
+      "year": 2013,
+      "publisher": "GDC",
+      "url": "https://www.youtube.com/watch?v=iNEe3KhMvXM",
+      "evidence": "heuristic",
+      "note": { "it": "Dieci principi pratici per costruire livelli che insegnano, sorprendono e si capiscono.", "en": "Ten practical principles for building levels that teach, surprise and read clearly." }
+    },
+    {
+      "id": "upton-pitch",
+      "kind": "video",
+      "title": "30 Things I Hate About Your Game Pitch",
+      "by": "Brian Upton",
+      "year": 2017,
+      "publisher": "GDC",
+      "url": "https://www.youtube.com/watch?v=4LTtr45y7P0",
+      "evidence": "heuristic",
+      "note": { "it": "Gli errori più comuni nei pitch, raccontati da chi ne ha ascoltati centinaia.", "en": "The most common pitch mistakes, from someone who has heard hundreds of them." }
+    },
+    {
+      "id": "saltsman-pitch",
+      "kind": "video",
+      "title": "So You're Ready to Pitch to a Publisher? You're Not",
+      "by": "Rebekah Saltsman",
+      "year": 2019,
+      "publisher": "GDC",
+      "url": "https://www.youtube.com/watch?v=MP-nmrMb9FQ",
+      "evidence": "heuristic",
+      "note": { "it": "Cosa serve davvero per presentarsi a un publisher: documenti, immagini, video di gioco.", "en": "What you really need before pitching a publisher: documents, key art, gameplay video." }
+    },
+    {
       "id": "gmtk-disability",
       "kind": "video",
       "title": "Designing for Disability",
@@ -590,13 +743,6 @@
       "url": "https://www.ted.com/talks/mihaly_csikszentmihalyi_flow_the_secret_to_happiness",
       "evidence": "research",
       "note": { "it": "Il flow raccontato da chi l'ha studiato: venti minuti, nessun gioco, molto utile.", "en": "Flow explained by the person who studied it: twenty minutes, no games, very useful." }
-    },
-    {
-      "id": "yt-input-output",
-      "kind": "video",
-      "title": "Input vs output randomness",
-      "evidence": "heuristic",
-      "note": { "it": "Una ricerca: molti designer e canali spiegano la distinzione tra casualità in input e in output. Parti da qui.", "en": "A search: many designers and channels explain the difference between input and output randomness. Start here." }
     },
 
     {
@@ -694,7 +840,7 @@
       "title": "Quantic Foundry — Gamer Motivation Model",
       "url": "https://quanticfoundry.com/",
       "evidence": "research",
-      "note": { "it": "Una tassonomia delle motivazioni con alle spalle un'analisi fattoriale su larga scala: l'alternativa seria a Bartle.", "en": "A taxonomy of motivations backed by a large-scale factor analysis: the serious alternative to Bartle." }
+      "note": { "it": "Una mappa dei motivi per cui le persone giocano, costruita sui dati di centinaia di migliaia di giocatori. Sul sito c'è anche il test da fare.", "en": "A map of the reasons people play, built on data from hundreds of thousands of players. The site also has the test you can take." }
     },
     {
       "id": "bgg",
@@ -716,6 +862,15 @@
       "title": "Machinations",
       "url": "https://machinations.io/",
       "note": { "it": "Uno strumento per simulare economie e loop prima di costruirli.", "en": "A tool for simulating economies and loops before you build them." }
+    },
+    {
+      "id": "machinations-f2p",
+      "kind": "web",
+      "title": "Game economy design in Free-to-Play games",
+      "by": "Machinations",
+      "url": "https://machinations.io/articles/game-economy-design-free-to-play-games",
+      "evidence": "heuristic",
+      "note": { "it": "Come si progetta l'economia di un gioco: risorse che entrano, risorse che escono.", "en": "How a game economy is designed: resources coming in, resources going out." }
     },
     {
       "id": "twine",
