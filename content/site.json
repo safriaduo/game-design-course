@@ -16,16 +16,22 @@
     "affiliation": { "it": "IED", "en": "IED" },
     "bio": {
       "it": [
-        "Due o tre righe su di te: cosa fai, a cosa hai lavorato, perché insegni game design.",
-        "Questo testo si modifica in `content/site.json`, alla voce `teacher.bio`."
+        "Ciao! Sono Federico, ho 29 anni e sono il Game Director e fondatore di Deep Monolith!",
+        "Amo il Game Design, soprattutto il design di sistemi complessi, economie e bilanciamento.",
+        "Insegno Game Design dal 2025 perchè mi diverte e mi permette di migliorare nel lavoro.",
+        "Questo sito è Open Source, se ti va di aggiungere altro alla discussione mi fa piacere!"
       ],
       "en": [
-        "Two or three lines about you: what you do, what you have worked on, why you teach game design.",
-        "Edit this text in `content/site.json`, under `teacher.bio`."
+        "Hi! I'm Federico, I'm 29 and I'm the Game Director and founder of Deep Monolith!",
+        "I love Game Design, especially the design of complex systems, economies and balancing.",
+        "I've been teaching Game Design since 2025 because I enjoy it and it helps me get better at my job.",
+        "This site is Open Source, if you'd like to add something to the discussion, I'd be glad to hear it!"
       ]
     },
     "links": [
-      { "label": "GitHub", "url": "https://github.com/safriaduo" }
+      { "label": "Deep Monolith", "url": "https://deepmonolith.com/" },
+      { "label": "GitHub", "url": "https://github.com/safriaduo" },
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/federico-gallucci-safriaduo/" }
     ]
   },
   "course": {
@@ -58,7 +64,7 @@
       "en": "The process — your initial hypothesis, what the playtests said, what you changed — counts at least as much as the result. It's the only way to reward method over raw talent."
     }
   },
-  "repository": "https://github.com/safriaduo/game-design",
+  "repository": "https://github.com/safriaduo/game-design-course",
   "branch": "main",
   "syllabus": "ProgrammaCorso.md",
   "featured": ["what-is-a-game", "interesting-decisions", "prototyping", "playtesting"],

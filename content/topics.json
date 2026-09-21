@@ -301,38 +301,52 @@
       "glyph": "chain",
       "title": { "it": "Il framework MDA", "en": "The MDA framework" },
       "lead": {
-        "it": "Meccaniche, dinamiche, estetiche. Il designer progetta dalle meccaniche verso le estetiche; chi gioca le vive al contrario. È tutto qui, ed è moltissimo.",
-        "en": "Mechanics, dynamics, aesthetics. Designers work from mechanics towards aesthetics; players experience them the other way round. That's all it is — and it's a lot."
+        "it": "Le meccaniche accadono nel codice, le dinamiche nelle azioni di chi gioca, le estetiche in quello che prova. Il designer progetta dalle meccaniche verso le estetiche; chi gioca le vive al contrario.",
+        "en": "Mechanics happen in the code, dynamics in the player's actions, aesthetics in the player's feelings. Designers work from mechanics towards aesthetics; players experience them the other way round."
       },
       "key": {
         "it": [
-          "Le meccaniche sono le regole; le dinamiche i comportamenti che emergono in partita; le estetiche le risposte emotive di chi gioca.",
+          "**Meccaniche**: ciò che il game designer tocca direttamente. Regole, numeri, sistemi: accadono nel codice, o nel regolamento.",
+          "**Dinamiche**: ciò che le meccaniche producono quando qualcuno gioca. Non le scrivi tu: accadono nelle azioni di chi gioca.",
+          "**Estetiche**: come si sente chi gioca. Accadono nelle sue emozioni, ed è l'unico livello che il giocatore percepisce davvero.",
+          "Un esempio: le munizioni. In Resident Evil sono poche (meccanica), quindi conti i colpi ed eviti gli scontri (dinamica), e ti senti sotto pressione e vulnerabile (estetica). In Doom sono tantissime: spari di continuo e cerchi lo scontro, e ti senti immortale e potentissimo. Stesse azioni di base, esperienza opposta.",
+          "MDA serve anche a leggere i giochi degli altri, partendo dal «perché». Perché in Breath of the Wild le armi si rompono? Prova a rispondere su tutti e tre i livelli: cosa fa la regola, cosa ti spinge a fare, cosa ti fa provare.",
+          "Prima di tutto serve la vision del tuo gioco: lotta per sopravvivere? Il brivido dell'ignoto? Sentirti un assassino, o un leader mondiale? Se sai quale esperienza vuoi, è molto più facile valutare ogni meccanica.",
+          "Tutti gli elementi devono cantare le stesse note: meccaniche, dinamiche ed estetiche al servizio della stessa vision rendono il gioco coeso.",
+          "Un gioco è fatto di migliaia di meccaniche, e tenerle insieme è difficile. Taglia fino a quelle che sai fare e sai nominare: poche meccaniche che generano dinamiche profonde battono quasi sempre molte meccaniche che generano poco.",
           "Il divertimento non si progetta direttamente: si progettano regole e si spera nelle dinamiche giuste. È per questo che si playtesta.",
-          "Le otto estetiche di LeBlanc — sensation, fantasy, narrative, challenge, fellowship, discovery, expression, submission — sono una tassonomia utile, mai validata empiricamente.",
-          "Poche meccaniche che generano dinamiche profonde battono quasi sempre molte meccaniche che generano poco.",
           "MDA è descrittivo, non generativo: non ti dice come progettare, ti dà un vocabolario per parlarne."
         ],
         "en": [
-          "Mechanics are the rules; dynamics are the behaviours that emerge during play; aesthetics are the player's emotional responses.",
+          "**Mechanics**: what the game designer touches directly. Rules, numbers, systems: they happen in the code, or in the rulebook.",
+          "**Dynamics**: what the mechanics produce when someone plays. You don't write them: they happen in the player's actions.",
+          "**Aesthetics**: how the player feels. They happen in the player's emotions, and they're the only level the player really perceives.",
+          "An example: ammo. In Resident Evil it's scarce (mechanic), so you count every shot and avoid fights (dynamic), and you feel pressure and vulnerability (aesthetic). In Doom it's plentiful: you fire constantly and look for fights, and you feel immortal and incredibly powerful. Same basic actions, opposite experience.",
+          "MDA also helps you read other people's games, starting from the “why”. Why do weapons break in Breath of the Wild? Try answering on all three levels: what the rule does, what it pushes you to do, what it makes you feel.",
+          "First of all you need your game's vision: a struggle to survive? The thrill of the unknown? Feeling like an assassin, or a world leader? If you know the experience you want, evaluating every mechanic gets much easier.",
+          "All the elements need to sing the same notes: mechanics, dynamics and aesthetics serving the same vision make the game cohesive.",
+          "A game is made of thousands of mechanics, and holding them together is hard. Cut down to the ones you can build and can name: a few mechanics that generate deep dynamics almost always beat many mechanics that generate little.",
           "You can't design fun directly: you design rules and hope for the right dynamics. That's why you playtest.",
-          "LeBlanc's eight aesthetics — sensation, fantasy, narrative, challenge, fellowship, discovery, expression, submission — are a useful taxonomy, never empirically validated.",
-          "A few mechanics that generate deep dynamics almost always beat many mechanics that generate little.",
           "MDA is descriptive, not generative: it doesn't tell you how to design, it gives you a vocabulary to talk about it."
         ]
       },
       "mistakes": {
         "it": [
           "Confondere dinamiche e meccaniche.",
-          "Elencare estetiche senza collegarle a una meccanica precisa."
+          "Elencare estetiche senza collegarle a una meccanica precisa.",
+          "Aggiungere meccaniche a caso, solo perché sembrano belle.",
+          "Valutare le meccaniche prima di aver deciso la vision del gioco."
         ],
         "en": [
           "Confusing dynamics with mechanics.",
-          "Listing aesthetics without tying them to a specific mechanic."
+          "Listing aesthetics without tying them to a specific mechanic.",
+          "Throwing in mechanics at random, just because they seem cool.",
+          "Judging mechanics before deciding on the game's vision."
         ]
       },
-      "games": ["perudo", "codenames"],
-      "sources": ["mda", "ec-aesthetics", "sicart-mechanics", "bartle", "yee-motivations", "quantic-foundry"],
-      "related": ["flow-and-fun", "emergence", "what-is-a-game"]
+      "games": ["resident-evil", "doom", "zelda-botw", "perudo", "codenames"],
+      "sources": ["gmtk-think-like-designer", "mda", "ec-aesthetics", "sicart-mechanics", "bartle", "yee-motivations", "quantic-foundry"],
+      "related": ["balancing", "flow-and-fun", "emergence"]
     },
 
     {
@@ -538,7 +552,7 @@
       },
       "games": ["resident-evil", "doom", "slay-the-spire"],
       "sources": ["game-balance", "ec-perfect-imbalance", "sts-metrics", "game-balance-concepts", "machinations", "ch-sakurai"],
-      "related": ["feedback-loops", "metrics", "randomness-information"]
+      "related": ["mda", "feedback-loops", "metrics", "randomness-information"]
     },
 
     {
@@ -836,6 +850,10 @@
         "it": [
           "I ruoli reali: systems, content, level, narrative e technical designer — e il punto in cui finisce il designer e comincia il producer.",
           "Il game designer non è «quello che ha le idee», non è il creative director e non è necessariamente chi programma.",
+          "Ogni game designer gioca a giochi diversi, e sono proprio quei giochi a dargli spunti su cosa creare e su come risolvere i problemi del proprio progetto.",
+          "Soprattutto all'inizio, non avere la presunzione di «inventare» qualcosa di nuovo. Il design è un lavoro di remix della tua esperienza: i giochi che hai giocato, le cose che hai vissuto. Usa il più possibile quello che esiste e che funziona.",
+          "Per fare remix bisogna capire *perché* una meccanica funziona in un gioco e in un altro no. Copiarla senza capirla non basta.",
+          "Un esempio: perché Alien: Isolation non usa i checkpoint ma punti di salvataggio manuali? Con i checkpoint i giocatori correvano per raggiungerli invece di nascondersi, e la paura spariva. Una scelta di sistema cambia il comportamento di chi gioca.",
           "Il design è sempre design sotto vincolo. Un designer che non sa tagliare non pubblica niente.",
           "Il gioco migliore che non trova giocatori non esiste: posizionamento, analisi dei competitor, wishlist e demo sono parte del design.",
           "Per entrare: un portfolio di decisioni motivate, non di concept. E i design test, dove conta il ragionamento più della risposta."
@@ -843,6 +861,10 @@
         "en": [
           "The real roles: systems, content, level, narrative and technical designer — and where the designer ends and the producer begins.",
           "A game designer is not “the ideas person”, not the creative director, and not necessarily the one who codes.",
+          "Every game designer plays different games, and those games are exactly what gives them ideas about what to create and how to solve their own project's problems.",
+          "Especially when you're starting out, don't presume to “invent” something new. Design is remixing your own experience: the games you've played, the things you've lived. Use as much as you can of what already exists and works.",
+          "To remix, you have to understand *why* a mechanic works in one game and not in another. Copying it without understanding it isn't enough.",
+          "An example: why does Alien: Isolation use manual save points instead of checkpoints? With checkpoints, players ran to reach them instead of hiding, and the fear was gone. A system choice changes how people play.",
           "Design is always design under constraints. A designer who can't cut never ships.",
           "The best game that finds no players doesn't exist: positioning, competitor analysis, wishlists and demos are part of design.",
           "Getting in: a portfolio of reasoned decisions, not of concepts. And design tests, where the reasoning matters more than the answer."
@@ -858,9 +880,9 @@
           "Designing without knowing who for, and against which other games."
         ]
       },
-      "games": [],
-      "sources": ["blood-sweat-pixels", "how-to-market", "level-up", "art-of-game-design", "gdc-vault", "ch-sakurai"],
-      "related": ["development-process", "ethics-monetization", "prototyping"]
+      "games": ["alien-isolation"],
+      "sources": ["gmtk-think-like-designer", "gmtk-game-ideas", "blood-sweat-pixels", "how-to-market", "level-up", "art-of-game-design", "gdc-vault", "ch-sakurai"],
+      "related": ["mda", "development-process", "ethics-monetization"]
     }
   ]
 }

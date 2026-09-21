@@ -82,6 +82,17 @@
       }
     },
     {
+      "id": "alien-isolation",
+      "name": "Alien: Isolation",
+      "kind": "video",
+      "year": 2014,
+      "designer": "Creative Assembly",
+      "note": {
+        "it": "Il sistema di salvataggio è una scelta di design: niente checkpoint, perché con i checkpoint i giocatori correvano invece di nascondersi.",
+        "en": "The save system is a design choice: no checkpoints, because with checkpoints players ran instead of hiding."
+      }
+    },
+    {
       "id": "doom",
       "name": "Doom",
       "kind": "video",

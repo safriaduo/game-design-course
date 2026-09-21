@@ -525,6 +525,30 @@
       "note": { "it": "Introduzione, sviluppo, svolta, conclusione: come un livello insegna una meccanica.", "en": "Introduction, development, twist, conclusion: how a level teaches a mechanic." }
     },
     {
+      "id": "gmtk-think-like-designer",
+      "kind": "video",
+      "title": "How To Think Like A Game Designer",
+      "by": "Game Maker's Toolkit",
+      "url": "https://www.youtube.com/watch?v=iIOIT3dCy5w",
+      "evidence": "heuristic",
+      "note": {
+        "it": "Cosa fa davvero un game designer: la vision, meccaniche che «cantano le stesse note», e l'abitudine di chiedersi perché un gioco è fatto così.",
+        "en": "What a game designer really does: the vision, mechanics that “sing the same notes”, and the habit of asking why a game is made the way it is."
+      }
+    },
+    {
+      "id": "gmtk-game-ideas",
+      "kind": "video",
+      "title": "How to find amazing game ideas",
+      "by": "Game Maker's Toolkit",
+      "url": "https://www.youtube.com/watch?v=0m60QbT85Tc",
+      "evidence": "heuristic",
+      "note": {
+        "it": "Da dove vengono le idee per un gioco, e come trovarne di buone senza aspettare l'ispirazione.",
+        "en": "Where game ideas come from, and how to find good ones without waiting for inspiration."
+      }
+    },
+    {
       "id": "gmtk-disability",
       "kind": "video",
       "title": "Designing for Disability",
