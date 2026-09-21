@@ -10,10 +10,10 @@
     "en": "Open materials from a university game design course: topics, games to try, books, papers, talks and student projects."
   },
   "teacher": {
-    "name": "Nome Cognome",
-    "email": "nome.cognome@esempio.it",
+    "name": "Federico Gallucci",
+    "email": "federico.gallucci.97@gmail.com",
     "role": { "it": "Docente di Game Design", "en": "Game Design lecturer" },
-    "affiliation": { "it": "Nome dell'università", "en": "University name" },
+    "affiliation": { "it": "IED", "en": "IED" },
     "bio": {
       "it": [
         "Due o tre righe su di te: cosa fai, a cosa hai lavorato, perché insegni game design.",
