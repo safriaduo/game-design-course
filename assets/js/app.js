@@ -15,13 +15,14 @@
  *   #/<lang>/games            games to try (?kind=…&focus=<game id>)
  *   #/<lang>/library          books, papers, talks (?kind=…)
  *   #/<lang>/showcase         student projects
+ *   #/<lang>/career           where to go next: jams, communities, launching
  *   #/<lang>/about            teacher, course, contacts
  */
 
-import { glyph, suit, gameIcon, sourceIcon, icon, heroArt, cover } from './glyphs.js';
+import { glyph, suit, gameIcon, sourceIcon, linkIcon, icon, heroArt, cover } from './glyphs.js';
 import { PALETTE, GAME_KINDS, SOURCE_KINDS, EVIDENCE, SEARCH_ENGINES, DEFAULT_ENGINE } from './schema.js';
 
-const CONTENT = ['site', 'ui', 'topics', 'games', 'library', 'students'];
+const CONTENT = ['site', 'ui', 'topics', 'games', 'library', 'students', 'career'];
 const state = { lang: '', data: null, idx: null, booted: false };
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
@@ -75,8 +76,8 @@ function md(text, { links = true } = {}) {
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     .replace(/\*(.+?)\*/g, '<em>$1</em>')
     .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, label, url) => {
-      if (!links || !/^(https?:|mailto:|#)/.test(url)) return label;
-      const ext = url.startsWith('http') ? ' target="_blank" rel="noopener"' : '';
+      if (!links || !/^(https?:|mailto:|#|assets\/)/.test(url)) return label;
+      const ext = /^(https?:|assets\/)/.test(url) ? ' target="_blank" rel="noopener"' : '';
       return `<a href="${url}"${ext}>${label}</a>`;
     });
 }
@@ -179,6 +180,7 @@ const VIEWS = {
   games: viewGames,
   library: viewLibrary,
   showcase: viewShowcase,
+  career: viewCareer,
   about: viewAbout,
 };
 
@@ -230,7 +232,7 @@ function replaceQuery(view, params) {
    ============================================================= */
 
 function renderChrome(active) {
-  const nav = ['topics', 'games', 'library', 'showcase', 'about'];
+  const nav = ['topics', 'games', 'library', 'showcase', 'career', 'about'];
   const navEl = $('#nav');
   navEl.setAttribute('aria-label', t('nav.label'));
   navEl.innerHTML = nav.map((view) => `<a href="${href(view)}"${view === active ? ' aria-current="page"' : ''}>${esc(t(`nav.${view}`))}</a>`).join('');
@@ -305,6 +307,15 @@ function topicLinks(topics) {
 }
 
 function sourceLink(source) {
+  if (source.file) {
+    // "file" can differ per language. With "download": true the file is downloaded as is;
+    // otherwise Markdown opens in GitHub's rendered view (tables, headings) and anything else directly.
+    const file = L(source.file);
+    if (source.download) return { url: file, engine: null, download: file.split('/').pop() };
+    const { repository, branch = 'main' } = state.data.site;
+    const url = /\.md$/i.test(file) ? `${repository}/blob/${branch}/${file}` : file;
+    return { url, engine: null };
+  }
   if (source.url) return { url: source.url, engine: null };
   const engine = SEARCH_ENGINES[source.search] ? source.search : DEFAULT_ENGINE[source.kind] || 'web';
   const title = L(source.title);
@@ -313,8 +324,10 @@ function sourceLink(source) {
 }
 
 function sourceItem(source, { citedIn = false } = {}) {
-  const { url, engine } = sourceLink(source);
-  const meta = [source.by, source.year, source.publisher].filter(Boolean).map(esc).join(' · ');
+  const { url, engine, download } = sourceLink(source);
+  const meta = [L(source.by), source.year, L(source.publisher)].filter(Boolean).map(esc).join(' · ');
+  const target = download ? ` download="${esc(download)}"` : ' target="_blank" rel="noopener"';
+  const saving = download ? `<span class="badge badge-dl">${icon('download')}${esc(t('src.download'))}</span>` : '';
   const evidence = EVIDENCE.includes(source.evidence)
     ? `<span class="badge ev-${source.evidence}" title="${esc(t(`ev.${source.evidence}.desc`))}">${esc(t(`ev.${source.evidence}`))}</span>`
     : '';
@@ -325,12 +338,12 @@ function sourceItem(source, { citedIn = false } = {}) {
   return `<li class="source">
     ${sourceIcon(source.kind)}
     <div>
-      <a class="source-title" href="${esc(url)}" target="_blank" rel="noopener">${esc(L(source.title))}</a>
+      <a class="source-title" href="${esc(url)}"${target}>${esc(L(source.title))}</a>
       ${meta ? `<div class="meta">${meta}</div>` : ''}
       ${source.note ? `<p class="source-note">${md(L(source.note))}</p>` : ''}
       ${topics}
     </div>
-    <div class="source-badges">${evidence}${search}</div>
+    <div class="source-badges">${saving}${evidence}${search}</div>
   </li>`;
 }
 
@@ -411,8 +424,9 @@ function viewHome() {
 function topicHaystack(topic) {
   const fam = familyOf(topic);
   const examples = examplesOf(topic).flatMap((ex) => [L(state.idx.games.get(ex.game)?.name), L(ex.title), L(ex.text)]);
+  const compared = (topic.compare || []).flatMap((c) => [L(c.name), L(c.text), ...list(c.pros), ...list(c.cons)]);
   const exercises = (topic.exercises || []).flatMap((ex) => [L(ex.text), L(ex.bonus)]);
-  return norm([L(topic.title), L(topic.lead), ...list(topic.key), ...list(topic.mistakes), L(fam.name), ...examples, ...exercises].join(' '));
+  return norm([L(topic.title), L(topic.lead), ...list(topic.key), ...list(topic.mistakes), L(fam.name), ...compared, ...examples, ...exercises].join(' '));
 }
 
 function viewTopics(_, params) {
@@ -496,6 +510,20 @@ function viewTopic(id) {
       : `<li><div class="token">${body}</div></li>`;
   };
 
+  const compare = topic.compare || [];
+  const compareCard = (c) => {
+    const pros = list(c.pros);
+    const cons = list(c.cons);
+    return `<li class="compare-card">
+      <h3>${esc(L(c.name))}</h3>
+      ${c.text ? `<p>${md(L(c.text))}</p>` : ''}
+      <div class="pc">
+        ${pros.length ? `<div><span class="pc-label pc-pro">${esc(t('topic.pros'))}</span><ul class="pc-list pro">${pros.map((p) => `<li><span>${md(p)}</span></li>`).join('')}</ul></div>` : ''}
+        ${cons.length ? `<div><span class="pc-label pc-con">${esc(t('topic.cons'))}</span><ul class="pc-list con">${cons.map((p) => `<li><span>${md(p)}</span></li>`).join('')}</ul></div>` : ''}
+      </div>
+    </li>`;
+  };
+
   const exercise = (ex, i) => `<li class="exercise">
     <span class="exercise-badge">${icon('pencil')}${esc(t('topic.exercise'))}${exercises.length > 1 ? ` ${i + 1}` : ''}</span>
     ${list(ex.text).map((p) => `<p>${md(p)}</p>`).join('')}
@@ -527,6 +555,8 @@ function viewTopic(id) {
         <p class="lead">${md(L(topic.lead))}</p>
 
         ${key.length ? section('key', `<ol class="rules">${key.map((k) => `<li><span>${md(k)}</span></li>`).join('')}</ol>`) : ''}
+
+        ${compare.length ? section('compare', `<ul class="compare">${compare.map(compareCard).join('')}</ul>`) : ''}
 
         ${mistakes.length ? `<section class="section pitfalls"><h2 class="section-title">${esc(t('topic.mistakes'))}</h2>
           <ul>${mistakes.map((m) => `<li><span>${md(m)}</span></li>`).join('')}</ul></section>` : ''}
@@ -752,6 +782,50 @@ function openLightbox(project, opener) {
   dialog.onclose = () => opener?.focus();
   draw();
   dialog.showModal();
+}
+
+function viewCareer() {
+  const { career } = state.data;
+  const steps = list(career.steps);
+  const related = (career.related || []).map((id) => state.idx.topics.get(id)).filter(Boolean);
+  const colours = PALETTE.filter((c) => c !== 'ink');
+
+  const linkCard = (link) => {
+    const tags = list(link.tags);
+    return `<li><a class="link-card" href="${esc(link.url)}" target="_blank" rel="noopener">
+      <span class="link-head">${linkIcon(link.kind)}<strong>${esc(L(link.name))}</strong><span class="meta">${esc(t(`career.kind.${link.kind}`))}</span></span>
+      <p>${md(L(link.note), { links: false })}</p>
+      ${tags.length ? `<ul class="tags">${tags.map((tag) => `<li>${esc(tag)}</li>`).join('')}</ul>` : ''}
+      <span class="link-go">${esc(t(link.kind === 'discord' ? 'career.join' : 'career.visit'))}${icon('external')}</span>
+    </a></li>`;
+  };
+
+  const html = `
+  <div class="wrap">
+    <header class="page-head">
+      <p class="eyebrow">${esc(t('career.eyebrow'))}</p>
+      <h1>${esc(t('career.title'))}</h1>
+      <p class="lead">${md(t('career.lead'))}</p>
+    </header>
+
+    ${steps.length ? `<section class="section" style="margin-top:40px;${paint('red')}">
+      <h2 class="section-title">${esc(t('career.steps'))}</h2>
+      <ol class="rules">${steps.map((s) => `<li><span>${md(s)}</span></li>`).join('')}</ol>
+    </section>` : ''}
+
+    ${(career.groups || []).map((group, i) => `<section class="section" style="${paint(group.color || colours[i % colours.length])}">
+      <h2 class="section-title">${esc(L(group.title))}</h2>
+      ${group.lead ? `<p class="section-lead">${md(L(group.lead))}</p>` : ''}
+      <ul class="links-grid">${(group.links || []).map(linkCard).join('')}</ul>
+    </section>`).join('')}
+
+    ${related.length ? `<section class="section">
+      <h2 class="section-title">${esc(t('career.related'))}</h2>
+      <ul class="deck deck--mini">${related.map(card).join('')}</ul>
+    </section>` : ''}
+  </div>`;
+
+  return { title: t('career.title'), html };
 }
 
 function viewAbout() {

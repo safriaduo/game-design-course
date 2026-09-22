@@ -1,0 +1,107 @@
+{
+  "steps": {
+    "it": [
+      "Fai una game jam: in un weekend impari più che in un mese di progetti mai finiti.",
+      "Pubblica quello che fai, anche se è piccolo: un gioco finito vale più di dieci idee.",
+      "Entra in una community: fai vedere i tuoi giochi e fai playtest a quelli degli altri.",
+      "Tieni sempre con te il tuo [libro di Indiana Jones](#/it/topic/design-tools)."
+    ],
+    "en": [
+      "Do a game jam: in one weekend you learn more than in a month of projects you never finish.",
+      "Publish what you make, even if it's small: one finished game is worth more than ten ideas.",
+      "Join a community: show your games and playtest other people's.",
+      "Always carry your [Indiana Jones notebook](#/en/topic/design-tools)."
+    ]
+  },
+
+  "groups": [
+    {
+      "id": "publish",
+      "color": "red",
+      "title": { "it": "Pubblica e partecipa", "en": "Publish and take part" },
+      "links": [
+        {
+          "id": "itch",
+          "name": "itch.io",
+          "kind": "site",
+          "url": "https://itch.io/",
+          "note": {
+            "it": "Il posto dove partecipare alle game jam (le trovi nella sezione «Jams») e pubblicare gratis i tuoi giochi, anche piccoli e sperimentali.",
+            "en": "Where to join game jams (you'll find them under “Jams”) and publish your games for free, even small and experimental ones."
+          },
+          "tags": [
+            { "it": "game jam", "en": "game jams" },
+            { "it": "pubblicazione gratuita", "en": "free publishing" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "community",
+      "color": "violet",
+      "title": { "it": "Community in Italia", "en": "Communities in Italy" },
+      "links": [
+        {
+          "id": "igda-italy",
+          "name": "IGDA Italy",
+          "kind": "discord",
+          "url": "https://discord.gg/PM4Z9Kp7KN",
+          "note": {
+            "it": "La sezione italiana dell'International Game Developers Association: si parla di sviluppo e si scoprono eventi e incontri a Torino e in tutta Italia.",
+            "en": "The Italian branch of the International Game Developers Association: talk about making games and find events and meetups in Turin and across Italy."
+          },
+          "tags": [
+            { "it": "eventi", "en": "events" },
+            "Torino",
+            { "it": "Italia", "en": "Italy" }
+          ]
+        },
+        {
+          "id": "iidea",
+          "name": "IIDEA",
+          "kind": "discord",
+          "url": "https://discord.gg/YtHbFBg3sd",
+          "note": {
+            "it": "Italian Interactive Digital Entertainment Association: l'associazione dell'industria italiana dei videogiochi. Un buon posto per conoscere studi, eventi e opportunità in Italia.",
+            "en": "Italian Interactive Digital Entertainment Association: the association of the Italian video game industry. A good place to get to know studios, events and opportunities in Italy."
+          },
+          "tags": [
+            { "it": "industria", "en": "industry" },
+            { "it": "Italia", "en": "Italy" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "launch",
+      "color": "blue",
+      "title": { "it": "Lanciare il tuo gioco", "en": "Launching your game" },
+      "links": [
+        {
+          "id": "prelaunch-club",
+          "name": "Prelaunch Club",
+          "kind": "discord",
+          "url": "https://discord.gg/exabAp6mhV",
+          "note": {
+            "it": "Una community per chi vuole lanciare un gioco su Kickstarter: consigli gratuiti ed esperti di crowdfunding che si aiutano a vicenda.",
+            "en": "A community for anyone who wants to launch a game on Kickstarter: free advice and crowdfunding experts helping each other."
+          },
+          "tags": ["Kickstarter", "crowdfunding"]
+        },
+        {
+          "id": "how-to-market",
+          "name": "How To Market A Game",
+          "kind": "site",
+          "url": "https://howtomarketagame.com/",
+          "note": {
+            "it": "Il blog di Chris Zukowski sul marketing dei videogiochi, basato sui dati: wishlist, Steam, pagine del negozio. Per capire come far trovare il tuo gioco.",
+            "en": "Chris Zukowski's data-driven blog on video game marketing: wishlists, Steam, store pages. To understand how to get your game found."
+          },
+          "tags": ["marketing", "Steam"]
+        }
+      ]
+    }
+  ],
+
+  "related": ["craft-and-industry", "design-tools", "pitch", "game-ideas"]
+}

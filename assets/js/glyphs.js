@@ -63,6 +63,10 @@ export const GLYPHS = {
   bubble: '<path d="M12 16 H108 V80 H52 L30 104 V80 H12 Z" class="a"/><rect x="26" y="32" width="68" height="9" class="c"/><rect x="26" y="52" width="44" height="9" class="c"/><circle cx="96" cy="100" r="9" class="b"/>',
   // a tank with a tap and a drain: taps and sinks
   tank: '<path d="M18 12 H54 V28" class="sb" style="stroke-width:7"/><circle cx="54" cy="40" r="5" class="a"/><path d="M22 48 V100 H98 V48" class="sb"/><rect x="25" y="68" width="70" height="30" class="a"/><path d="M60 100 V114" class="sb" style="stroke-width:7"/>',
+  // a 2×2 payoff matrix
+  matrix: '<rect x="12" y="12" width="44" height="44" class="a"/><circle cx="34" cy="34" r="9" class="c"/><rect x="64" y="12" width="44" height="44" class="g0"/><path d="M78 43 L86 26 L94 43 Z" class="a"/><rect x="12" y="64" width="44" height="44" class="g0"/><path d="M26 95 L34 78 L42 95 Z" class="b"/><rect x="64" y="64" width="44" height="44" class="b"/><rect x="79" y="79" width="14" height="14" class="c"/>',
+  // the Indiana Jones notebook: rings, a couple of lines, a scribble
+  notebook: '<rect x="26" y="10" width="74" height="100" rx="5" class="a"/><rect x="16" y="22" width="20" height="9" rx="4.5" class="b"/><rect x="16" y="55" width="20" height="9" rx="4.5" class="b"/><rect x="16" y="88" width="20" height="9" rx="4.5" class="b"/><rect x="46" y="28" width="40" height="8" class="c"/><rect x="46" y="44" width="28" height="8" class="c"/><path d="M46 80 Q54 64 62 80 T78 78 T88 70" class="sb" style="stroke-width:4"/>',
   square: '<rect x="24" y="24" width="72" height="72" class="a"/>',
 };
 
@@ -103,6 +107,16 @@ const SOURCE_ICONS = {
   web: '<circle cx="12" cy="12" r="9.5"/><path d="M2.5 12 H21.5"/><path d="M12 2.5 C8.5 6 8.5 18 12 21.5 C15.5 18 15.5 6 12 2.5 Z"/>',
 };
 
+const LINK_ICONS = {
+  site: SOURCE_ICONS.web,
+  // a speech bubble: an online community (Discord server)
+  discord: '<path d="M3.5 5 H20.5 V16 H11 L6 20 V16 H3.5 Z"/><circle cx="8.5" cy="10.5" r="1.3" class="f"/><circle cx="12" cy="10.5" r="1.3" class="f"/><circle cx="15.5" cy="10.5" r="1.3" class="f"/>',
+};
+
+export function linkIcon(kind) {
+  return `<svg class="kind-icon" viewBox="0 0 24 24" ${SVG_HIDDEN}>${LINK_ICONS[kind] || LINK_ICONS.site}</svg>`;
+}
+
 export function gameIcon(kind) {
   return `<svg class="kind-icon" viewBox="0 0 24 24" ${SVG_HIDDEN}>${GAME_ICONS[kind] || GAME_ICONS.board}</svg>`;
 }
@@ -125,7 +139,8 @@ const ICONS = {
   arrow: '<path d="M4 12 H20 M14 6 L20 12 L14 18"/>',
   back: '<path d="M20 12 H4 M10 6 L4 12 L10 18"/>',
   external: '<path d="M14 4 H20 V10 M20 4 L11 13 M18 14 V20 H4 V6 H10"/>',
-  pencil: '<path d="M4 20 L5 15 L16 4 L20 8 L9 19 Z"/><path d="M14 6 L18 10"/>',
+  download: '<path d="M12 3 V15 M7 10 L12 15 L17 10"/><path d="M4 19 H20"/>',
+  pencil:'<path d="M4 20 L5 15 L16 4 L20 8 L9 19 Z"/><path d="M14 6 L18 10"/>',
   book: '<path d="M4 5 A2 2 0 0 1 6 3 H20 V17 H6 A2 2 0 0 0 4 19 Z"/><path d="M4 19 A2 2 0 0 0 6 21 H20 V17"/>',
   play: '<rect x="2.5" y="5" width="19" height="14" rx="3"/><path d="M10 9 L15 12 L10 15 Z"/>',
   github:'<path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/>',

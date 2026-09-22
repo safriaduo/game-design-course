@@ -286,7 +286,7 @@
         }
       ],
       "sources": ["characteristics-of-games", "meier-psychology", "into-the-breach-postmortem"],
-      "related": ["randomness-information", "social-dynamics", "balancing"]
+      "related": ["game-theory", "randomness-information", "balancing"]
     },
 
     {
@@ -569,8 +569,8 @@
           }
         }
       ],
-      "sources": ["blood-sweat-pixels", "librande-one-page", "ch-gdc"],
-      "related": ["prototyping", "pitch", "craft-and-industry"]
+      "sources": ["blood-sweat-pixels", "ch-gdc"],
+      "related": ["prototyping", "design-tools", "pitch"]
     },
 
     {
@@ -1036,6 +1036,93 @@
     },
 
     {
+      "id": "game-theory",
+      "family": "lenses",
+      "glyph": "matrix",
+      "title": { "it": "Teoria dei giochi (le basi)", "en": "Game theory (the basics)" },
+      "lead": {
+        "it": "La teoria dei giochi studia cosa succede quando la tua scelta migliore dipende da quello che sceglieranno gli altri. Non serve la matematica: bastano poche idee per riconoscere le scelte finte e le strategie che rompono un gioco.",
+        "en": "Game theory studies what happens when your best choice depends on what the others will choose. You don't need the maths: a few ideas are enough to spot fake choices and the strategies that break a game."
+      },
+      "key": {
+        "it": [
+          "**Strategia dominante**: una scelta che conviene sempre, qualunque cosa facciano gli altri. In un gioco è un problema: se esiste, tutte le altre scelte smettono di contare.",
+          "**Equilibrio (di Nash)**: una situazione in cui nessuno ha motivo di cambiare strategia da solo. Spiega perché certi modi di giocare si «fissano» e alla fine tutti fanno la stessa cosa.",
+          "**Somma zero e non**: in alcuni giochi quello che vinco io lo perdi tu (scacchi, poker); in altri si può vincere o perdere insieme (cooperativi, scambi). Producono comportamenti completamente diversi.",
+          "**Il dilemma del prigioniero**: a ciascuno conviene tradire, ma se tradiscono entrambi stanno peggio che se avessero collaborato. Se però ci si rivede tante volte, collaborare diventa la scelta migliore.",
+          "**Nessuna mossa vince sempre**: quando ogni scelta ha una contromossa, come in sasso-carta-forbice, la cosa migliore è essere imprevedibili. Per un designer è il segnale di un gioco sano."
+        ],
+        "en": [
+          "**Dominant strategy**: a choice that always pays off, whatever the others do. In a game it's a problem: if one exists, every other choice stops mattering.",
+          "**Equilibrium (Nash)**: a situation where nobody has a reason to change strategy on their own. It explains why certain ways of playing “settle in” and eventually everyone does the same thing.",
+          "**Zero-sum or not**: in some games what I win, you lose (chess, poker); in others you can win or lose together (co-op games, trading). They produce completely different behaviour.",
+          "**The prisoner's dilemma**: each player is better off betraying, but if both betray they end up worse off than if they had cooperated. If you'll meet again many times, though, cooperating becomes the best choice.",
+          "**No move always wins**: when every choice has a counter, as in rock-paper-scissors, the best thing is to be unpredictable. For a designer, that's the sign of a healthy game."
+        ]
+      },
+      "mistakes": {
+        "it": [
+          "Lasciare nel gioco una strategia dominante, magari senza accorgersene perché nessuno ha giocato abbastanza.",
+          "Pensare che i giocatori giochino sempre in modo perfetto: sbagliano, si vendicano, si fidano. Il gioco vero succede lì."
+        ],
+        "en": [
+          "Leaving a dominant strategy in the game, maybe without noticing because nobody has played enough.",
+          "Assuming players always play perfectly: they make mistakes, take revenge, trust each other. That's where the real game happens."
+        ]
+      },
+      "examples": [
+        {
+          "game": "rock-paper-scissors",
+          "text": {
+            "it": "Ogni mossa ne batte una e perde con un'altra: nessuna strategia dominante, e la scelta migliore è essere imprevedibili.",
+            "en": "Every move beats one and loses to another: no dominant strategy, and the best choice is to be unpredictable."
+          }
+        },
+        {
+          "game": "diplomacy",
+          "text": {
+            "it": "Collaborare conviene a tutti, finché a qualcuno non conviene tradire: il dilemma del prigioniero su un tavolo.",
+            "en": "Cooperating helps everyone, until betraying helps someone more: the prisoner's dilemma on a tabletop."
+          }
+        },
+        {
+          "game": "poker",
+          "text": {
+            "it": "Somma zero: ogni fiche che vinci è una fiche che qualcun altro ha perso.",
+            "en": "Zero-sum: every chip you win is a chip someone else lost."
+          }
+        },
+        {
+          "game": "pandemic",
+          "text": {
+            "it": "Non a somma zero: si vince o si perde tutti insieme, contro il gioco.",
+            "en": "Not zero-sum: everyone wins or loses together, against the game."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "text": {
+            "it": "Disegna una tabella 2×2 per un gioco a due giocatori con due scelte ciascuno, per esempio «collaborare» o «tradire». In ogni casella scrivi quanti punti prende ciascun giocatore. C'è una scelta che conviene sempre? Se sì, cambia i punti finché non sparisce.",
+            "en": "Draw a 2×2 table for a two-player game with two choices each, for example “cooperate” or “betray”. In each cell, write how many points each player gets. Is there a choice that always pays off? If so, change the points until it disappears."
+          },
+          "bonus": {
+            "it": "Giocate 10 round di fila con la stessa tabella: cambia qualcosa rispetto a un round solo?",
+            "en": "Play 10 rounds in a row with the same table: does anything change compared with a single round?"
+          }
+        },
+        {
+          "text": {
+            "it": "Gioca The Evolution of Trust (mezz'ora, gratis nel browser) e scopri quando conviene fidarsi degli altri.",
+            "en": "Play The Evolution of Trust (half an hour, free in the browser) and find out when it pays to trust others."
+          }
+        }
+      ],
+      "sources": ["ncase-trust", "veritasium-game-theory"],
+      "related": ["social-dynamics", "interesting-decisions", "balancing"]
+    },
+
+    {
       "id": "feedback-loops",
       "family": "systems",
       "glyph": "snowball",
@@ -1097,6 +1184,13 @@
           "text": {
             "it": "La barra Ultra si carica subendo colpi: chi è in svantaggio ottiene una mossa devastante per rimontare.",
             "en": "The Ultra meter fills as you take hits: whoever is losing gets a devastating move to come back."
+          }
+        },
+        {
+          "game": "heat",
+          "text": {
+            "it": "Il contrario di Mario Kart: un errore in curva costa carissimo (testacoda, marcia bassa, carte stress nel mazzo) e lascia pochissimo spazio per recuperare. La scia aiuta solo se sei già vicino agli altri.",
+            "en": "The opposite of Mario Kart: a mistake in a corner costs you dearly (spin-out, low gear, stress cards in your deck) and leaves very little room to recover. Slipstreaming only helps if you're already close to the others."
           }
         }
       ],
@@ -1452,14 +1546,14 @@
           "A sasso-carta-forbice la strategia perfetta è giocare a caso, ma nessuno lo fa: le persone cercano schemi, e il gioco vero è leggere l'altro.",
           "Il bluff funziona solo se mentire ha un costo: se non rischi niente quando menti, nessuno crede più a niente.",
           "Quello che sai degli altri conta da una partita all'altra: la seconda partita con lo stesso gruppo, con le stesse regole, è un gioco diverso.",
-          "Fidarsi o tradire? Molti giochi mettono i giocatori davanti al dilemma del prigioniero: tradire conviene nel breve, fidarsi conviene se ci si rivede.",
+          "Alleanze e tradimenti: un'alleanza è interessante solo se prima o poi conviene romperla, e tutti al tavolo lo sanno.",
           "Lo stesso gioco sociale può essere fantastico con sei amici e pessimo con sei sconosciuti: è un vincolo di design, non un difetto."
         ],
         "en": [
           "In rock-paper-scissors the perfect strategy is to play at random, but nobody does: people look for patterns, and the real game is reading the other person.",
           "A bluff only works if lying has a cost: if you risk nothing when you lie, nobody believes anything any more.",
           "What you know about the others carries from one match to the next: the second match with the same group, under the same rules, is a different game.",
-          "Trust or betray? Many games put players in the prisoner's dilemma: betrayal pays in the short run, trust pays if you'll meet again.",
+          "Alliances and betrayals: an alliance is only interesting if, sooner or later, it pays to break it — and everyone at the table knows it.",
           "The same social game can be great with six friends and terrible with six strangers: that's a design constraint, not a flaw."
         ]
       },
@@ -1510,13 +1604,13 @@
             "en": "Play two consecutive games of Avalon with the same group. Afterwards, discuss: what changed in the second one, if the rules were identical?"
           },
           "bonus": {
-            "it": "Gioca The Evolution of Trust (mezz'ora, gratis nel browser) e scopri quando conviene fidarsi.",
-            "en": "Play The Evolution of Trust (half an hour, free in the browser) and find out when trust pays off."
+            "it": "Aggiungi a un gioco semplice una regola per bluffare, e decidi cosa succede a chi viene scoperto a mentire. Il bluff diventa più interessante?",
+            "en": "Add a bluffing rule to a simple game, and decide what happens to anyone caught lying. Does bluffing get more interesting?"
           }
         }
       ],
-      "sources": ["ncase-trust", "veritasium-game-theory"],
-      "related": ["randomness-information", "interesting-decisions", "player-types"]
+      "sources": ["building-blocks-tabletop", "ch-susd"],
+      "related": ["game-theory", "player-types", "randomness-information"]
     },
 
     {
@@ -1886,7 +1980,177 @@
         }
       ],
       "sources": ["door-problem", "blood-sweat-pixels", "gmtk-think-like-designer", "gmtk-job", "tyroller-perspective"],
-      "related": ["game-ideas", "development-process", "pitch"]
+      "related": ["game-ideas", "design-tools", "development-process"]
+    },
+
+    {
+      "id": "design-tools",
+      "family": "craft",
+      "glyph": "notebook",
+      "title": { "it": "Gli strumenti del game designer", "en": "The game designer's tools" },
+      "lead": {
+        "it": "Il game design non avviene nella testa, ma sulla carta: è scrivendo che le idee diventano decisioni. Taccuino, documento, wiki, one-page e foglio di calcolo sono gli attrezzi con cui lo fai.",
+        "en": "Game design doesn't happen in your head but on paper: writing is what turns ideas into decisions. Notebook, document, wiki, one-page and spreadsheet are the tools you do it with."
+      },
+      "key": {
+        "it": [
+          "Il libro di Indiana Jones: porta sempre con te un taccuino e scrivi tutto, anche in modo disordinato — idee, cose che noti mentre giochi, regole che ti vengono in mente. Poi rileggi, analizza e raffina: le idee buone vengono fuori alla seconda lettura.",
+          "Il game design avviene mentre scrivi il documento: mettere un'idea nero su bianco ti obbliga a decidere i dettagli che nella testa restavano vaghi.",
+          "Ci sono diversi modi di documentare un gioco: la bibbia, la wiki, il one-page. Nessuno è giusto in assoluto: ognuno ha pro e contro, e spesso si usano insieme.",
+          "Il foglio di calcolo (Google Sheets, Excel) è lo strumento dei numeri: bilanciamento, economie, curve di difficoltà. Il documento dice cosa succede, il foglio dice quanto.",
+          "Un documento serve solo se qualcuno lo legge e lo usa: tienilo breve, aggiornato e facile da consultare."
+        ],
+        "en": [
+          "The Indiana Jones notebook: always carry a notebook and write everything down, even messily — ideas, things you notice while playing, rules that pop into your head. Then reread, analyse and refine: the good ideas show up on the second read.",
+          "Game design happens while you write the document: putting an idea down in black and white forces you to decide the details that stayed vague in your head.",
+          "There are several ways to document a game: the bible, the wiki, the one-page. None is right in absolute terms: each has pros and cons, and they're often used together.",
+          "The spreadsheet (Google Sheets, Excel) is the tool for numbers: balancing, economies, difficulty curves. The document says what happens, the spreadsheet says how much.",
+          "A document is only useful if someone reads and uses it: keep it short, up to date and easy to look things up in."
+        ]
+      },
+      "compare": [
+        {
+          "name": { "it": "Il taccuino («libro di Indiana Jones»)", "en": "The notebook (the “Indiana Jones book”)" },
+          "text": { "it": "Carta e penna, sempre con te.", "en": "Pen and paper, always with you." },
+          "pros": {
+            "it": ["È sempre a portata di mano", "Nessun filtro: scrivi tutto, anche le idee strane"],
+            "en": ["Always within reach", "No filter: you write everything down, even the weird ideas"]
+          },
+          "cons": {
+            "it": ["È disordinato: va riletto e riorganizzato", "Serve solo a te, non al team"],
+            "en": ["It's messy: it needs rereading and reorganising", "It's only useful to you, not to the team"]
+          }
+        },
+        {
+          "name": { "it": "Game bible", "en": "Game bible" },
+          "text": {
+            "it": "Il documentone delle origini dell'industria: storia, personaggi, regole, livelli, tutto in un solo file. Letteralmente la bibbia del gioco.",
+            "en": "The giant document from the industry's early days: story, characters, rules, levels, everything in a single file. Literally the game's bible."
+          },
+          "pros": {
+            "it": ["Tutto in un posto solo", "Obbliga a pensare al gioco nel suo insieme"],
+            "en": ["Everything in one place", "Forces you to think about the game as a whole"]
+          },
+          "cons": {
+            "it": ["Lunghissimo: nessuno lo legge tutto", "Invecchia subito: appena il gioco cambia, è sbagliato", "Spesso si scrive prima di aver provato qualcosa"],
+            "en": ["Very long: nobody reads all of it", "Goes stale fast: as soon as the game changes, it's wrong", "Often written before anything has been tested"]
+          }
+        },
+        {
+          "name": { "it": "Game wiki", "en": "Game wiki" },
+          "text": {
+            "it": "Come la bibbia, ma divisa in tante pagine piccole e collegate: una per ogni meccanica, personaggio o livello.",
+            "en": "Like the bible, but split into many small linked pages: one for each mechanic, character or level."
+          },
+          "pros": {
+            "it": ["Ogni pezzo si aggiorna senza toccare gli altri", "Più persone ci lavorano insieme", "Trovi subito quello che ti serve"],
+            "en": ["Each piece can be updated without touching the others", "Several people can work on it together", "You find what you need straight away"]
+          },
+          "cons": {
+            "it": ["Senza cura diventa un labirinto di pagine vecchie", "Si perde la visione d'insieme"],
+            "en": ["Without care it becomes a maze of outdated pages", "You lose sight of the big picture"]
+          }
+        },
+        {
+          "name": { "it": "One-page design", "en": "One-page design" },
+          "text": {
+            "it": "Una pagina sola, più disegni che parole, da appendere al muro: la reference sempre sotto gli occhi per livelli, difficoltà, core loop.",
+            "en": "A single page, more drawings than words, pinned to the wall: a reference always in sight for levels, difficulty, the core loop."
+          },
+          "pros": {
+            "it": ["Si legge con un colpo d'occhio", "È sempre davanti al team", "Obbliga a scegliere l'essenziale"],
+            "en": ["You read it at a glance", "It's always in front of the team", "Forces you to pick what's essential"]
+          },
+          "cons": {
+            "it": ["Non ci stanno i dettagli", "Ne serve una per ogni sistema o livello, e vanno tenute aggiornate"],
+            "en": ["There's no room for details", "You need one per system or level, and they have to be kept up to date"]
+          }
+        },
+        {
+          "name": { "it": "Foglio di calcolo", "en": "Spreadsheet" },
+          "text": {
+            "it": "Google Sheets o Excel: il posto dei numeri, soprattutto per il bilanciamento.",
+            "en": "Google Sheets or Excel: the home of the numbers, especially for balancing."
+          },
+          "pros": {
+            "it": ["Vedi subito l'effetto di un cambiamento", "Perfetto per bilanciamento, economie e curve", "I valori si possono importare direttamente nel gioco"],
+            "en": ["You see the effect of a change instantly", "Perfect for balancing, economies and curves", "Values can be imported straight into the game"]
+          },
+          "cons": {
+            "it": ["Dice quanto, non perché", "Per chi non l'ha fatto è un muro di numeri"],
+            "en": ["It says how much, not why", "To anyone who didn't build it, it's a wall of numbers"]
+          }
+        }
+      ],
+      "mistakes": {
+        "it": [
+          "Tenere le idee solo nella testa: quello che non scrivi, lo dimentichi o non lo decidi mai davvero.",
+          "Scrivere un documento enorme prima di aver provato qualcosa, e poi non aggiornarlo più.",
+          "Mettere i numeri nel testo invece che in un foglio di calcolo: diventano vecchi alla prima modifica."
+        ],
+        "en": [
+          "Keeping ideas only in your head: what you don't write down, you forget or never really decide.",
+          "Writing a huge document before testing anything, and then never updating it.",
+          "Putting numbers in the text instead of a spreadsheet: they go stale at the first change."
+        ]
+      },
+      "examples": [
+        {
+          "game": "doom",
+          "text": {
+            "it": "La «Doom Bible» di Tom Hall (1992) raccontava storia, personaggi e livelli in un unico documento. Durante lo sviluppo quasi tutto fu abbandonato: il gioco prese forma provando, non scrivendo.",
+            "en": "Tom Hall's “Doom Bible” (1992) laid out story, characters and levels in a single document. Almost all of it was dropped during development: the game took shape through play, not writing."
+          }
+        },
+        {
+          "title": { "it": "Un GDD d'esempio: Pac-Man", "en": "A sample GDD: Pac-Man" },
+          "text": {
+            "it": "Il documento di design del gameplay di Pac-Man, con i numeri dell'arcade originale (lo trovi in «Da leggere»). È una pagina di una wiki: parla di un solo sistema e rimanda agli altri. Guarda come è costruito: panoramica, fantasy del giocatore, regole, stati, formule, casi limite, manopole di bilanciamento, UI/UX con il wireframe dello schermo e criteri per verificare che funzioni.",
+            "en": "The design document for Pac-Man's gameplay, with the original arcade numbers (you'll find it under “Read”). It's one page of a wiki: it covers a single system and points to the others. Look at how it's built: overview, player fantasy, rules, states, formulas, edge cases, tuning knobs, UI/UX with a screen wireframe, and criteria to check that it works."
+          }
+        },
+        {
+          "title": { "it": "I one-page di Stone Librande", "en": "Stone Librande's one-pagers" },
+          "text": {
+            "it": "Nel suo [talk alla GDC](https://gdcvault.com/play/1012356/One-Page) mostra i one-page usati per giochi come Diablo III e Spore: diagrammi annotati che si capiscono in pochi secondi.",
+            "en": "In his [GDC talk](https://gdcvault.com/play/1012356/One-Page) he shows the one-pagers used for games like Diablo III and Spore: annotated diagrams you grasp in a few seconds."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "text": {
+            "it": "Per una settimana porta con te un taccuino, il tuo «libro di Indiana Jones»: annota ogni idea, ogni cosa che noti giocando, ogni regola che ti viene in mente, senza preoccuparti dell'ordine. Alla fine della settimana rileggilo, evidenzia le tre idee migliori e riscrivile in modo chiaro.",
+            "en": "For a week, carry a notebook — your “Indiana Jones book” — and jot down every idea, everything you notice while playing, every rule that comes to mind, without worrying about order. At the end of the week, reread it, highlight the three best ideas and rewrite them clearly."
+          },
+          "bonus": {
+            "it": "Scegline una e sviluppala abbastanza da capire se merita un prototipo.",
+            "en": "Pick one and develop it far enough to tell whether it deserves a prototype."
+          }
+        },
+        {
+          "text": {
+            "it": "Fai il one-page design del tuo prototipo: una sola pagina, più disegni che parole, con obiettivo, core loop e regole principali. Appendilo al muro durante il prossimo playtest.",
+            "en": "Make a one-page design of your prototype: a single page, more drawings than words, with the goal, the core loop and the main rules. Pin it to the wall during your next playtest."
+          },
+          "bonus": {
+            "it": "Metti i numeri del gioco (costi, punti, durate) in un foglio di calcolo a parte. Cosa va nel disegno e cosa nel foglio?",
+            "en": "Put the game's numbers (costs, points, durations) in a separate spreadsheet. What belongs in the drawing and what in the sheet?"
+          }
+        },
+        {
+          "text": {
+            "it": "Scarica il template di GDD (in «Da leggere») e compilalo per un sistema del tuo prototipo. Tienilo corto: una o due pagine. Usa il GDD di Pac-Man come riferimento.",
+            "en": "Download the GDD template (under “Read”) and fill it in for one system of your prototype. Keep it short: one or two pages. Use the Pac-Man GDD as a reference."
+          },
+          "bonus": {
+            "it": "Nella sezione UI/UX disegna il wireframe della tua schermata (o del tavolo) e metti in ordine le informazioni dalla più importante alla meno importante.",
+            "en": "In the UI/UX section, draw the wireframe of your screen (or table) and rank the information from most to least important."
+          }
+        }
+      ],
+      "sources": ["gdd-template", "pacman-gdd", "doom-bible", "one-page-philosophy"],
+      "related": ["development-process", "balancing", "craft-and-industry"]
     },
 
     {

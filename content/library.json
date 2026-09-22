@@ -230,6 +230,43 @@
     },
 
     {
+      "id": "pacman-gdd",
+      "kind": "paper",
+      "title": { "it": "GDD d'esempio: Pac-Man", "en": "Sample GDD: Pac-Man" },
+      "by": { "it": "Corso di Game Design", "en": "Game Design course" },
+      "year": 2026,
+      "file": { "it": "assets/docs/pacman-gdd-it.md", "en": "assets/docs/pacman-gdd-en.md" },
+      "note": {
+        "it": "Un documento di design breve ma completo per il gameplay di Pac-Man, con i numeri dell'arcade originale: regole, stati, formule, casi limite, manopole di bilanciamento, UI/UX con wireframe e criteri di accettazione.",
+        "en": "A short but complete design document for Pac-Man's gameplay, with the original arcade numbers: rules, states, formulas, edge cases, tuning knobs, UI/UX with a wireframe and acceptance criteria."
+      }
+    },
+    {
+      "id": "gdd-template",
+      "kind": "paper",
+      "title": { "it": "Template di GDD da compilare", "en": "GDD template to fill in" },
+      "by": { "it": "Corso di Game Design", "en": "Game Design course" },
+      "year": 2026,
+      "file": { "it": "assets/docs/gdd-template-it.md", "en": "assets/docs/gdd-template-en.md" },
+      "download": true,
+      "note": {
+        "it": "Tutte le sezioni del GDD, ognuna con una breve spiegazione di come si compila e un esempio da Pac-Man. È un file Markdown: si apre con qualsiasi editor di testo, Notion o Obsidian.",
+        "en": "Every section of the GDD, each with a short explanation of how to fill it in and an example from Pac-Man. It's a Markdown file: it opens in any text editor, Notion or Obsidian."
+      }
+    },
+    {
+      "id": "doom-bible",
+      "kind": "paper",
+      "title": "Doom Bible",
+      "by": "Tom Hall",
+      "year": 1992,
+      "url": "https://archive.org/details/Doombible",
+      "note": {
+        "it": "Il documento di design originale di Doom: un esempio storico di «bibbia» di gioco, in gran parte abbandonata durante lo sviluppo.",
+        "en": "Doom's original design document: a historical example of a game “bible”, largely abandoned during development."
+      }
+    },
+    {
       "id": "door-problem",
       "kind": "paper",
       "title": "The Door Problem",
@@ -462,6 +499,7 @@
       "by": "Stone Librande",
       "year": 2010,
       "publisher": "GDC",
+      "url": "https://gdcvault.com/play/1012356/One-Page",
       "evidence": "heuristic",
       "note": { "it": "Documenti di design visivi, in una sola pagina: l'alternativa al GDD monolitico.", "en": "Visual, one-page design documents: the alternative to the monolithic GDD." }
     },
@@ -565,6 +603,18 @@
       "note": {
         "it": "Da dove vengono le idee per un gioco, e come trovarne di buone senza aspettare l'ispirazione.",
         "en": "Where game ideas come from, and how to find good ones without waiting for inspiration."
+      }
+    },
+    {
+      "id": "one-page-philosophy",
+      "kind": "video",
+      "title": "One Page Design Philosophy",
+      "by": "circache",
+      "url": "https://www.youtube.com/watch?v=E9_wLks1kAg",
+      "evidence": "heuristic",
+      "note": {
+        "it": "Perché i documenti lunghi non li legge nessuno, e come riassumere un sistema in una sola pagina da appendere al muro.",
+        "en": "Why nobody reads long design documents, and how to sum up a system on a single page you can pin to the wall."
       }
     },
     {

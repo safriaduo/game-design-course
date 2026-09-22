@@ -531,6 +531,17 @@
       }
     },
     {
+      "id": "heat",
+      "name": "Heat: Pedal to the Metal",
+      "kind": "board",
+      "year": 2022,
+      "designer": "Asger Harding Granerud, Daniel Skjold Pedersen",
+      "note": {
+        "it": "Corse automobilistiche con le carte: prendere una curva troppo veloce costa carissimo, e recuperare è difficile.",
+        "en": "Card-driven motor racing: taking a corner too fast costs you dearly, and catching up is hard."
+      }
+    },
+    {
       "id": "gloomhaven",
       "name": "Gloomhaven",
       "kind": "board",

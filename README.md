@@ -30,6 +30,7 @@ content/                ← TUTTI I CONTENUTI: si modifica quasi solo qui
   games.json            giochi da provare
   library.json          libri, paper, talk, canali, siti
   students.json         progetti degli studenti
+  career.json           pagina "Carriera": siti, community e primi passi dopo il corso
 tools/check-content.mjs controlla i contenuti (traduzioni, riferimenti, foto)
 tools/serve.mjs         server locale per l'anteprima
 ProgrammaCorso.md       il programma dettagliato del corso
@@ -65,6 +66,7 @@ Nei testi puoi usare un po' di Markdown: `*corsivo*`, `**grassetto**`, `` `codic
 | `glyph` | la forma disegnata sulla carta (vedi `GLYPHS` in `assets/js/glyphs.js`) |
 | `title`, `lead` | titolo e introduzione (2 frasi) |
 | `key` | punti chiave: 3–5, un'idea per punto, parole semplici |
+| `compare` | facoltativo, "A confronto": `{ "name": …, "text": …, "pros": [ … ], "cons": [ … ] }` per mettere a confronto strumenti o approcci |
 | `mistakes` | errori tipici: 2–3, brevi |
 | `examples` | esempi: `{ "game": "<id da games.json>", "text": … }`, oppure `{ "title": …, "text": … }` se non è un gioco |
 | `exercises` | esercizi: `{ "text": …, "list": [ … ], "bonus": … }` (`list` e `bonus` sono facoltativi) |
@@ -78,6 +80,12 @@ Stile: niente nomi di autori nei punti chiave, e un termine tecnico solo se si u
 - `kind`: `book`, `paper`, `video`, `channel`, `web`
 - `evidence`: che tipo di conoscenza è — `research` (ricerca empirica), `theory` (teoria accademica), `heuristic` (euristica di mestiere). Si può omettere.
 - `url`: il link diretto. **Se manca**, il sito crea un link di ricerca (YouTube per i video, Google Scholar per i paper, Open Library per i libri) e lo segnala con una lente. Per molti talk il link è una ricerca: quando trovi il video giusto, basta aggiungere `"url"`.
+
+**Un sito o una community per la pagina Carriera**: in `content/career.json` aggiungi un link a uno dei gruppi (`publish`, `community`, `launch`) oppure crea un gruppo nuovo. Ogni link ha `name`, `url`, `kind` (`site` o `discord`), una `note` e dei `tags` facoltativi.
+
+**Un documento del corso** (un GDD d'esempio, un template, un regolamento, un PDF…): mettilo in `assets/docs/` e in `library.json` indica il percorso con `"file"`, anche uno per lingua: `"file": { "it": "assets/docs/pacman-gdd-it.md", "en": "assets/docs/pacman-gdd-en.md" }`. I file Markdown (`.md`) si aprono nella vista di GitHub, con tabelle e titoli formattati; gli altri file si aprono direttamente. Aggiungi `"download": true` se vuoi che il link scarichi il file (come per il template di GDD). Il controllo verifica che i file esistano.
+
+In `assets/docs/` trovi già il GDD d'esempio di Pac-Man e il template di GDD da compilare, in italiano e in inglese.
 
 **Un gioco**: `content/games.json`, con `kind` = `board`, `video` o `classic`, e una `note` su cosa insegna. Per citarlo in un tema, aggiungi un esempio con `"game": "<id>"` negli `examples` del tema: la pagina Giochi mostrerà da sola in quali temi compare.
 

@@ -6,6 +6,7 @@
   "nav.games": { "it": "Giochi", "en": "Games" },
   "nav.library": { "it": "Biblioteca", "en": "Library" },
   "nav.showcase": { "it": "Showcase", "en": "Showcase" },
+  "nav.career": { "it": "Carriera", "en": "Career" },
   "nav.about": { "it": "Info", "en": "About" },
 
   "lang.label": { "it": "Lingua", "en": "Language" },
@@ -59,6 +60,9 @@
   "topic.family": { "it": "Famiglia", "en": "Suit" },
   "topic.key": { "it": "Punti chiave", "en": "Key points" },
   "topic.mistakes": { "it": "Errori tipici", "en": "Common mistakes" },
+  "topic.compare": { "it": "A confronto", "en": "Side by side" },
+  "topic.pros": { "it": "Pro", "en": "Pros" },
+  "topic.cons": { "it": "Contro", "en": "Cons" },
   "topic.examples": { "it": "Esempi", "en": "Examples" },
   "topic.exercises": { "it": "Esercizi", "en": "Exercises" },
   "topic.exercise": { "it": "Esercizio", "en": "Exercise" },
@@ -113,6 +117,7 @@
   "src.video": { "it": "Talk e video", "en": "Talks & videos" },
   "src.channel": { "it": "Canali", "en": "Channels" },
   "src.web": { "it": "Siti e strumenti", "en": "Sites & tools" },
+  "src.download": { "it": "Scarica", "en": "Download" },
   "search.youtube": { "it": "ricerca YouTube", "en": "YouTube search" },
   "search.scholar": { "it": "ricerca Scholar", "en": "Scholar search" },
   "search.book": { "it": "Open Library", "en": "Open Library" },
@@ -139,6 +144,19 @@
     "it": "Hai seguito il corso e vuoi aggiungere il tuo gioco? Scrivimi, oppure apri una pull request sulla repository.",
     "en": "Took the course and want your game here? Email me, or open a pull request on the repository."
   },
+
+  "career.eyebrow": { "it": "Dopo il corso", "en": "After the course" },
+  "career.title": { "it": "Fare giochi, sul serio", "en": "Making games, for real" },
+  "career.lead": {
+    "it": "Il corso finisce, i giochi no. Se vuoi fare del game design la tua carriera, o semplicemente iniziare a fare giochi sul serio, questi sono i posti da cui partire: dove pubblicare, dove trovare altre persone che fanno giochi, come lanciare il tuo.",
+    "en": "The course ends, the games don't. If you want game design to be your career, or simply want to start making games seriously, these are the places to begin: where to publish, where to find other people who make games, how to launch yours."
+  },
+  "career.steps": { "it": "Da dove partire", "en": "Where to start" },
+  "career.related": { "it": "Temi utili", "en": "Useful topics" },
+  "career.kind.site": { "it": "Sito", "en": "Website" },
+  "career.kind.discord": { "it": "Discord", "en": "Discord" },
+  "career.visit": { "it": "Apri il sito", "en": "Open the site" },
+  "career.join": { "it": "Entra nel Discord", "en": "Join the Discord" },
 
   "about.eyebrow": { "it": "Docente, corso, contatti", "en": "Teacher, course, contact" },
   "about.title": { "it": "Info e contatti", "en": "About & contact" },

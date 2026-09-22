@@ -42,8 +42,8 @@ function report() {
   process.exit(errors.length ? 1 : 0);
 }
 
-const names = ['site', 'ui', 'topics', 'games', 'library', 'students'];
-const [site, ui, topicsFile, gamesFile, library, students] = await Promise.all(names.map(loadJson));
+const names = ['site', 'ui', 'topics', 'games', 'library', 'students', 'career'];
+const [site, ui, topicsFile, gamesFile, library, students, career] = await Promise.all(names.map(loadJson));
 if (errors.length) report();
 
 /* ---------- languages ---------- */
@@ -122,6 +122,11 @@ for (const [id, topic] of topics) {
   (topic.exercises || []).forEach((ex, i) => {
     if (!ex.text) error(`${where} › exercises[${i}]`, 'missing "text"');
   });
+  (topic.compare || []).forEach((c, i) => {
+    const at = `${where} › compare[${i}]`;
+    if (!c.name) error(at, 'missing "name"');
+    if (!c.pros && !c.cons) warn(at, 'no "pros" or "cons"');
+  });
   if (!topic.examples?.length && !topic.games?.length) warn(where, 'no examples');
   if (!topic.exercises?.length) warn(where, 'no exercises');
   (topic.sources || []).forEach((s) => sources.has(s) || error(where, `unknown source "${s}" (add it to library.json)`));
@@ -144,7 +149,22 @@ for (const [id, src] of sources) {
   if (!src.title) error(where, 'missing "title"');
   if (!SOURCE_KINDS.includes(src.kind)) error(where, `unknown kind "${src.kind}" (use: ${SOURCE_KINDS.join(', ')})`);
   if (src.evidence != null && !EVIDENCE.includes(src.evidence)) error(where, `unknown evidence "${src.evidence}" (use: ${EVIDENCE.join(', ')})`);
-  if (src.url != null && !/^https?:\/\//.test(src.url)) error(where, `url must start with http:// or https://`);
+  if (src.file != null) {
+    // "file" is a path, or one path per language: { "it": "…", "en": "…" }
+    const files = typeof src.file === 'string' ? [src.file] : Object.values(src.file);
+    for (const file of files) {
+      if (!String(file).startsWith('assets/')) error(where, `"file" must point to a file in assets/ (got "${file}")`);
+      else if (!(await exists(file))) error(where, `file not found: ${file}`);
+    }
+    if (src.url != null) warn(where, 'has both "file" and "url": "file" wins');
+  }
+  if (src.download != null && typeof src.download !== 'boolean') error(where, '"download" must be true or false');
+  if (src.download && src.file == null) error(where, '"download" needs a "file"');
+  if (src.url != null && !/^https?:\/\//.test(src.url)) {
+    // Local files (e.g. a PDF in assets/docs/) are allowed, as long as they exist.
+    if (!src.url.startsWith('assets/')) error(where, 'url must start with http(s):// or point to a file in assets/');
+    else if (!(await exists(src.url))) error(where, `file not found: ${src.url}`);
+  }
   if (src.search != null && !SEARCH_ENGINES[src.search]) error(where, `unknown search "${src.search}" (use: ${Object.keys(SEARCH_ENGINES).join(', ')})`);
 }
 
@@ -164,6 +184,21 @@ for (const [id, p] of projects) {
 }
 if (placeholders) warn('students.json', `${placeholders} example project(s) still marked "placeholder": remove them when real projects arrive`);
 
+/* ---------- career ---------- */
+
+const LINK_KINDS = ['site', 'discord'];
+(career.groups || []).forEach((group, gi) => {
+  const where = `career.json › groups[${gi}]${group.id ? ` (${group.id})` : ''}`;
+  if (!group.title) error(where, 'missing "title"');
+  (group.links || []).forEach((link, li) => {
+    const at = `${where} › ${link.id || `links[${li}]`}`;
+    if (!link.name) error(at, 'missing "name"');
+    if (!/^https?:\/\//.test(link.url || '')) error(at, 'url must start with http:// or https://');
+    if (!LINK_KINDS.includes(link.kind)) error(at, `unknown kind "${link.kind}" (use: ${LINK_KINDS.join(', ')})`);
+  });
+});
+(career.related || []).forEach((id) => topics.has(id) || error('career.json › related', `unknown topic "${id}"`));
+
 /* ---------- site ---------- */
 
 (site.featured || []).forEach((id) => topics.has(id) || error('site.json › featured', `unknown topic "${id}"`));
@@ -179,14 +214,15 @@ for (const m of code.matchAll(/\bplural\(\s*'([\w.-]+)'/g)) { used.add(`${m[1]}.
 for (const key of used) if (!(key in ui)) error('ui.json', `missing key "${key}" (used in app.js)`);
 // keys built dynamically in app.js
 const dynamic = [
-  ...['topics', 'games', 'library', 'showcase', 'about'].map((v) => `nav.${v}`),
+  ...['topics', 'games', 'library', 'showcase', 'career', 'about'].map((v) => `nav.${v}`),
+  ...LINK_KINDS.map((k) => `career.kind.${k}`),
   ...EVIDENCE.flatMap((e) => [`ev.${e}`, `ev.${e}.desc`]),
   ...SOURCE_KINDS.map((k) => `src.${k}`),
   ...Object.keys(SEARCH_ENGINES).map((e) => `search.${e}`),
   ...['all', ...GAME_KINDS].map((k) => `games.kind.${k}`),
   ...GAME_KINDS.map((k) => `games.kind1.${k}`),
   ...['topics', 'games', 'sources', 'projects'].map((k) => `home.box.${k}`),
-  ...['key', 'mistakes', 'examples', 'exercises', 'sources', 'related'].map((k) => `topic.${k}`),
+  ...['key', 'compare', 'mistakes', 'examples', 'exercises', 'sources', 'related'].map((k) => `topic.${k}`),
 ];
 for (const key of dynamic) if (!(key in ui)) error('ui.json', `missing key "${key}"`);
 
@@ -201,6 +237,7 @@ checkTranslations(topicsFile, 'topics.json');
 checkTranslations(gamesFile, 'games.json');
 checkTranslations(library, 'library.json');
 checkTranslations(students, 'students.json');
+checkTranslations(career, 'career.json');
 
 console.log(`Checked ${topics.size} topics, ${families.size} families, ${games.size} games, ${sources.size} sources, ${projects.size} projects in ${langs.length} languages (${langs.join(', ')}).`);
 report();
