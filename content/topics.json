@@ -1304,6 +1304,7 @@
         "it": [
           "Ogni sistema ha delle «manopole» (tuning knobs): danno, vita, costo, tempo di ricarica, rarità, velocità. Alcune cambiano tutto, altre quasi niente: scopri quali.",
           "Gira una manopola alla volta, e prima di toccarla scrivi cosa ti aspetti che succeda.",
+          "Quando un sistema ha troppa variabilità per calcolarlo a mano (dadi, carte, critici), usa il metodo Monte Carlo: fai simulare al computer migliaia di partite finte con le tue regole, e guarda cosa esce in media (chi vince più spesso, quanto dura uno scontro, quanto danno fa una build). Non sostituisce il playtest con persone vere, ma ti dice in pochi secondi se i numeri sono ragionevoli, prima di sprecare ore di test umani.",
           "I numeri si ritoccano, le regole si riprogettano: se cambiare i numeri non risolve, il problema è la regola.",
           "Bilancia verso l'esperienza che vuoi, non verso un'equità astratta. A volte un'opzione volutamente fortissima è proprio la ricompensa.",
           "Non bilanciare sul tuo livello di abilità: tu conosci il gioco meglio di chiunque altro."
@@ -1311,6 +1312,7 @@
         "en": [
           "Every system has “knobs” (tuning knobs): damage, health, cost, cooldown, rarity, speed. Some change everything, others almost nothing: find out which.",
           "Turn one knob at a time, and before you touch it, write down what you expect to happen.",
+          "When a system has too much variance to work out by hand (dice, cards, crits), use the Monte Carlo method: have the computer simulate thousands of fake matches with your rules, and look at what comes out on average (who wins most often, how long a fight lasts, how much damage a build deals). It doesn't replace playtesting with real people, but it tells you in seconds whether the numbers are reasonable, before you burn hours of human testing.",
           "Numbers get tweaked, rules get redesigned: if changing numbers doesn't fix it, the problem is the rule.",
           "Balance towards the experience you want, not towards abstract fairness. Sometimes a deliberately overpowered option is exactly the reward.",
           "Don't balance around your own skill: you know the game better than anyone."
