@@ -255,6 +255,19 @@
       }
     },
     {
+      "id": "playtest-report",
+      "kind": "paper",
+      "title": { "it": "Report di playtest da compilare", "en": "Playtest report to fill in" },
+      "by": { "it": "Corso di Game Design", "en": "Game Design course" },
+      "year": 2026,
+      "file": { "it": "assets/docs/playtest-report-it.md", "en": "assets/docs/playtest-report-en.md" },
+      "download": true,
+      "note": {
+        "it": "Una scheda per ogni playtest: obiettivo e criterio di successo si scrivono prima del test, osservazioni, dati, risultato e decisione dopo. Obbliga a testare un problema alla volta.",
+        "en": "One sheet per playtest: the goal and the success criterion are written before the test, the observations, data, result and decision afterwards. It forces you to test one problem at a time."
+      }
+    },
+    {
       "id": "doom-bible",
       "kind": "paper",
       "title": "Doom Bible",

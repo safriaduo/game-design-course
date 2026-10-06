@@ -175,6 +175,7 @@ Documento di lavoro per il docente. I moduli sono ordinati per dipendenza logica
 **Cosa trattare:**
 - Tipi di test e a cosa servono: interno, blind, focus test, test di usabilità, test di bilanciamento
 - Preparazione: definire la domanda, scegliere i tester giusti, preparare la sessione, decidere cosa osservare
+- Obiettivo e criterio di successo si scrivono prima del test, non dopo; un problema alla volta. Il report di playtest (`assets/docs/playtest-report-it.md`) è obbligatorio per ogni test
 - Durante: non spiegare, non difendersi, non suggerire. Il silenzio del designer è una competenza.
 - Think-aloud protocol: far parlare il giocatore mentre gioca
 - Osservare vs ascoltare: cosa fa il giocatore conta più di cosa dice. I giocatori sono ottimi a segnalare problemi e pessimi a proporre soluzioni.
@@ -383,6 +384,7 @@ Documento di lavoro per il docente. I moduli sono ordinati per dipendenza logica
 - La differenza tra cambiare un numero e cambiare una regola: i numeri si tunano, le regole si riprogettano. Sapere quando serve quale è la competenza chiave.
 - Economie: sink e faucet, inflazione, valute multiple e a cosa servono
 - Bilanciare su foglio di calcolo: modelli semplici, time-to-kill, damage per second, curve di costo/beneficio
+- Metodi pratici, dal più veloce al più costoso: raddoppia o dimezza; un valore di riferimento comune (es. «1 punto = 2 monete = 1 azione»); il registro dei playtest (vincitore e posto di partenza, durata, distacco, opzioni mai scelte); rompere il gioco di proposito; simulazione Monte Carlo
 - Bilanciamento intenzionale vs sbilanciamento intenzionale (opzioni volutamente forti come ricompensa)
 
 **Punti chiave:**
@@ -494,6 +496,14 @@ Documento di lavoro per il docente. I moduli sono ordinati per dipendenza logica
 | Love Letter *(opzionale)* | 5.1 | Deduzione completa con 16 carte |
 | Pandemic *(opzionale)* | 5.2 | Cooperativo e problema dell'alpha player |
 | Vampire Survivors *(opzionale)* | 4.1, 3.2 | Core loop e feedback puro |
+| Shifting Stones | 1.2, 3.1 | Regole minime: il primo gioco da smontare |
+| Patchwork | 1.3 | Piazzamento a incastro (tipo Tetris) e bilanciamento di tre risorse: spazio, bottoni, tempo |
+| Camel Up | 5.1 | Meccanica della scommessa: gestire il rischio invece di subirlo |
+| Cryptid | 5.1 | Deduzione con informazione condivisa: ogni domanda rivela anche qualcosa di te |
+| Modern Art | 7.1 | Meccanica dell'asta: il valore lo decidono i giocatori |
+| Heat | 4.2 | Meccanica della corsa: spingere costa, e recuperare è difficile |
+| Nemesis | 5.2, 6.1 | Mappa scoperta esplorando; cooperativo e competitivo nella stessa partita |
+| Kingdom Legacy *(da far vedere, si gioca da soli)* | 4.1, 6.1 | Meccanica legacy: il loop tra una partita e l'altra diventa la storia |
 
 ---
 

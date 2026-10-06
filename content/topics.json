@@ -190,6 +190,13 @@
             "it": "La plancia è divisa in aree chiare: sai sempre dove guardare.",
             "en": "The board is split into clear areas: you always know where to look."
           }
+        },
+        {
+          "game": "shifting-stones",
+          "text": {
+            "it": "Regole su un foglietto, obiettivo stampato sulle carte che hai in mano, feedback immediato sulla griglia: in un minuto sai cosa fare e perché.",
+            "en": "Rules on a leaflet, the goal printed on the cards in your hand, instant feedback on the grid: within a minute you know what to do and why."
+          }
         }
       ],
       "exercises": [
@@ -271,6 +278,13 @@
             "it": "Nelle aste, ogni soldo speso per una centrale è un soldo che non avrai per comprare le risorse.",
             "en": "In the auctions, every coin spent on a power plant is a coin you won't have for resources."
           }
+        },
+        {
+          "game": "patchwork",
+          "text": {
+            "it": "Ogni pezza ha un prezzo in bottoni, un prezzo in tempo e una forma che deve entrare nella coperta: nessuna è la migliore in assoluto, e la scelta giusta cambia a ogni turno.",
+            "en": "Every patch has a price in buttons, a price in time and a shape that has to fit the quilt: none is best in absolute terms, and the right choice changes every turn."
+          }
         }
       ],
       "exercises": [
@@ -303,25 +317,27 @@
           "Soprattutto all'inizio, non avere la presunzione di inventare qualcosa di mai visto. Un'idea è quasi sempre un remix: i giochi che hai giocato, le esperienze che hai fatto, le cose che ti appassionano. Usa il più possibile quello che esiste e che funziona.",
           "Gioca tanto e a giochi diversi, e chiediti sempre perché una meccanica funziona in un gioco e in un altro no. Senza questa domanda il remix diventa una copia.",
           "Cambia medium o mescola i generi: porta un gioco da tavolo in digitale (o il contrario), unisci due generi che non si sono mai incontrati, oppure togli a un genere un pezzo che tutti danno per scontato.",
-          "Parti dalla fantasy: chi vuoi far sentire il giocatore? Una preda, un ispettore di frontiera, uno che pulisce… Le regole vengono dopo, al servizio di quella sensazione.",
+          "Parti dalla fantasy: chi vuoi far sentire il giocatore? Una preda, un ispettore di frontiera, uno che pulisce… Poi ricava pochissime meccaniche (due o tre) che fanno vivere quella fantasy, scrivi le regole base e playtesta subito. Il resto si aggiunge solo quando il test dice che serve.",
           "Parti da un verbo o da un vincolo: un'azione sola (saltare, scambiare, nascondersi) oppure un limite (il tema di una game jam, «un mazzo di carte e 20 segnalini»). I vincoli aiutano più della libertà totale."
         ],
         "en": [
           "Especially when you're starting out, don't presume to invent something never seen before. An idea is almost always a remix: the games you've played, the things you've lived, what you're passionate about. Use as much as you can of what already exists and works.",
           "Play a lot, and play different games, and always ask why a mechanic works in one game and not in another. Without that question, a remix becomes a copy.",
           "Change the medium or mix genres: bring a board game to digital (or the other way round), combine two genres that have never met, or take away a piece of a genre that everyone takes for granted.",
-          "Start from the fantasy: who do you want the player to feel like? Prey, a border inspector, someone who cleans… The rules come later, in service of that feeling.",
+          "Start from the fantasy: who do you want the player to feel like? Prey, a border inspector, someone who cleans… Then work out a very small number of mechanics (two or three) that bring that fantasy to life, write the basic rules and playtest straight away. Everything else gets added only when a test says it's needed.",
           "Start from a verb or a constraint: a single action (jump, swap, hide) or a limit (a game jam theme, “a deck of cards and 20 tokens”). Constraints help more than total freedom."
         ]
       },
       "mistakes": {
         "it": [
           "Aspettare l'idea geniale invece di produrne tante e scegliere la migliore.",
-          "Scambiare un'ambientazione («pirati nello spazio!») per un'idea di gioco: finché non sai cosa fa il giocatore, non è ancora un'idea."
+          "Scambiare un'ambientazione («pirati nello spazio!») per un'idea di gioco: finché non sai cosa fa il giocatore, non è ancora un'idea.",
+          "Partire con troppe meccaniche: per la prima versione ne bastano due o tre, quelle che fanno vivere la fantasy."
         ],
         "en": [
           "Waiting for the brilliant idea instead of producing many and picking the best.",
-          "Mistaking a setting (“pirates in space!”) for a game idea: until you know what the player does, it isn't an idea yet."
+          "Mistaking a setting (“pirates in space!”) for a game idea: until you know what the player does, it isn't an idea yet.",
+          "Starting with too many mechanics: the first version only needs two or three, the ones that bring the fantasy to life."
         ]
       },
       "examples": [
@@ -364,10 +380,16 @@
             "it": "Prendi un gioco da tavolo e descrivi come funzionerebbe come videogioco (o viceversa): cosa guadagna e cosa perde?",
             "en": "Take a board game and describe how it would work as a video game (or vice versa): what does it gain and what does it lose?"
           }
+        },
+        {
+          "text": {
+            "it": "Presenta l'idea scelta in tre righe: **fantasy** (chi sei e cosa provi), **obiettivo** (cosa devi ottenere per vincere), **game loop** (cosa fai, turno dopo turno). Leggila a un compagno: se non sa dirti cosa farebbe nel primo turno, riscrivila.",
+            "en": "Present the idea you picked in three lines: **fantasy** (who you are and what you feel), **goal** (what you have to achieve to win), **game loop** (what you do, turn after turn). Read it to a classmate: if they can't tell you what they'd do on the first turn, rewrite it."
+          }
         }
       ],
       "sources": ["art-of-game-design", "gmtk-game-ideas", "gmtk-ico"],
-      "related": ["prototyping", "fantasy-narrative", "craft-and-industry"]
+      "related": ["prototyping", "pitch", "fantasy-narrative", "craft-and-industry"]
     },
 
     {
@@ -450,6 +472,7 @@
       },
       "key": {
         "it": [
+          "Ogni playtest ha un obiettivo, scritto prima: un solo problema da verificare e il criterio per dire se è risolto. Il criterio si decide prima del test, non dopo: «chi è in testa a metà partita vince al massimo 1 partita su 3», non «sembrava più equilibrato». Poi cambi una cosa, ritesti e controlli il criterio.",
           "Prova presto e spesso, anche con un prototipo orribile: se diverte anche così, sei sulla strada giusta.",
           "Durante il test non spiegare, non difenderti, non suggerire. Guarda in silenzio: se il giocatore si blocca, hai trovato un problema.",
           "Sei un dottore: il giocatore ti racconta i sintomi («mi annoio», «non capivo cosa fare»), ma la diagnosi e la cura spettano a te. Ha quasi sempre ragione sul problema, quasi sempre torto sulla soluzione.",
@@ -457,6 +480,7 @@
           "Pochi tester bastano per trovare i problemi grossi; per bilanciare i numeri ne servono molti, anche a distanza, raccogliendo dati."
         ],
         "en": [
+          "Every playtest has a goal, written down beforehand: a single problem to check and the criterion for calling it solved. The criterion is set before the test, not after: “whoever leads at the halfway point wins at most 1 match in 3”, not “it felt more balanced”. Then you change one thing, test again and check the criterion.",
           "Test early and often, even with a horrible prototype: if it's fun even like that, you're on the right track.",
           "During the test: don't explain, don't defend, don't hint. Watch in silence: if the player gets stuck, you've found a problem.",
           "You're a doctor: players describe the symptoms (“I got bored”, “I didn't know what to do”), but the diagnosis and the cure are your job. They're almost always right about the problem and almost always wrong about the fix.",
@@ -467,11 +491,13 @@
       "mistakes": {
         "it": [
           "Spiegare le regole a voce invece di far leggere il regolamento, e non scoprire mai che il regolamento è illeggibile.",
-          "Intervenire appena il giocatore si blocca."
+          "Intervenire appena il giocatore si blocca.",
+          "Fare un playtest «per vedere come va», senza un obiettivo scritto: alla fine ognuno ci legge quello che vuole, e si cambiano cinque cose insieme."
         ],
         "en": [
           "Explaining the rules out loud instead of handing over the rulebook, and never finding out it's unreadable.",
-          "Stepping in as soon as the player gets stuck."
+          "Stepping in as soon as the player gets stuck.",
+          "Running a playtest “to see how it goes”, with no written goal: in the end everyone reads into it whatever they want, and five things get changed at once."
         ]
       },
       "examples": [
@@ -497,12 +523,12 @@
             "en": "Swap prototypes with another group and split the roles: who plays, who observes, who takes notes. Whoever made the game stays silent."
           },
           "bonus": {
-            "it": "Scrivete tre cose: cosa avete osservato, cosa ne avete dedotto, cosa cambierete e perché.",
-            "en": "Write down three things: what you observed, what you concluded, what you'll change and why."
+            "it": "Usate il report di playtest: prima del test compilate obiettivo, criterio e cosa osservare; dopo, il resto. L'obiettivo è stato raggiunto? Cosa cambierete, e quale sarà l'obiettivo del prossimo test?",
+            "en": "Use the playtest report: before the test, fill in the goal, the criterion and what to watch for; afterwards, the rest. Was the goal reached? What will you change, and what will the next test's goal be?"
           }
         }
       ],
-      "sources": ["nielsen-5-users", "gmtk-negative-feedback", "ambinder-valve"],
+      "sources": ["playtest-report", "nielsen-5-users", "gmtk-negative-feedback", "ambinder-valve"],
       "related": ["prototyping", "metrics", "onboarding"]
     },
 
@@ -644,6 +670,7 @@
       },
       "key": {
         "it": [
+          "Prima del pitch lungo, l'idea in tre righe: **fantasy** (chi sei, cosa provi), **obiettivo** (cosa devi ottenere), **game loop** (cosa fai, turno dopo turno). Se non sta in tre righe, non è ancora chiara neanche a te.",
           "Una struttura semplice: gancio (una frase che incuriosisce) → riferimenti («X incontra Y») → cosa ti rende diverso → cosa fa il giocatore → la prova (prototipo, video, foto del playtest) → cosa chiedi.",
           "Parti da cosa fa il giocatore, non dalla storia: venti minuti di ambientazione non vendono un gioco.",
           "Mostra invece di raccontare: un minuto di gioco vero vale più di dieci slide.",
@@ -651,6 +678,7 @@
           "Allenati: cronometrati, presentalo a qualcuno che non conosce il gioco e taglia tutto quello che non serve."
         ],
         "en": [
+          "Before the long pitch, the idea in three lines: **fantasy** (who you are, what you feel), **goal** (what you have to achieve), **game loop** (what you do, turn after turn). If it doesn't fit in three lines, it isn't clear even to you yet.",
           "A simple structure: hook (one intriguing sentence) → references (“X meets Y”) → what makes you different → what the player does → proof (prototype, video, playtest photos) → what you're asking for.",
           "Start from what the player does, not from the story: twenty minutes of setting won't sell a game.",
           "Show instead of telling: one minute of real gameplay beats ten slides.",
@@ -778,6 +806,16 @@
           "bonus": {
             "it": "Cambia una sola meccanica per ribaltare l'estetica, per esempio da tensione a senso di potere.",
             "en": "Change a single mechanic to flip the aesthetic, for example from tension to a sense of power."
+          }
+        },
+        {
+          "text": {
+            "it": "Scomponi una meccanica che ti diverte (l'asta, la scommessa, il bluff…) nei pezzi che la rendono divertente. Poi togline uno alla volta: la meccanica regge ancora? Se togliendo un pezzo smette di funzionare, quel pezzo era fondamentale, e quando la userai nel tuo gioco non potrà mancare.",
+            "en": "Break a mechanic you enjoy (the auction, the bet, the bluff…) down into the pieces that make it fun. Then remove them one at a time: does the mechanic still hold up? If it stops working when a piece is gone, that piece was essential, and when you use the mechanic in your own game it can't be missing."
+          },
+          "bonus": {
+            "it": "Prova con l'asta di Modern Art. I pezzi: nessuno sa quanto varrà un quadro, i soldi sono pochi, chi vende incassa. Togli il primo e l'asta diventa un calcolo; togli il secondo e nessuna offerta costa davvero; togli il terzo e vendere non è più una mossa.",
+            "en": "Try it with the auction in Modern Art. The pieces: nobody knows what a painting will be worth, money is tight, the seller gets paid. Remove the first and the auction becomes arithmetic; remove the second and no bid really costs anything; remove the third and selling is no longer a move."
           }
         },
         {
@@ -927,6 +965,13 @@
           "text": {
             "it": "Stanza, ricompensa, stanza; poi la run finisce e torni a casa un po' più forte. Loop dentro loop.",
             "en": "Room, reward, room; then the run ends and you go home a little stronger. Loops inside loops."
+          }
+        },
+        {
+          "game": "kingdom-legacy",
+          "text": {
+            "it": "Il loop più lungo possibile: ogni partita cambia il mazzo per sempre, e la partita dopo riparte da lì. Il loop tra una partita e l'altra diventa la storia del tuo regno.",
+            "en": "The longest loop there is: every match changes the deck for good, and the next match starts from there. The loop between matches becomes the story of your kingdom."
           }
         }
       ],
@@ -1273,6 +1318,20 @@
             "it": "Vedi le carte di tutti tranne le tue: l'informazione nascosta diventa il gioco.",
             "en": "You see everyone's cards except your own: hidden information becomes the game."
           }
+        },
+        {
+          "game": "camel-up",
+          "text": {
+            "it": "La corsa la decidono i dadi, tu scegli solo quando scommettere: prima scommetti, più guadagni e più rischi. L'abilità non è evitare il caso, ma gestire il rischio.",
+            "en": "The dice decide the race; you only choose when to bet: the earlier you bet, the more you earn and the more you risk. Skill isn't avoiding chance, it's managing risk."
+          }
+        },
+        {
+          "game": "cryptid",
+          "text": {
+            "it": "Informazione nascosta ma deducibile: gli indizi di tutti insieme indicano una sola casella. E ogni risposta che dai aiuta anche gli altri a capire il tuo indizio.",
+            "en": "Hidden but deducible information: everyone's clues together point to a single space. And every answer you give also helps the others work out your clue."
+          }
         }
       ],
       "exercises": [
@@ -1303,7 +1362,7 @@
       "key": {
         "it": [
           "Ogni sistema ha delle «manopole» (tuning knobs): danno, vita, costo, tempo di ricarica, rarità, velocità. Alcune cambiano tutto, altre quasi niente: scopri quali.",
-          "Gira una manopola alla volta, e prima di toccarla scrivi cosa ti aspetti che succeda.",
+          "Gira una manopola alla volta, e prima di toccarla scrivi cosa ti aspetti che succeda. Non ritoccarla del 10%: raddoppiala o dimezzala. Vedi subito se quella manopola conta e da che parte devi andare; poi restringi verso il valore giusto.",
           "Quando un sistema ha troppa variabilità per calcolarlo a mano (dadi, carte, critici), usa il metodo Monte Carlo: fai simulare al computer migliaia di partite finte con le tue regole, e guarda cosa esce in media (chi vince più spesso, quanto dura uno scontro, quanto danno fa una build). Non sostituisce il playtest con persone vere, ma ti dice in pochi secondi se i numeri sono ragionevoli, prima di sprecare ore di test umani.",
           "I numeri si ritoccano, le regole si riprogettano: se cambiare i numeri non risolve, il problema è la regola.",
           "Bilancia verso l'esperienza che vuoi, non verso un'equità astratta. A volte un'opzione volutamente fortissima è proprio la ricompensa.",
@@ -1311,20 +1370,99 @@
         ],
         "en": [
           "Every system has “knobs” (tuning knobs): damage, health, cost, cooldown, rarity, speed. Some change everything, others almost nothing: find out which.",
-          "Turn one knob at a time, and before you touch it, write down what you expect to happen.",
+          "Turn one knob at a time, and before you touch it, write down what you expect to happen. Don't nudge it by 10%: double it or halve it. You'll see straight away whether that knob matters and which way to go; then narrow in on the right value.",
           "When a system has too much variance to work out by hand (dice, cards, crits), use the Monte Carlo method: have the computer simulate thousands of fake matches with your rules, and look at what comes out on average (who wins most often, how long a fight lasts, how much damage a build deals). It doesn't replace playtesting with real people, but it tells you in seconds whether the numbers are reasonable, before you burn hours of human testing.",
           "Numbers get tweaked, rules get redesigned: if changing numbers doesn't fix it, the problem is the rule.",
           "Balance towards the experience you want, not towards abstract fairness. Sometimes a deliberately overpowered option is exactly the reward.",
           "Don't balance around your own skill: you know the game better than anyone."
         ]
       },
+      "compare": [
+        {
+          "name": { "it": "Raddoppia o dimezza", "en": "Double or halve" },
+          "text": {
+            "it": "Prendi il numero che non ti convince e cambialo in modo estremo: il doppio o la metà. Gioca, guarda cosa succede, poi restringi verso il valore giusto.",
+            "en": "Take the number you're unsure about and change it drastically: double or half. Play, see what happens, then narrow in on the right value."
+          },
+          "pros": {
+            "it": ["Velocissimo, non serve nessun calcolo", "Ti dice subito se quella manopola conta, e in che direzione andare"],
+            "en": ["Very fast, no maths needed", "Tells you straight away whether that knob matters, and which way to go"]
+          },
+          "cons": {
+            "it": ["Un numero alla volta: con tante manopole è lento", "Trova il valore giusto, ma non ti dice se è sbagliata la regola"],
+            "en": ["One number at a time: slow when there are many knobs", "Finds the right value, but doesn't tell you if the rule is wrong"]
+          }
+        },
+        {
+          "name": { "it": "Un valore di riferimento", "en": "A reference value" },
+          "text": {
+            "it": "Scegli una moneta comune per tutto il gioco (per esempio «1 punto = 2 monete = 1 azione») e dai un prezzo a ogni carta, potere o mossa. Ogni opzione deve costare quanto dà: quelle che danno troppo o troppo poco saltano all'occhio.",
+            "en": "Pick a common currency for the whole game (for example “1 point = 2 coins = 1 action”) and put a price on every card, power or move. Every option should cost what it gives: the ones that give too much or too little stand out."
+          },
+          "pros": {
+            "it": ["Vedi a colpo d'occhio cosa è fuori scala", "Perfetto per carte, poteri, negozi, mercati"],
+            "en": ["You see at a glance what's out of scale", "Ideal for cards, powers, shops, markets"]
+          },
+          "cons": {
+            "it": ["Alcune cose non si traducono in numeri: tempismo, flessibilità, combo", "Ti dà un punto di partenza, non la risposta finale"],
+            "en": ["Some things don't translate into numbers: timing, flexibility, combos", "Gives you a starting point, not the final answer"]
+          }
+        },
+        {
+          "name": { "it": "Il registro dei playtest", "en": "The playtest log" },
+          "text": {
+            "it": "In ogni partita annoti sempre le stesse cose: chi vince e da che posto partiva, punteggi, durata, distacco tra primo e ultimo, opzioni scelte e opzioni mai scelte. Dopo qualche partita i numeri parlano.",
+            "en": "In every match you write down the same things: who won and which seat they started in, scores, length, the gap between first and last, options picked and options never picked. After a few matches the numbers start talking."
+          },
+          "pros": {
+            "it": ["Misura quello che succede davvero, con persone vere", "Scopre il vantaggio di chi gioca per primo, le opzioni ignorate, le partite decise troppo presto"],
+            "en": ["Measures what really happens, with real people", "Uncovers first-player advantage, ignored options, matches decided too early"]
+          },
+          "cons": {
+            "it": ["Servono tante partite per numeri affidabili", "Ti dice cosa succede, non perché"],
+            "en": ["You need many matches for reliable numbers", "Tells you what happens, not why"]
+          }
+        },
+        {
+          "name": { "it": "Rompere il gioco", "en": "Breaking the game" },
+          "text": {
+            "it": "Una partita in cui l'unico obiettivo è vincere a ogni costo: cercate la strategia più sporca, la combo più forte, la regola da sfruttare. Se esiste una strategia dominante, è meglio trovarla voi.",
+            "en": "A match where the only goal is winning at any cost: look for the dirtiest strategy, the strongest combo, the rule to exploit. If there's a dominant strategy, better that you find it."
+          },
+          "pros": {
+            "it": ["Trova le strategie dominanti prima dei giocatori", "Si fa in aula, in mezz'ora, ed è divertente"],
+            "en": ["Finds dominant strategies before the players do", "Can be done in class in half an hour, and it's fun"]
+          },
+          "cons": {
+            "it": ["Chi rompe ottimizza, non si diverte: non ti dice se il gioco è bello", "Serve qualcuno che conosca già bene le regole"],
+            "en": ["Whoever breaks it optimises rather than enjoys: it doesn't tell you if the game is good", "Needs someone who already knows the rules well"]
+          }
+        },
+        {
+          "name": { "it": "Foglio di calcolo e simulazione", "en": "Spreadsheet and simulation" },
+          "text": {
+            "it": "Metti le regole in un foglio di calcolo o in un piccolo programma e fai giocare il computer: migliaia di partite in pochi secondi (il metodo Monte Carlo).",
+            "en": "Put the rules in a spreadsheet or a small program and let the computer play: thousands of matches in a few seconds (the Monte Carlo method)."
+          },
+          "pros": {
+            "it": ["Migliaia di partite senza stancare nessuno", "Ottimo con dadi, carte e tanta variabilità"],
+            "en": ["Thousands of matches without tiring anyone out", "Great with dice, cards and lots of variance"]
+          },
+          "cons": {
+            "it": ["Simula le regole, non le persone", "Servono un po' di formule o di codice"],
+            "en": ["Simulates the rules, not the people", "Needs some formulas or some code"]
+          }
+        }
+      ],
       "mistakes": {
         "it": [
           "Cambiare più numeri insieme e non sapere quale ha funzionato.",
+          "Ritoccare i numeri un poco alla volta: dopo dieci test non sai ancora se quella manopola conta.",
           "Confondere «troppo forte» con «troppo noioso da affrontare»."
         ],
         "en": [
           "Changing several numbers at once and not knowing which one worked.",
+          "Nudging numbers a little at a time: after ten tests you still don't know whether that knob matters.",
           "Confusing “too strong” with “too boring to face”."
         ]
       },
@@ -1360,6 +1498,16 @@
           "bonus": {
             "it": "Fai provare entrambe le versioni: le persone sentono la differenza che ti aspettavi?",
             "en": "Have people play both versions: do they feel the difference you expected?"
+          }
+        },
+        {
+          "text": {
+            "it": "Sul tuo prototipo: scegli la manopola che secondo te conta di più. Giocate una partita col valore raddoppiato e una col valore dimezzato, e confrontatele con la versione normale. Quella manopola conta davvero? Da che parte devi andare?",
+            "en": "On your prototype: pick the knob you think matters most. Play one match with the value doubled and one with it halved, and compare them with the normal version. Does that knob really matter? Which way should you go?"
+          },
+          "bonus": {
+            "it": "Tieni il registro per cinque partite: chi vince e da che posto partiva, durata, distacco tra primo e ultimo, opzioni mai scelte. Cosa salta fuori?",
+            "en": "Keep the log for five matches: who won and which seat they started in, length, the gap between first and last, options never picked. What stands out?"
           }
         }
       ],
@@ -1422,6 +1570,13 @@
           "text": {
             "it": "L'oro arriva dai combattimenti e si spende nei negozi: non puoi comprare tutto, quindi ogni acquisto è una scelta.",
             "en": "Gold comes from fights and is spent in shops: you can't buy everything, so every purchase is a choice."
+          }
+        },
+        {
+          "game": "modern-art",
+          "text": {
+            "it": "I prezzi non li decide il gioco ma i giocatori: un artista vale tanto quanto viene comprato, e i soldi che spendi finiscono in tasca a un avversario. Un mercato intero con un mazzo di carte.",
+            "en": "Prices aren't set by the game but by the players: an artist is worth as much as people buy them, and the money you spend ends up in an opponent's pocket. A whole market from one deck of cards."
           }
         }
       ],
@@ -1596,6 +1751,13 @@
           "text": {
             "it": "Niente dadi, solo accordi e tradimenti: il sistema sono le persone.",
             "en": "No dice, only deals and betrayals: the people are the system."
+          }
+        },
+        {
+          "game": "nemesis",
+          "text": {
+            "it": "Semi-cooperativo: si lotta insieme contro gli alieni, ma ognuno ha un obiettivo segreto. Ogni aiuto che ricevi solleva la stessa domanda: di chi ti puoi fidare?",
+            "en": "Semi-co-operative: you fight the aliens together, but everyone has a secret goal. Every bit of help you get raises the same question: who can you trust?"
           }
         }
       ],

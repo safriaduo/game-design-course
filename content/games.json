@@ -537,8 +537,8 @@
       "year": 2022,
       "designer": "Asger Harding Granerud, Daniel Skjold Pedersen",
       "note": {
-        "it": "Corse automobilistiche con le carte: prendere una curva troppo veloce costa carissimo, e recuperare è difficile.",
-        "en": "Card-driven motor racing: taking a corner too fast costs you dearly, and catching up is hard."
+        "it": "Il gioco di riferimento per la meccanica della corsa. La marcia decide quante carte giochi, e quindi quanto vai veloce; ogni curva ha un limite, e se lo superi paghi in carte calore che ti intasano la mano. A ogni turno la stessa domanda: spingo o freno?",
+        "en": "The reference game for the racing mechanic. Your gear decides how many cards you play, and so how fast you go; every corner has a limit, and if you go over it you pay in heat cards that clog your hand. Every turn asks the same question: push or brake?"
       }
     },
     {
@@ -550,6 +550,83 @@
       "note": {
         "it": "Un gioco da tavolo a scenari: ogni scenario è un livello, con obiettivi, nemici e regole speciali.",
         "en": "A scenario-based board game: each scenario is a level, with goals, enemies and special rules."
+      }
+    },
+    {
+      "id": "modern-art",
+      "name": "Modern Art",
+      "kind": "board",
+      "year": 1992,
+      "designer": "Reiner Knizia",
+      "note": {
+        "it": "Il gioco di riferimento per la meccanica dell'asta. Sei un mercante d'arte: a turno metti all'asta un quadro, e quanto vale ogni artista lo decidono i giocatori con quello che comprano. Chi vende incassa i soldi degli altri, quindi ogni offerta è una scommessa su quanto vale davvero un quadro.",
+        "en": "The reference game for the auction mechanic. You're an art dealer: on your turn you auction a painting, and what each artist is worth is decided by what the players buy. The seller pockets the other players' money, so every bid is a bet on what a painting is really worth."
+      }
+    },
+    {
+      "id": "camel-up",
+      "name": "Camel Up",
+      "kind": "board",
+      "year": 2014,
+      "designer": "Steffen Bogen",
+      "note": {
+        "it": "Il gioco di riferimento per la meccanica della scommessa. Non controlli i cammelli: scommetti su chi vincerà. La corsa è casuale ma in parte prevedibile, e chi scommette prima rischia di più ma guadagna di più. Insegna a gestire il rischio invece di subirlo.",
+        "en": "The reference game for the betting mechanic. You don't control the camels: you bet on who'll win. The race is random but partly predictable, and whoever bets first risks more but earns more. It teaches managing risk instead of suffering it."
+      }
+    },
+    {
+      "id": "kingdom-legacy",
+      "name": "Kingdom Legacy: Feudal Kingdom",
+      "kind": "board",
+      "year": 2024,
+      "designer": "Jonathan Fryxelius",
+      "note": {
+        "it": "Il gioco di riferimento per la meccanica legacy: le partite sono collegate, e quello che fai cambia il gioco per sempre. Le carte si girano, migliorano, si aggiungono, alcune escono per sempre: il mazzo diventa la storia del tuo regno. Si gioca da soli.",
+        "en": "The reference game for the legacy mechanic: matches are linked, and what you do changes the game for good. Cards get flipped, upgraded, added, and some leave forever: the deck becomes the story of your kingdom. It's played solo."
+      }
+    },
+    {
+      "id": "patchwork",
+      "name": "Patchwork",
+      "kind": "board",
+      "year": 2014,
+      "designer": "Uwe Rosenberg",
+      "note": {
+        "it": "Due giocatori cuciono una coperta: scegli pezze di forme diverse e incastrale come in Tetris. Ogni pezza costa bottoni (la moneta) e tempo, e chi è più indietro sul tracciato del tempo gioca di nuovo. Ogni scelta pesa tre cose insieme: spazio, bottoni e tempo.",
+        "en": "Two players sew a quilt: pick patches of different shapes and fit them together like Tetris. Each patch costs buttons (the currency) and time, and whoever is further behind on the time track plays again. Every choice weighs three things at once: space, buttons and time."
+      }
+    },
+    {
+      "id": "shifting-stones",
+      "name": "Shifting Stones",
+      "kind": "board",
+      "year": 2018,
+      "designer": "Joshua Buergel",
+      "note": {
+        "it": "Nove tessere in una griglia 3×3 e un mazzo di carte: scarti carte per spostare o girare le tessere finché la griglia non mostra uno dei disegni che hai in mano. Le regole stanno in un foglietto e la griglia è di tutti, quindi ogni mossa può aiutare anche gli avversari. Ottimo come primo gioco da smontare.",
+        "en": "Nine tiles in a 3×3 grid and a deck of cards: you discard cards to move or flip tiles until the grid shows one of the patterns in your hand. The rules fit on a leaflet and the grid is shared, so every move can help your opponents too. A great first game to take apart."
+      }
+    },
+    {
+      "id": "cryptid",
+      "name": "Cryptid",
+      "kind": "board",
+      "year": 2018,
+      "designer": "Hal Duncan, Ruth Veevers",
+      "note": {
+        "it": "Il gioco di riferimento per la deduzione con informazione condivisa. Ognuno ha un indizio diverso su dove si nasconde la creatura, e solo tutti gli indizi insieme indicano una casella. Ma ogni domanda che fai, e ogni risposta che dai, rivela qualcosa del tuo indizio: devi scoprire senza farti scoprire.",
+        "en": "The reference game for deduction with shared information. Everyone has a different clue about where the creature hides, and only all the clues together point to a single space. But every question you ask, and every answer you give, reveals something about your clue: you have to find out without being found out."
+      }
+    },
+    {
+      "id": "nemesis",
+      "name": "Nemesis",
+      "kind": "board",
+      "year": 2018,
+      "designer": "Adam Kwapiński",
+      "note": {
+        "it": "Un'astronave da esplorare stanza per stanza: le stanze sono pescate a caso e scoperte man mano che entri, quindi la mappa cambia a ogni partita. Si collabora per sopravvivere agli alieni, ma ognuno ha un obiettivo segreto che può andare contro gli altri: cooperativo e competitivo nella stessa partita.",
+        "en": "A spaceship to explore room by room: the rooms are drawn at random and revealed as you enter, so the map changes every game. You work together to survive the aliens, but everyone has a secret goal that can go against the others: co-operative and competitive in the same game."
       }
     }
   ]

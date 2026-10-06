@@ -34,6 +34,7 @@ content/                ← TUTTI I CONTENUTI: si modifica quasi solo qui
 tools/check-content.mjs controlla i contenuti (traduzioni, riferimenti, foto)
 tools/serve.mjs         server locale per l'anteprima
 ProgrammaCorso.md       il programma dettagliato del corso
+RetrospettivaCorso.md   feedback di fine corso e piano per la prossima edizione
 ```
 
 ### Come funzionano le traduzioni
@@ -85,7 +86,7 @@ Stile: niente nomi di autori nei punti chiave, e un termine tecnico solo se si u
 
 **Un documento del corso** (un GDD d'esempio, un template, un regolamento, un PDF…): mettilo in `assets/docs/` e in `library.json` indica il percorso con `"file"`, anche uno per lingua: `"file": { "it": "assets/docs/pacman-gdd-it.md", "en": "assets/docs/pacman-gdd-en.md" }`. I file Markdown (`.md`) si aprono nella vista di GitHub, con tabelle e titoli formattati; gli altri file si aprono direttamente. Aggiungi `"download": true` se vuoi che il link scarichi il file (come per il template di GDD). Il controllo verifica che i file esistano.
 
-In `assets/docs/` trovi già il GDD d'esempio di Pac-Man e il template di GDD da compilare, in italiano e in inglese.
+In `assets/docs/` trovi già il GDD d'esempio di Pac-Man, il template di GDD e il report di playtest da compilare, in italiano e in inglese.
 
 **Un gioco**: `content/games.json`, con `kind` = `board`, `video` o `classic`, e una `note` su cosa insegna. Per citarlo in un tema, aggiungi un esempio con `"game": "<id>"` negli `examples` del tema: la pagina Giochi mostrerà da sola in quali temi compare.
 
