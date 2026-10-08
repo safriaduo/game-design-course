@@ -529,7 +529,8 @@
         }
       ],
       "sources": ["playtest-report", "nielsen-5-users", "gmtk-negative-feedback", "ambinder-valve"],
-      "related": ["prototyping", "metrics", "onboarding"]
+      "related": ["prototyping", "metrics", "onboarding"],
+      "guides": ["validate-core-loop"]
     },
 
     {
@@ -596,7 +597,7 @@
         }
       ],
       "sources": ["blood-sweat-pixels", "ch-gdc"],
-      "related": ["prototyping", "design-tools", "pitch"]
+      "related": ["prototyping", "design-tools", "pitch", "steam-release"]
     },
 
     {
@@ -728,6 +729,82 @@
       ],
       "sources": ["upton-pitch", "saltsman-pitch"],
       "related": ["game-ideas", "development-process", "craft-and-industry"]
+    },
+
+    {
+      "id": "steam-release",
+      "family": "method",
+      "glyph": "flag",
+      "title": { "it": "Pubblicare un gioco su Steam", "en": "Releasing a game on Steam" },
+      "lead": {
+        "it": "Su Steam il lancio è l'ultima tappa, non la prima: pagina, wishlist, demo e Next Fest si preparano mesi prima. Qui trovi il percorso che usiamo, tappa per tappa, con cosa si fa e perché.",
+        "en": "On Steam, launch is the last milestone, not the first: the store page, wishlists, demo and Next Fest are prepared months ahead. Here's the pipeline we use, milestone by milestone, with what we do and why."
+      },
+      "key": {
+        "it": [
+          "La pagina Steam va online almeno 6 mesi prima del lancio. Valve ne chiede solo 2 settimane, ma i mesi in più servono ad accumulare wishlist (la lista dei desideri: quando il gioco esce, Steam avvisa chi ce l'ha messo).",
+          "Lo Steam Next Fest (il festival delle demo, tre volte l'anno) si fa una volta sola per gioco, e moltiplica le wishlist che hai già invece di crearne dal nulla. Per questo la demo esce mesi prima del festival, non durante.",
+          "Ogni fase si chiude con un cancello (*gate*): un controllo con criteri scritti prima. Se non passa, si itera, si cambia rotta o si chiude il progetto. Chiudere presto costa meno che chiudere tardi.",
+          "Una sola metrica guida ogni build pubblica, la *North Star*: il tempo di gioco mediano della demo. Dice se il core loop trattiene le persone ed è disponibile dal primo playtest, molto prima di vendite e recensioni. Il metodo RICE usa la stessa metrica per decidere quali compiti fare per primi.",
+          "Produzione, marketing e burocrazia di Steamworks corrono insieme sulle stesse tappe. Verifica fiscale, revisioni e scadenze del festival hanno tempi fissi: si sceglie l'edizione del Next Fest e si pianifica tutto a ritroso da lì."
+        ],
+        "en": [
+          "The Steam page goes live at least 6 months before launch. Valve only requires 2 weeks, but the extra months are for collecting wishlists (when the game comes out, Steam notifies everyone who wishlisted it).",
+          "Steam Next Fest (the demo festival, three times a year) happens once per game, and it multiplies the wishlists you already have rather than creating them from nothing. That's why the demo comes out months before the fest, not during it.",
+          "Every phase ends with a *gate*: a check against criteria written in advance. If it fails, you iterate, change course or stop the project. Stopping early costs less than stopping late.",
+          "One metric guides every public build, the *North Star*: median demo playtime. It tells you whether the core loop holds people, and it's available from the first playtest, long before sales and reviews. The RICE method uses the same metric to decide which tasks come first.",
+          "Production, marketing and Steamworks admin run together on the same milestones. Tax verification, reviews and festival deadlines have fixed lead times: you pick the Next Fest edition and plan everything backwards from there."
+        ]
+      },
+      "mistakes": {
+        "it": [
+          "Aprire la pagina Steam un mese prima del lancio.",
+          "Far debuttare la demo proprio al Next Fest.",
+          "Passare alla produzione piena senza aver guardato le wishlist."
+        ],
+        "en": [
+          "Opening the Steam page a month before launch.",
+          "Debuting the demo at Next Fest itself.",
+          "Moving into full production without looking at the wishlists."
+        ]
+      },
+      "examples": [
+        {
+          "title": { "it": "Il calendario a ritroso", "en": "The workback calendar" },
+          "text": {
+            "it": "Lancio a luglio 2027 con il Next Fest di giugno: pagina pubblica entro gennaio, iscrizione al festival entro il 25 aprile, demo in revisione entro il 17 maggio per l'anteprima stampa (31 maggio al più tardi), festival dal 14 al 21 giugno, lancio poche settimane dopo.",
+            "en": "Launch in July 2027 with the June Next Fest: page public by January, fest registration by April 25, demo in review by May 17 for the press preview (May 31 at the latest), fest from June 14 to 21, launch a few weeks later."
+          }
+        },
+        {
+          "game": "vampire-survivors",
+          "text": {
+            "it": "È uscito prima su itch.io, dove ha trovato i suoi primi giocatori, e solo dopo è arrivato su Steam in accesso anticipato.",
+            "en": "It came out on itch.io first, where it found its first players, and only then arrived on Steam in early access."
+          }
+        }
+      ],
+      "exercises": [
+        {
+          "text": {
+            "it": "Scegli un'edizione del Next Fest (febbraio, giugno o ottobre) e una data di lancio per il tuo gioco. Costruisci il calendario a ritroso: quando deve essere pubblica la pagina, quando chiudono le iscrizioni, quando va in revisione la demo, quando la lanci.",
+            "en": "Pick a Next Fest edition (February, June or October) and a launch date for your game. Build the workback calendar: when the page must be public, when registration closes, when the demo goes into review, when you launch."
+          },
+          "bonus": {
+            "it": "Aggiungi le scadenze di Steamworks: verifica fiscale (10–15 giorni lavorativi), 21 giorni dal pagamento della quota, revisione della pagina almeno 7 giorni prima. Quale cade per prima?",
+            "en": "Add the Steamworks deadlines: tax verification (10–15 business days), 21 days after paying the fee, store page review at least 7 days ahead. Which one comes first?"
+          }
+        },
+        {
+          "text": {
+            "it": "Elenca cinque compiti per la prossima tappa del tuo gioco e dai a ognuno un punteggio RICE, misurando l'impatto sul tempo di gioco della demo. Il primo in classifica è quello che ti aspettavi?",
+            "en": "List five tasks for your game's next milestone and give each a RICE score, measuring impact on demo playtime. Is the top one the one you expected?"
+          }
+        }
+      ],
+      "sources": ["how-to-market", "steam-next-fest"],
+      "related": ["development-process", "metrics", "playtesting"],
+      "guides": ["steam-release-pipeline"]
     },
 
     {
@@ -988,7 +1065,8 @@
         }
       ],
       "sources": ["cook-loops-arcs", "gmtk-engaged"],
-      "related": ["flow-and-fun", "feedback-loops", "economy"]
+      "related": ["flow-and-fun", "feedback-loops", "economy"],
+      "guides": ["validate-core-loop"]
     },
 
     {
@@ -2380,6 +2458,803 @@
       ],
       "sources": ["darkpattern-games", "dark-patterns", "gmtk-engaged", "ec-skinner-box"],
       "related": ["core-loop", "economy", "metrics"]
+    }
+  ],
+
+  "guides": [
+    {
+      "id": "validate-core-loop",
+      "title": { "it": "Come capire se il core loop di un prototipo è validato", "en": "How to tell if a prototype's core loop is validated" },
+      "lead": {
+        "it": "Fai diversi giri piccoli, ognuno con 3–5 sconosciuti del tuo pubblico, invece di un unico test grande. Guarda cosa fanno e dai poco peso a cosa dicono. Prima della prima sessione scrivi quale risultato ti farà tenere il prototipo e quale te lo farà buttare. Il core loop è validato quando persone che non ti devono niente continuano a giocare senza che tu glielo chieda, e ci tornano più tardi. Sentirsi dire che è «divertente» non conta.",
+        "en": "Run several small rounds of 3–5 strangers from your target audience rather than one big test. Watch what they do and give little weight to what they say. Before the first session, write down what result would make you keep the prototype and what would make you kill it. A core loop counts as validated when people who owe you nothing keep playing without being asked, and come back to it later. Being told it's “fun” doesn't count."
+      },
+      "sections": [
+        {
+          "title": { "it": "1. Quanti playtest bastano?", "en": "1. How many playtests are enough?" },
+          "blocks": [
+            { "text": { "it": "Non esiste un numero magico. Le fonti però sono d'accordo su tre punti.", "en": "There's no single magic number. The sources agree on three points." } },
+            {
+              "list": {
+                "it": [
+                  "**Circa 5 giocatori per giro, poi correggi e ritesta.** Le ricerche di usabilità di Jakob Nielsen hanno trovato che 5 utenti scoprono circa l'85% dei problemi, e ogni utente in più aggiunge sempre meno. Il suo consiglio è spendere i tester in più giri da 5 invece che in un giro solo da 15. Paul Sztajer applica questa regola ai giochi su Game Developer, con una precisazione: funziona solo con sessioni strutturate e osservate. Mandare la build a 5 amici e chiedere «che ne pensi?» non basta, a nessun numero.",
+                  "**Cinque giocatori trovano i problemi, ma non ti danno un verdetto.** La regola di Nielsen serve a scoprire cosa è rotto. «Le persone vogliono continuare a giocare?» è invece una domanda di quantità, e ha bisogno di un gruppo più grande: 20 persone o più, meglio se il tempo di gioco viene misurato in automatico. È qui che la maggior parte di chi sviluppa da solo si inganna: tre belle sessioni su cinque sono un aneddoto, non una validazione.",
+                  "**Per avere un'idea della scala:** per Half-Life Valve ha fatto circa 200 sessioni da due ore. Per un prototipo non serve niente del genere. Il punto è che i grandi studi trattano il playtest come un'attività continua, non come un evento singolo."
+                ],
+                "en": [
+                  "**About 5 players per round, then fix things and test again.** Jakob Nielsen's usability research found that 5 users uncover about 85% of the problems, and each extra user tells you less. His advice is to spend your testers on several rounds of 5 rather than one round of 15. Paul Sztajer applies this directly to games on Game Developer, with a caveat: it only works for structured, observed sessions. Sending a build to 5 friends and asking what they think isn't enough at any number.",
+                  "**Five players find problems, but they can't give you a go/no-go verdict.** Nielsen's rule is about spotting what's broken. “Do people want to keep playing?” is a question about how many people, and it needs a bigger group: 20 or more, ideally with playtime measured automatically. This is where most solo developers fool themselves: three good sessions out of five is an anecdote, not a validation.",
+                  "**For scale:** Valve ran about 200 two-hour sessions for Half-Life. You don't need anything like that for a prototype. The point is that big studios treat playtesting as continuous, not a single event."
+                ]
+              }
+            },
+            { "text": { "it": "**Una struttura ragionevole:** 2–3 giri da circa 5 sessioni, dal vivo o in videochiamata, per eliminare le confusioni. Poi un giro più grande a distanza, da 20 persone o più, in cui misuri solo il comportamento.", "en": "**A sensible structure:** 2–3 rounds of about 5 in-person or video-call sessions to fix confusion, then one larger remote round of 20 or more where you only measure behavior." } }
+          ]
+        },
+        {
+          "title": { "it": "2. Quali tester ti servono, e quali no", "en": "2. Which playtesters you want, and which you don't" },
+          "blocks": [
+            { "text": { "it": "In *The Art of Game Design* Jesse Schell divide i tester in quattro tipi:", "en": "In *The Art of Game Design*, Jesse Schell sorts playtesters into four types:" } },
+            {
+              "table": {
+                "it": [
+                  ["Tipo", "Utili per", "Il rischio"],
+                  ["Sviluppatori", "Tanto feedback, sempre a portata di mano", "Sono troppo vicini al gioco: dai meno peso a quello che dicono"],
+                  ["Amici e parenti", "Sempre disponibili", "Non vogliono ferirti e si sforzano di farselo piacere"],
+                  ["Esperti del genere", "Confronti dettagliati con giochi simili", "Non rappresentano il pubblico generale"],
+                  ["Tester «usa e getta» (sconosciuti, una volta sola)", "Occhi freschi, prime impressioni vere", "Se usi solo loro, costruisci un inizio bellissimo che stanca presto"]
+                ],
+                "en": [
+                  ["Type", "Useful for", "Danger"],
+                  ["Developers", "Lots of feedback, convenient", "Too close to the game, so discount what they say"],
+                  ["Friends and family", "Always available", "They don't want to hurt your feelings and will try to like it"],
+                  ["Expert genre players", "Detailed comparisons with similar games", "They don't represent the general audience"],
+                  ["“Tissue” testers (one-time strangers)", "Fresh eyes, real first impressions", "Rely on them alone and you build a great opening that gets boring fast"]
+                ]
+              }
+            },
+            { "title": { "it": "Ti servono", "en": "You want" } },
+            {
+              "tone": "pro",
+              "list": {
+                "it": [
+                  "**Sconosciuti, senza nessun legame con te.** Chris Zukowski (How To Market A Game) lo dice chiaramente: giocatori ingenui, non amici, osservati in silenzio.",
+                  "**Persone che giocano già al tuo genere.** Far provare un roguelite a chi odia i roguelite non ti dice niente.",
+                  "**Qualche tester che puoi richiamare.** L'avvertenza di Schell sui tester usa e getta conta soprattutto per il core loop: un loop è fatto di ripetizione, quindi ti serve qualcuno che faccia una seconda e una terza sessione."
+                ],
+                "en": [
+                  "**Strangers with no relationship to you.** Chris Zukowski (How To Market A Game) specifically says naive players, not friends, and observe them silently.",
+                  "**People who already play your genre.** Testing a roguelite on someone who hates roguelites tells you nothing.",
+                  "**A few testers you can bring back.** Schell's caveat about tissue testers matters most for core loops. A loop is about repetition, so you need some people who play a second and third session."
+                ]
+              }
+            },
+            { "title": { "it": "Non ti servono", "en": "You don't want" } },
+            {
+              "tone": "con",
+              "list": {
+                "it": [
+                  "**Amici e parenti, se ti serve un verdetto.** Vanno benissimo per controllare che la build non sia rotta.",
+                  "**Altri sviluppatori.** Riconoscono i pattern di design e sopportano spigoli che un giocatore normale non tollererebbe.",
+                  "**Il feedback al posto dell'osservazione.** Mark Rosewater, lead designer di Magic: The Gathering, paragona i giocatori ai pazienti di un medico: sono bravi a dirti dove fa male e pessimi a prescrivere la cura. Tratta le loro lamentele come dati veri e le soluzioni che propongono come rumore."
+                ],
+                "en": [
+                  "**Friends and family, if what you need is a verdict.** They're fine for checking whether the build is broken.",
+                  "**Other game developers.** They recognize design patterns and put up with rough edges that a normal player wouldn't.",
+                  "**Feedback as a substitute for watching.** Mark Rosewater, lead designer of Magic: The Gathering, compares players to a doctor's patients: they're good at telling you where it hurts and bad at prescribing the cure. Treat players' complaints as real data and their suggested fixes as noise."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": { "it": "3. Cosa decide se il loop è validato", "en": "3. What decides whether the loop is validated" },
+          "blocks": [
+            {
+              "text": {
+                "it": [
+                  "**Trattalo come un esperimento, non come una sensazione.** Il talk di Valve sul playtest (Mike Ambinder, GDC 2009) tratta il progetto di un gioco come un'ipotesi e il playtest come un esperimento. L'obiettivo dichiarato è il divertimento: non il bug testing, non il bilanciamento, e di sicuro non il focus group. Per un prototipo grezzo vuol dire ignorare i commenti su grafica, bug e rifiniture.",
+                  "**Il comportamento batte l'opinione.** Valve insiste su «quello che le persone fanno, non quello che dicono», e nota che nelle domande dopo la sessione le persone non sanno davvero perché hanno fatto quello che hanno fatto."
+                ],
+                "en": [
+                  "**Treat it as an experiment, not a vibe check.** Valve's playtesting talk (Mike Ambinder, GDC 2009) frames game designs as hypotheses and playtests as experiments. Its stated goal for playtesting is fun: not bug testing, not balancing, and definitely not focus testing. For a scrappy prototype, that means ignoring feedback about art, bugs and polish.",
+                  "**Behavior beats opinion.** Valve stresses “what people do—not what they say.” It also notes that in post-session Q&As, people don't actually know why they did what they did."
+                ]
+              }
+            },
+            { "title": { "it": "Segnali che il loop funziona", "en": "Signals that the loop is working" } },
+            {
+              "tone": "pro",
+              "list": {
+                "it": [
+                  "Iniziano un'altra run o un altro round senza che tu glielo chieda.",
+                  "Continuano a giocare dopo che hai detto che la sessione poteva finire.",
+                  "Chiedono cosa viene dopo, cosa si sblocca, quali potenziamenti esistono.",
+                  "Ci tornano più tardi da soli, o ti chiedono la build. Per un loop è il segnale più forte.",
+                  "In un test grande a distanza, il tempo di gioco mediano è alto. I dati di Zukowski sulle demo dello Steam Next Fest danno una mediana di circa 14 minuti su tutte le demo e di circa 38 minuti per i giochi che hanno avuto successo commerciale. Sono demo rifinite, non prototipi: usa questi numeri solo come direzione di massima."
+                ],
+                "en": [
+                  "They start another run or round without being asked.",
+                  "They keep playing after you said the session could end.",
+                  "They ask what comes next, what unlocks, or what upgrades exist.",
+                  "They come back to it later on their own, or ask for the build. For a loop, this is the strongest signal.",
+                  "On a larger remote test, their median playtime is high. Zukowski's data from Steam Next Fest demos gives a median of about 14 minutes across all demos and about 38 minutes for commercially successful games. These are polished demos, not prototypes, so use the numbers as a rough direction only."
+                ]
+              }
+            },
+            { "title": { "it": "Campanelli d'allarme", "en": "Red flags" } },
+            {
+              "tone": "con",
+              "list": {
+                "it": [
+                  "Diventa divertente solo dopo che l'hai spiegato tu.",
+                  "Le persone sono gentili e ti fanno i complimenti, ma non rigiocano mai.",
+                  "Il feedback è quasi tutto «sarebbe bello se…». Di solito vuol dire che stanno cercando di aggiustare qualcosa che trovano noioso.",
+                  "Ti sorprendi a voler aggiungere grafica o contenuti prima del prossimo test."
+                ],
+                "en": [
+                  "It only becomes fun after you explain it.",
+                  "People are polite and complimentary but never replay.",
+                  "Feedback is mostly “it would be cool if…”. That usually means they're trying to fix something they find boring.",
+                  "You catch yourself wanting to add art or content before the next test."
+                ]
+              }
+            },
+            { "text": { "it": "**Decidi il risultato prima.** Schell consiglia di entrare in ogni sessione con domande precise a cui vuoi rispondere. Scrivi i criteri per tenere o buttare il prototipo prima di testare, finché sei ancora distaccato. Altrimenti ogni prototipo «ha del potenziale».", "en": "**Decide the result in advance.** Schell says to go into every session with specific questions you're trying to answer. Write your keep/kill criteria before you test, while you're still detached from the prototype. Otherwise every prototype “has potential.”" } }
+          ]
+        },
+        {
+          "title": { "it": "4. Il passo successivo: la scheda tieni/butta", "en": "4. Next step: the keep/kill sheet" },
+          "blocks": [
+            { "text": { "it": "Prima del primo giro scrivi la tua scheda tieni/butta. Le soglie le decidi tu, ma devono essere numeri, per esempio: «almeno X tester su 5 rigiocano senza che glielo chieda» e «sessione mediana di almeno Y minuti nel giro a distanza». Per fissare numeri realistici parti da tre domande:", "en": "Before the first round, write your keep/kill sheet. The thresholds are yours, but they have to be numbers, for example: “at least X of 5 testers replay unprompted” and “median session of at least Y minutes in the remote round”. To set realistic numbers, start from three questions:" } },
+            {
+              "list": {
+                "it": [
+                  "Qual è il genere del gioco?",
+                  "Quanto dovrebbe durare un loop, o una run?",
+                  "Puoi fare sessioni dal vivo o in videochiamata, o solo a distanza?"
+                ],
+                "en": [
+                  "What genre is the game?",
+                  "How long is one loop or run meant to take?",
+                  "Can you run in-person or video-call sessions, or only remote ones?"
+                ]
+              }
+            },
+            { "text": { "it": "Le soglie vanno nel campo «criterio di successo» del report di playtest, compilato prima di ogni giro.", "en": "The thresholds go in the “success criterion” field of the playtest report, filled in before each round." } }
+          ]
+        }
+      ],
+      "sources": ["ambinder-valve", "playtesting-101", "sztajer-how-many", "nielsen-5-users", "zukowski-retention", "zukowski-demo-playtime", "rosewater-20-lessons", "firstlook-playtesters", "playtest-report"]
+    },
+
+    {
+      "id": "steam-release-pipeline",
+      "title": { "it": "La pipeline di Deep Monolith Studios: dall'idea al dopo-lancio, tappa per tappa", "en": "The Deep Monolith Studios pipeline: from idea to post-launch, step by step" },
+      "lead": {
+        "it": "Il percorso ha 14 tappe in 5 fasi, e tre binari che corrono insieme: produzione, marketing e burocrazia di Steamworks. Quattro tappe sono cancelli: lì ci fermiamo, guardiamo i dati e decidiamo se continuare, cambiare rotta o chiudere. La pagina Steam va online almeno 6 mesi prima del lancio, la demo esce mesi prima del Next Fest, e tutte le scadenze si calcolano a ritroso dall'edizione del festival che scegliamo. Ogni build pubblica si giudica con un solo numero, il tempo di gioco della demo, e il metodo RICE ci dice quali compiti fare per primi.",
+        "en": "The pipeline has 14 milestones in 5 phases, and three tracks that run together: production, marketing and Steamworks admin. Four milestones are gates: there we stop, look at the data and decide whether to continue, change course or stop. The Steam page goes live at least 6 months before launch, the demo comes out months before Next Fest, and every deadline is worked back from the festival edition we pick. Every public build is judged by one number, demo playtime, and the RICE method tells us which tasks to do first."
+      },
+      "sections": [
+        {
+          "title": { "it": "1. Come leggere questa guida", "en": "1. How to read this guide" },
+          "blocks": [
+            { "text": { "it": "Ogni affermazione porta un'etichetta che dice da dove viene e quanto fidarsi. Non valgono tutte uguale: una regola di Valve è un vincolo, un sondaggio tra sviluppatori è un ordine di grandezza, un'euristica è un'opinione ragionata che possiamo cambiare.", "en": "Every claim carries a label saying where it comes from and how far to trust it. They're not equal: a Valve rule is a constraint, a developer survey is an order of magnitude, a heuristic is a reasoned opinion we can change." } },
+            {
+              "table": {
+                "it": [
+                  ["Etichetta", "Cosa vuol dire", "Quanto fidarsi"],
+                  ["`doc`", "Regola o fatto documentato da Valve/Steamworks, o dato pubblicato e verificabile", "È un vincolo: si pianifica attorno a lui"],
+                  ["`sondaggio`", "Dati dichiarati dagli sviluppatori stessi (per esempio i sondaggi di Chris Zukowski)", "Un ordine di grandezza, non la verità: i dati dichiarati tendono a sovrastimare"],
+                  ["`euristica`", "Pratica comune o opinione ragionata, non dimostrata", "Un punto di partenza: si cambia se i dati dicono altro"],
+                  ["`regola dello studio`", "Decisione interna di Deep Monolith", "Non negoziabile in questa pipeline"]
+                ],
+                "en": [
+                  ["Label", "What it means", "How far to trust it"],
+                  ["`doc`", "Rule or fact documented by Valve/Steamworks, or published, verifiable data", "It's a constraint: you plan around it"],
+                  ["`survey data`", "Data self-reported by developers (e.g. Chris Zukowski's surveys)", "An order of magnitude, not ground truth: self-reported data tends to overestimate"],
+                  ["`heuristic`", "Common practice or reasoned opinion, not proven", "A starting point: change it if the data says otherwise"],
+                  ["`studio rule`", "Internal Deep Monolith decision", "Non-negotiable in this pipeline"]
+                ]
+              }
+            },
+            { "text": { "it": "Le tappe appartengono a tre binari: **produzione** (costruire il gioco), **marketing** (farlo trovare) e **amministrazione** (Steamworks, tasse, revisioni). Li teniamo nello stesso documento perché condividono le stesse scadenze: se ne pianifichi uno solo, gli altri due ti fermano.", "en": "Milestones belong to three tracks: **production** (building the game), **marketing** (getting it found) and **admin** (Steamworks, taxes, reviews). We keep them in one document because they share the same deadlines: plan only one and the other two will stop you." } }
+          ]
+        },
+        {
+          "title": { "it": "2. Le quattro regole dello studio, e perché esistono", "en": "2. The four studio rules, and why they exist" },
+          "blocks": [
+            { "text": { "it": "Sono le uniche cose che non si discutono progetto per progetto. Tutto il resto della pipeline si adatta al gioco; queste no. `regola dello studio`", "en": "These are the only things we don't renegotiate project by project. The rest of the pipeline adapts to the game; these don't. `studio rule`" } },
+            {
+              "table": {
+                "it": [
+                  ["Regola", "Perché"],
+                  ["La pagina Steam è online almeno 6 mesi prima del lancio", "Valve chiede solo 2 settimane di «Coming Soon» `doc`. I mesi in più servono ad accumulare wishlist: ogni settimana senza pagina è una settimana di wishlist perse, e al lancio Steam avvisa chi ha il gioco in wishlist."],
+                  ["Ogni gioco fa un Next Fest prima del lancio", "È la vetrina più grande di Steam per i giochi non ancora usciti, e si può fare una volta sola: va pianificato, non improvvisato."],
+                  ["La North Star è il tempo di gioco della demo", "Un solo numero comune evita di inseguirne dieci diversi, ed è disponibile dal primo playtest. Vedi la sezione 11."],
+                  ["Ogni fase si chiude con un cancello esplicito", "È il nostro valore «prima le prove, poi l'ambizione» (*Evidence before ambition*) messo in pratica. Se il cancello non passa si itera, si cambia rotta o si chiude il progetto: chiudere al cancello 1 costa settimane, chiudere dopo la produzione costa anni."]
+                ],
+                "en": [
+                  ["Rule", "Why"],
+                  ["The Steam page is live at least 6 months before launch", "Valve only requires 2 weeks of “Coming Soon” `doc`. The extra months are for collecting wishlists: every week without a page is a week of lost wishlists, and at launch Steam notifies everyone who wishlisted the game."],
+                  ["Every game does a Next Fest before launch", "It's Steam's biggest showcase for unreleased games, and you only get one: it has to be planned, not improvised."],
+                  ["The North Star is demo playtime", "One shared number stops you chasing ten different ones, and it's available from the first playtest. See section 11."],
+                  ["Every phase ends with an explicit gate", "It's our “Evidence before ambition” value put into practice. If a gate fails we iterate, change course or stop the project: stopping at gate 1 costs weeks, stopping after production costs years."]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": { "it": "3. I vincoli di Steam da conoscere prima di pianificare", "en": "3. Steam constraints to know before planning" },
+          "blocks": [
+            { "text": { "it": "Questi non li decidiamo noi, e vanno letti prima di fare il calendario: alcuni (una sola partecipazione al Next Fest, una sola email per la demo) non danno una seconda possibilità.", "en": "We don't decide these, and they have to be read before building the calendar: some of them (one Next Fest per game, one demo email) give you no second chance." } },
+            { "title": { "it": "Steam Next Fest · doc", "en": "Steam Next Fest · doc" } },
+            {
+              "list": {
+                "it": [
+                  "Tre edizioni l'anno: **febbraio, giugno, ottobre**.",
+                  "**Una sola partecipazione per gioco, per sempre.** Se il lancio slitta, non si rifà.",
+                  "Al momento dell'iscrizione la pagina del gioco deve essere **pubblicata e pubblica**.",
+                  "Serve una **demo giocabile pubblicamente** entro l'inizio del festival.",
+                  "Il gioco **non può uscire prima che il festival finisca**. Dopo, nessun vincolo sulla data.",
+                  "Non sono ammessi prologhi o versioni ridotte di un gioco già uscito su Steam.",
+                  "Valve sconsiglia di tenere attivo uno Steam Playtest durante il festival: divide i giocatori tra due build."
+                ],
+                "en": [
+                  "Three editions a year: **February, June, October**.",
+                  "**One Next Fest per game, ever.** If the launch slips, you can't do it again.",
+                  "At registration, the game's store page must be **published and public**.",
+                  "A **publicly playable demo** is required by the start of the fest.",
+                  "The game **cannot release before the fest ends**. After that, no release-date constraints.",
+                  "Prologues or short versions of a game already released on Steam are not allowed.",
+                  "Valve advises against running a Steam Playtest during the fest: it splits players between two builds."
+                ]
+              }
+            },
+            { "text": { "it": "**Le scadenze cambiano a ogni edizione: vale sempre la pagina Steamworks dell'edizione scelta.** La pagina generale parla di circa 5 settimane prima per la demo da mostrare alla stampa e circa 3 per l'ultima scadenza; per giugno 2027 (14–21 giugno) Valve ha fissato date più tardive:", "en": "**Deadlines change with every edition: always go by the Steamworks page for the edition you picked.** The general page says about 5 weeks before for a demo shown to the press and about 3 for the final deadline; for June 2027 (June 14–21) Valve set later dates:" } },
+            {
+              "table": {
+                "it": [
+                  ["Data", "Cosa succede"],
+                  ["25 aprile", "Chiudono le iscrizioni (circa 7 settimane prima). Pagina, trailer e tag devono essere già aggiornati: Valve li usa per scegliere i giochi del trailer ufficiale."],
+                  ["3 maggio", "Valve preleva i video per il trailer ufficiale."],
+                  ["17 maggio", "Demo in revisione, se vuoi che sia giocabile durante l'anteprima stampa."],
+                  ["31 maggio", "Ultima scadenza per tutte le revisioni."],
+                  ["3 giugno", "Inizia l'anteprima stampa (*Press Preview*)."],
+                  ["14–21 giugno", "Il festival."]
+                ],
+                "en": [
+                  ["Date", "What happens"],
+                  ["April 25", "Registration closes (about 7 weeks before). Page, trailer and tags must already be up to date: Valve uses them to pick games for the official trailer."],
+                  ["May 3", "Valve pulls the videos for the official trailer."],
+                  ["May 17", "Demo in review, if you want it playable during the press preview."],
+                  ["May 31", "Final deadline for all reviews."],
+                  ["June 3", "Press Preview begins."],
+                  ["June 14–21", "The fest."]
+                ]
+              }
+            },
+            { "title": { "it": "La demo · doc", "en": "The demo · doc" } },
+            {
+              "list": {
+                "it": [
+                  "**L'email che Steam manda a chi ha il gioco in wishlist quando esce la demo si può usare una volta sola**, entro 14 giorni dall'uscita della demo, e non si ripete al Next Fest. È una munizione sola: va sparata quando la demo è pronta.",
+                  "La revisione della build di Valve controlla solo che il gioco parta e abbia le funzioni promesse. **Non è QA** (controllo qualità) e non cerca bug: il QA lo facciamo noi."
+                ],
+                "en": [
+                  "**The email Steam sends to wishlisters when the demo comes out can be used only once**, within 14 days of the demo's launch, and it doesn't repeat for Next Fest. It's a single shot: fire it when the demo is ready.",
+                  "Valve's build review only checks that the game runs and has the promised features. **It is not QA** and doesn't look for bugs: QA is on us."
+                ]
+              }
+            },
+            { "title": { "it": "Iscrizione e uscita · doc", "en": "Onboarding and release · doc" } },
+            {
+              "list": {
+                "it": [
+                  "Verifica fiscale e d'identità tramite un servizio esterno: **10–15 giorni lavorativi**, a volte con documenti in più.",
+                  "**Steam Direct: 100 $ per gioco**, restituiti dopo 1.000 $ di ricavi lordi rettificati.",
+                  "**21 giorni di attesa** tra il pagamento della quota e la possibilità di far uscire il gioco.",
+                  "Pagina **«Coming Soon» pubblica per almeno 2 settimane** prima dell'uscita.",
+                  "Revisione della pagina: di solito **3–5 giorni lavorativi**. Valve consiglia di inviarla **almeno 7 giorni prima** di quando la vuoi online.",
+                  "La pagina va in revisione **prima** della build.",
+                  "L'uscita non è automatica: si preme a mano il pulsante «Release App».",
+                  "**Steam non accetta applicazioni blockchain che emettono o permettono di scambiare criptovalute o NFT.** Vale per qualunque gioco nato nell'ecosistema Dawnshard."
+                ],
+                "en": [
+                  "Tax and identity verification through a third-party service: **10–15 business days**, sometimes with extra documents.",
+                  "**Steam Direct: $100 per game**, paid back after $1,000 in adjusted gross revenue.",
+                  "**21-day wait** between paying the fee and being able to release.",
+                  "**Public “Coming Soon” page for at least 2 weeks** before release.",
+                  "Store page review: typically **3–5 business days**. Valve recommends submitting **at least 7 days before** you want it live.",
+                  "The store page goes into review **before** the build.",
+                  "Release isn't automatic: you press the “Release App” button by hand.",
+                  "**Steam doesn't accept blockchain applications that issue or allow the exchange of cryptocurrencies or NFTs.** This applies to any game born in the Dawnshard ecosystem."
+                ]
+              }
+            },
+            { "title": { "it": "Steam Playtest · doc", "en": "Steam Playtest · doc" } },
+            {
+              "list": {
+                "it": [
+                  "È un'app figlia, con un **appID** (identificativo) separato: non tocca recensioni, wishlist, rimborsi o achievement del gioco principale.",
+                  "Non ha una pagina sua: ci si iscrive **dalla pagina Steam del gioco**, quindi il traffico arriva comunque al pulsante della wishlist.",
+                  "Le chiavi si possono distribuire **anche prima che la pagina sia pubblica**.",
+                  "**Non è riservato**: i tester non firmano un NDA (accordo di riservatezza). Valve consiglia di annunciare il gioco prima di fare playtest esterni."
+                ],
+                "en": [
+                  "It's a child app with its own **appID**: it doesn't touch the main game's reviews, wishlists, refunds or achievements.",
+                  "It has no page of its own: sign-up happens **on the game's store page**, so traffic still lands on the wishlist button.",
+                  "Keys can be handed out **even before the store page is public**.",
+                  "**It isn't confidential**: testers don't sign an NDA. Valve recommends announcing the game before running external playtests."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": { "it": "4. La mappa: 14 tappe in 5 fasi", "en": "4. The map: 14 milestones in 5 phases" },
+          "blocks": [
+            { "text": { "it": "Ogni fase risponde a una domanda, e non si passa alla fase dopo finché la risposta non è «sì». Le tappe di tipo **cancello** sono i punti in cui ci fermiamo a decidere.", "en": "Each phase answers one question, and you don't move to the next phase until the answer is “yes”. Milestones of type **gate** are where we stop and decide." } },
+            {
+              "table": {
+                "it": [
+                  ["#", "Tappa", "Tipo", "Fase"],
+                  ["1", "Concept valido", "Cancello", "Scoprire"],
+                  ["2", "Annuncio del playtest", "Produzione + community", "Scoprire"],
+                  ["3", "Prototipo validato", "Cancello", "Scoprire"],
+                  ["4", "Pre-produzione / vertical slice", "Produzione", "Mostrarsi"],
+                  ["5", "Pagina Steam online", "Marketing + amministrazione", "Mostrarsi"],
+                  ["6", "Cancello wishlist #1", "Cancello", "Mostrarsi"],
+                  ["7", "Demo su itch.io / Steam Playtest", "Produzione", "Dimostrare"],
+                  ["8", "Demo su Steam", "Produzione + marketing", "Dimostrare"],
+                  ["9", "Spinta di marketing", "Marketing", "Dimostrare"],
+                  ["10", "Cancello wishlist #2", "Cancello", "Dimostrare"],
+                  ["11", "Produzione: feature complete → content complete → rifinitura", "Produzione", "Costruire e lanciare"],
+                  ["12", "Next Fest", "Marketing", "Costruire e lanciare"],
+                  ["13", "Release candidate e lancio", "Produzione + amministrazione", "Costruire e lanciare"],
+                  ["14", "Dopo il lancio", "Supporto", "Dopo il lancio"]
+                ],
+                "en": [
+                  ["#", "Milestone", "Type", "Phase"],
+                  ["1", "Valid concept", "Gate", "Discover"],
+                  ["2", "Playtest announcement", "Production + community", "Discover"],
+                  ["3", "Validated prototype", "Gate", "Discover"],
+                  ["4", "Pre-production / vertical slice", "Production", "Show"],
+                  ["5", "Steam page live", "Marketing + admin", "Show"],
+                  ["6", "Wishlist gate #1", "Gate", "Show"],
+                  ["7", "itch.io demo / Steam Playtest", "Production", "Prove"],
+                  ["8", "Steam demo", "Production + marketing", "Prove"],
+                  ["9", "Marketing push", "Marketing", "Prove"],
+                  ["10", "Wishlist gate #2", "Gate", "Prove"],
+                  ["11", "Production: feature complete → content complete → polish", "Production", "Build and launch"],
+                  ["12", "Next Fest", "Marketing", "Build and launch"],
+                  ["13", "Release candidate and launch", "Production + admin", "Build and launch"],
+                  ["14", "Post-release", "Support", "After launch"]
+                ]
+              }
+            },
+            {
+              "list": {
+                "it": [
+                  "**Scoprire (M1–M3):** il gioco merita di esistere?",
+                  "**Mostrarsi (M4–M6):** il mercato lo vuole?",
+                  "**Dimostrare (M7–M10):** chi lo prova resta, e lo mette in wishlist?",
+                  "**Costruire e lanciare (M11–M13):** riusciamo a finirlo e a lanciarlo bene?",
+                  "**Dopo il lancio (M14):** cosa impariamo per il prossimo gioco?"
+                ],
+                "en": [
+                  "**Discover (M1–M3):** does this game deserve to exist?",
+                  "**Show (M4–M6):** does the market want it?",
+                  "**Prove (M7–M10):** do people who try it stay, and wishlist it?",
+                  "**Build and launch (M11–M13):** can we finish it and launch it well?",
+                  "**After launch (M14):** what do we learn for the next game?"
+                ]
+              }
+            },
+            { "text": { "it": "Una cosa salta all'occhio: la produzione piena (M11) arriva solo dopo la pagina, la demo e due cancelli sulle wishlist. È voluto. Prima di spendere la parte più costosa del progetto, vogliamo prove che il gioco trattenga le persone e che il mercato lo cerchi.", "en": "One thing stands out: full production (M11) only comes after the page, the demo and two wishlist gates. That's deliberate. Before spending the most expensive part of the project, we want evidence that the game holds people and that the market is looking for it." } }
+          ]
+        },
+        {
+          "title": { "it": "5. Fase 1 · Scoprire (M1–M3): il gioco merita di esistere?", "en": "5. Phase 1 · Discover (M1–M3): does this game deserve to exist?" },
+          "blocks": [
+            { "title": { "it": "M1 · Concept valido · cancello", "en": "M1 · Valid concept · gate" } },
+            {
+              "list": {
+                "it": [
+                  "**Cosa facciamo:** verifichiamo che il genere venda su Steam (con Gamalytic, che stima le vendite dei giochi Steam per genere e tag), cerchiamo uno spazio libero nel mercato e mettiamo in lista i concorrenti.",
+                  "**Perché:** è il momento più economico per scoprire che un gioco non ha mercato. Cambiare idea qui costa un pomeriggio; in produzione costa mesi.",
+                  "**Si passa quando:** il genere vende (verificato sui dati, non a sensazione), c'è uno spazio libero identificato, i concorrenti sono catalogati e il concept si spiega in una frase."
+                ],
+                "en": [
+                  "**What we do:** check that the genre sells on Steam (with Gamalytic, which estimates Steam sales by genre and tag), look for a gap in the market and catalogue the competitors.",
+                  "**Why:** this is the cheapest moment to find out a game has no market. Changing your mind here costs an afternoon; in production it costs months.",
+                  "**We pass when:** the genre sells (checked against data, not gut feeling), there's an identified gap, competitors are catalogued and the concept can be explained in one sentence."
+                ]
+              }
+            },
+            { "title": { "it": "M2 · Annuncio del playtest", "en": "M2 · Playtest announcement" } },
+            {
+              "list": {
+                "it": [
+                  "**Quando:** appena esiste un prototipo decente.",
+                  "**Cosa facciamo:** raccogliamo tester con un modulo e fissiamo le sessioni. Apriamo i canali della community che sono nostri, Discord e newsletter, e il modulo del playtest diventa il primo punto di raccolta `euristica`. Sul modulo mettiamo l'informativa privacy (GDPR), perché raccogliamo email e siamo un'azienda italiana `obbligo di legge`.",
+                  "**Perché:** i playtest servono a validare il loop (M3), ma ogni tester è anche la prima persona della community. Discord e newsletter sono canali che possediamo: nessun algoritmo decide chi vede i nostri messaggi, e li useremo a ogni tappa successiva."
+                ],
+                "en": [
+                  "**When:** as soon as a decent prototype exists.",
+                  "**What we do:** collect playtesters through a form and book sessions. We open the community channels we own, Discord and a newsletter, and the playtest form becomes the first collection point `heuristic`. The form carries a privacy notice (GDPR), because we collect emails and we're an Italian company `legal requirement`.",
+                  "**Why:** playtests are for validating the loop (M3), but every tester is also the first member of the community. Discord and the newsletter are channels we own: no algorithm decides who sees our messages, and we'll use them at every later milestone."
+                ]
+              }
+            },
+            { "title": { "it": "M3 · Prototipo validato · cancello", "en": "M3 · Validated prototype · gate" } },
+            {
+              "list": {
+                "it": [
+                  "**Cosa facciamo:** giri di playtest per capire se il core loop funziona.",
+                  "**Perché:** tutto quello che viene dopo (grafica, pagina, demo) costa caro. Non ha senso spenderlo su un loop che non trattiene i giocatori.",
+                  "**Si passa quando:** si raggiungono i criteri scritti prima del test. Si definiscono per ogni gioco, separando quelli universali (per esempio: i tester rigiocano senza che glielo chieda) da quelli che dipendono dal genere (per esempio: quanto deve durare una run). Il metodo è nella guida «Come capire se il core loop di un prototipo è validato», nel tema sul playtest."
+                ],
+                "en": [
+                  "**What we do:** rounds of playtests to find out whether the core loop works.",
+                  "**Why:** everything that comes next (art, page, demo) is expensive. There's no point spending it on a loop that doesn't hold players.",
+                  "**We pass when:** the criteria written before testing are met. They're set per game, separating universal ones (e.g. testers replay without being asked) from genre-dependent ones (e.g. how long a run should last). The method is in the guide “How to tell if a prototype's core loop is validated”, in the playtesting topic."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": { "it": "6. Fase 2 · Mostrarsi (M4–M6): il mercato lo vuole?", "en": "6. Phase 2 · Show (M4–M6): does the market want it?" },
+          "blocks": [
+            { "title": { "it": "M4 · Pre-produzione / vertical slice", "en": "M4 · Pre-production / vertical slice" } },
+            { "text": { "it": "**Perché esiste:** la pagina Steam ha bisogno di una capsule (l'immagine di copertina nel negozio) e di un trailer con grafica quasi definitiva. Quindi prima della pagina serve una vertical slice, anche se non la chiami così `euristica`. È anche l'ultimo momento in cui le grandi decisioni costano poco.", "en": "**Why it exists:** the Steam page needs a capsule (the store's cover image) and a trailer with near-final art. So a vertical slice is needed before the page, even if you don't call it that `heuristic`. It's also the last moment when big decisions are cheap." } },
+            { "text": { "it": "**Cosa facciamo:**", "en": "**What we do:**" } },
+            {
+              "list": {
+                "it": [
+                  "**Direzione artistica bloccata.** La capsule è l'immagine più vista del gioco: lo stile va deciso prima di farla.",
+                  "**Vertical slice:** un pezzo di gioco con grafica, audio e sensazione vicini alla qualità finale.",
+                  "**Scope bloccato:** piano dei contenuti (quanti livelli, carte, nemici…) e budget di tempo. Per un team piccolo è il miglior antidoto allo *scope creep*, il progetto che si allarga senza fine `euristica`.",
+                  "**Lingue:** decidiamo adesso quali supportare, perché anche la pagina Steam va tradotta. Le priorità si controllano sulla Steam Hardware & Software Survey `euristica`.",
+                  "**Ipotesi di prezzo** e prezzi regionali, da confermare prima della revisione della pagina `euristica`.",
+                  "**Controlli legali:** nome del gioco libero da marchi registrati, licenze per asset, font e musica `euristica`."
+                ],
+                "en": [
+                  "**Art direction locked.** The capsule is the game's most-seen image: the style has to be decided before making it.",
+                  "**Vertical slice:** a slice of the game with art, audio and feel close to final quality.",
+                  "**Scope locked:** content plan (how many levels, cards, enemies…) and time budget. For a small team it's the best antidote to scope creep, the project that keeps growing `heuristic`.",
+                  "**Languages:** we decide now which ones to support, because the Steam page has to be localized too. Priorities are checked against the Steam Hardware & Software Survey `heuristic`.",
+                  "**Pricing hypothesis** and regional pricing, to be confirmed before store page review `heuristic`.",
+                  "**Legal checks:** game name clear of trademarks, licenses for assets, fonts and music `heuristic`."
+                ]
+              }
+            },
+            { "title": { "it": "M5 · Pagina Steam online", "en": "M5 · Steam page live" } },
+            {
+              "list": {
+                "it": [
+                  "**Cosa serve:** trailer, capsule, tag, descrizione, screenshot e gli altri materiali per il negozio.",
+                  "**Perché adesso:** con la regola dei 6 mesi, la pagina è l'orologio che fa partire tutto il resto. Ogni wishlist si raccoglie qui, e il Next Fest stesso richiede una pagina pubblica.",
+                  "**Burocrazia da avviare per tempo** `doc`: iscrizione a Steamworks e verifica fiscale completate (10–15 giorni lavorativi); quota Steam Direct pagata; pagina in revisione almeno 7 giorni prima della data voluta; questionario sui contenuti compilato.",
+                  "**Calendario a ritroso:** appena la pagina è online scegliamo **l'edizione precisa del Next Fest** e la data di lancio. Ogni scadenza successiva si calcola a ritroso da lì (sezione 10).",
+                  "**Da qui il marketing è continuo, non un evento.** Cerchiamo festival di terzi e festival a tema di Steam, prepariamo il press kit (il pacchetto di materiali per la stampa) e la lista dei content creator `euristica`."
+                ],
+                "en": [
+                  "**What's needed:** trailer, capsule, tags, description, screenshots and the other store assets.",
+                  "**Why now:** with the 6-month rule, the page is the clock that starts everything else. Every wishlist is collected here, and Next Fest itself requires a public page.",
+                  "**Admin to start early** `doc`: Steamworks onboarding and tax verification completed (10–15 business days); Steam Direct fee paid; store page in review at least 7 days before the target date; content survey completed.",
+                  "**Workback planning:** as soon as the page is live we pick **the specific Next Fest edition** and the launch date. Every later deadline is worked back from there (section 10).",
+                  "**From here on, marketing is continuous, not an event.** We look for third-party festivals and Steam themed fests, and build the press kit and the content creator list `heuristic`."
+                ]
+              }
+            },
+            { "title": { "it": "M6 · Cancello wishlist #1 · cancello", "en": "M6 · Wishlist gate #1 · gate" } },
+            {
+              "list": {
+                "it": [
+                  "**Quando:** qualche settimana dopo l'apertura della pagina.",
+                  "**Cosa misuriamo:** wishlist totali, velocità giornaliera, conversione da visita a wishlist (i dati sono in Steamworks).",
+                  "**Perché:** la pagina è il primo contatto con il mercato vero. Se nessuno mette il gioco in wishlist, il problema va trovato adesso (capsule, trailer, tag, o il gioco stesso), non dopo un anno di produzione.",
+                  "**Decisione:** continuare, rifare pagina e materiali (capsule, trailer, tag), o fermarsi.",
+                  "**Soglie:** si fissano per ogni gioco. Come riferimento, le fasce di Zukowski per le wishlist guadagnate durante il Next Fest: Bronzo (0–999), Argento (1.000–6.999), Oro (7.000–9.999), Diamante (10.000+) `sondaggio`."
+                ],
+                "en": [
+                  "**When:** a few weeks after the page goes live.",
+                  "**What we measure:** total wishlists, daily velocity, visit → wishlist conversion (the data is in Steamworks).",
+                  "**Why:** the page is the first contact with the real market. If nobody wishlists the game, the problem has to be found now (capsule, trailer, tags, or the game itself), not after a year of production.",
+                  "**Decision:** continue, rework the page and assets (capsule, trailer, tags), or stop.",
+                  "**Thresholds:** set per game. As a reference, Zukowski's tiers for wishlists earned during Next Fest: Bronze (0–999), Silver (1,000–6,999), Gold (7,000–9,999), Diamond (10,000+) `survey data`."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": { "it": "7. Fase 3 · Dimostrare (M7–M10): chi lo prova resta, e lo mette in wishlist?", "en": "7. Phase 3 · Prove (M7–M10): do people who try it stay, and wishlist it?" },
+          "blocks": [
+            { "title": { "it": "M7 · Demo su itch.io / Steam Playtest", "en": "M7 · itch.io demo / Steam Playtest" } },
+            {
+              "list": {
+                "it": [
+                  "**Cosa facciamo:** il prototipo con la grafica integrata. Serve a validare come funziona il gioco; non deve essere bilanciato alla perfezione.",
+                  "**Prima la pagina Steam, poi itch o Steam Playtest** `euristica`. Perché: con la regola dei 6 mesi ogni settimana senza pagina è una settimana di wishlist perse; Steam Playtest fa quasi tutto quello che fa itch, ma porta il traffico sulla pagina con il pulsante della wishlist. itch resta utile per i playtest grezzi **prima** dell'annuncio.",
+                  "**Nella build:** un pulsante «feedback» nel menu principale che porta a Discord, a un modulo o a un forum (lo suggerisce Valve stessa `doc`), e una telemetria minima: tempo di gioco (la North Star), punto di abbandono, run completate `euristica`.",
+                  "**Perché la telemetria adesso:** da questa tappa in poi ogni decisione si appoggia sul tempo di gioco. Se non lo misuri dalla prima build pubblica, ai cancelli arrivi senza dati."
+                ],
+                "en": [
+                  "**What we do:** the prototype with integrated art. Its job is to validate how the game works; it doesn't need to be perfectly balanced.",
+                  "**Steam page first, then itch or Steam Playtest** `heuristic`. Why: with the 6-month rule, every week without a page is a week of lost wishlists; Steam Playtest does almost everything itch does, but sends traffic to the page with the wishlist button. itch is still useful for rough playtests **before** the announcement.",
+                  "**In the build:** a “feedback” button in the main menu leading to Discord, a form or a forum (suggested by Valve itself `doc`), and minimum telemetry: playtime (the North Star), drop-off point, completed runs `heuristic`.",
+                  "**Why telemetry now:** from this milestone on, every decision leans on playtime. If you don't measure it from the first public build, you reach the gates with no data."
+                ]
+              }
+            },
+            { "title": { "it": "M8 · Demo su Steam", "en": "M8 · Steam demo" } },
+            {
+              "list": {
+                "it": [
+                  "**Cosa facciamo:** la versione «potenziata» della demo di itch: più qualità e più bug corretti, perché adesso deve convertire in wishlist.",
+                  "**Quando:** **mesi prima del Next Fest, non durante.** Nel sondaggio di febbraio 2026 le demo uscite mesi prima del festival hanno raccolto circa **2,5 volte** le wishlist mediane di quelle uscite durante il festival `sondaggio`, e Zukowski sconsiglia esplicitamente di far debuttare la demo al Next Fest.",
+                  "**Perché:** una demo uscita prima ha tempo di raccogliere wishlist, recensioni dai creator e correzioni. Al festival arriva con un pubblico che la sta già aspettando, e il Next Fest moltiplica quel pubblico (M10).",
+                  "**Checklist:** usare l'email della demo a chi ha il gioco in wishlist (una volta sola, entro 14 giorni `doc`); fare il nostro QA, perché la revisione di Valve non trova i bug `doc`; provare il gioco su hardware poco potente e, se possibile, su Steam Deck e con il controller `euristica`."
+                ],
+                "en": [
+                  "**What we do:** a “boosted” version of the itch demo: higher quality and more bugs fixed, because now it has to convert into wishlists.",
+                  "**When:** **months before Next Fest, not during it.** In the February 2026 survey, demos launched months before the fest earned about **2.5×** the median wishlists of demos launched during it `survey data`, and Zukowski explicitly advises against debuting a demo at Next Fest.",
+                  "**Why:** a demo released early has time to collect wishlists, creator coverage and fixes. It reaches the fest with an audience already waiting for it, and Next Fest multiplies that audience (M10).",
+                  "**Checklist:** use the demo email to wishlisters (once only, within 14 days `doc`); do our own QA, because Valve's review doesn't catch bugs `doc`; test on low-end hardware and, if possible, on Steam Deck and with a controller `heuristic`."
+                ]
+              }
+            },
+            { "title": { "it": "M9 · Spinta di marketing", "en": "M9 · Marketing push" } },
+            {
+              "list": {
+                "it": [
+                  "**Quando:** la demo Steam è online e giocabile da chiunque.",
+                  "**Cosa facciamo:** contattiamo content creator e stampa, distribuiamo chiavi, ci candidiamo ai festival.",
+                  "**Perché adesso:** per la prima volta c'è qualcosa che chiunque può provare con un clic. Un creator che gioca la demo porta le persone direttamente al pulsante della wishlist.",
+                  "**Attenzione:** questo è il picco di un lavoro iniziato a M5. Press kit e lista dei creator si preparano mesi prima, non il giorno della spinta `euristica`."
+                ],
+                "en": [
+                  "**When:** the Steam demo is live and publicly playable.",
+                  "**What we do:** reach out to content creators and press, hand out keys, apply to festivals.",
+                  "**Why now:** for the first time there's something anyone can try in one click. A creator playing the demo sends people straight to the wishlist button.",
+                  "**Note:** this is the peak of an effort that started at M5. The press kit and creator list are prepared months in advance, not on push day `heuristic`."
+                ]
+              }
+            },
+            { "title": { "it": "M10 · Cancello wishlist #2 · cancello", "en": "M10 · Wishlist gate #2 · gate" } },
+            {
+              "list": {
+                "it": [
+                  "**Quando:** dopo la demo Steam e la spinta di marketing, **prima di impegnarsi nella produzione piena**.",
+                  "**Perché:** le wishlist con cui entri nel Next Fest predicono quelle con cui ne esci. Il Next Fest moltiplica, non crea `sondaggio`. Nel sondaggio di febbraio 2026 la correlazione tra le wishlist prima del festival e quelle guadagnate durante è r = 0,825: vicina a 1, cioè chi entra forte esce forte.",
+                  "**Quanto aspettarsi:** le wishlist mediane guadagnate durante il festival sono circa 800 secondo il sondaggio di Zukowski (806); GameDiscoverCo ne stima circa 200 su tutte le oltre 3.500 demo. La differenza mostra quanto i dati dichiarati sovrastimano `sondaggio`.",
+                  "**Decisione:** produzione piena, riposizionamento (pagina, demo, gancio) o chiusura.",
+                  "**Bivio possibile:** con i numeri in mano si valuta se pubblicare da soli o cercare un publisher o dei bandi `euristica`."
+                ],
+                "en": [
+                  "**When:** after the Steam demo and the marketing push, **before committing to full production**.",
+                  "**Why:** the wishlists you enter Next Fest with predict the ones you leave with. Next Fest multiplies, it doesn't generate `survey data`. In the February 2026 survey, the correlation between pre-fest wishlists and wishlists earned during the fest was r = 0.825: close to 1, meaning those who go in strong come out strong.",
+                  "**What to expect:** the median wishlists earned during the fest is about 800 according to Zukowski's survey (806); GameDiscoverCo estimates about 200 across all 3,500+ demos. The gap shows how much self-reported data overestimates `survey data`.",
+                  "**Decision:** full production, repositioning (page, demo, hook) or stop.",
+                  "**Possible fork:** with numbers in hand, we weigh self-publishing against a publisher or grants `heuristic`."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": { "it": "8. Fase 4 · Costruire e lanciare (M11–M13): riusciamo a finirlo e a lanciarlo bene?", "en": "8. Phase 4 · Build and launch (M11–M13): can we finish it and launch it well?" },
+          "blocks": [
+            { "title": { "it": "M11 · Produzione", "en": "M11 · Production" } },
+            { "text": { "it": "**Perché le sotto-tappe:** è la fase più lunga, e senza punti di controllo è quella in cui i progetti piccoli si perdono `euristica`. Ogni sotto-tappa chiude una porta: dopo *feature complete* non entrano meccaniche nuove, dopo *content complete* non entrano contenuti nuovi.", "en": "**Why sub-milestones:** it's the longest phase, and without checkpoints it's where small projects get lost `heuristic`. Each sub-milestone closes a door: after feature complete no new mechanics come in, after content complete no new content comes in." } },
+            {
+              "table": {
+                "it": [
+                  ["Sotto-tappa", "Definizione"],
+                  ["Feature complete", "Tutte le meccaniche sono nel gioco. Da qui in poi, nessuna funzione nuova."],
+                  ["Content complete", "Tutti i contenuti decisi con lo scope bloccato (M4) sono nel gioco."],
+                  ["Rifinitura e bug", "Bilanciamento, QA su hardware diversi, Steam Deck, controller, salvataggi e cloud, traduzioni provate nel gioco."]
+                ],
+                "en": [
+                  ["Sub-milestone", "Definition"],
+                  ["Feature complete", "All mechanics are in the game. From here on, no new features."],
+                  ["Content complete", "All the content from the scope lock (M4) is in the game."],
+                  ["Polish and bug fixing", "Balancing, QA on varied hardware, Steam Deck, controller, saves and cloud, localization tested in-game."]
+                ]
+              }
+            },
+            { "text": { "it": "**Integrazioni Steamworks da fare qui:** achievement, salvataggi nel cloud, Steam Input `euristica`.", "en": "**Steamworks integrations to do here:** achievements, cloud saves, Steam Input `heuristic`." } },
+            { "title": { "it": "M12 · Next Fest", "en": "M12 · Next Fest" } },
+            {
+              "list": {
+                "it": [
+                  "**Cosa vuol dire:** il gioco è completo o quasi, pronto al lancio. Il festival è il trampolino.",
+                  "**Perché qui e non prima:** si fa una volta sola, quindi lo mettiamo dove rende di più, a ridosso del lancio, quando le wishlist raccolte si possono trasformare in vendite poche settimane dopo `euristica`.",
+                  "**Checklist** (date esatte sulla pagina Steamworks dell'edizione) `doc`: iscrizione entro la scadenza (circa 7 settimane prima); pagina, trailer e tag aggiornati entro l'iscrizione, per il trailer ufficiale; demo in revisione entro la data per l'anteprima stampa o, al più tardi, entro l'ultima scadenza; tag controllati rispetto alle categorie della Developer Preview; nessuno Steam Playtest attivo durante il festival; diretta streaming sulla pagina facoltativa."
+                ],
+                "en": [
+                  "**What it means:** the game is complete or nearly so, ready to launch. The fest is the springboard.",
+                  "**Why here and not earlier:** you only get one, so we put it where it pays off most, close to launch, when the wishlists collected can turn into sales a few weeks later `heuristic`.",
+                  "**Checklist** (exact dates on the Steamworks page for the edition) `doc`: register by the deadline (about 7 weeks before); page, trailer and tags updated by registration, for the official trailer; demo in review by the press preview date or, at the latest, by the final deadline; tags checked against the Developer Preview categories; no Steam Playtest running during the fest; livestream on the store page optional."
+                ]
+              }
+            },
+            { "title": { "it": "M13 · Release candidate e lancio", "en": "M13 · Release candidate and launch" } },
+            {
+              "list": {
+                "it": [
+                  "**Cosa serve:** build in revisione con tutte le funzioni promesse sulla pagina `doc`; prezzo, sconto di lancio e prezzi regionali definiti `euristica`; data di lancio scelta rispetto al Next Fest e ai saldi stagionali di Steam.",
+                  "**Quanto dopo il Next Fest:** le fonti non sono d'accordo. Alcune consigliano di aspettare qualche settimana; altre notano che i giochi che convertono meglio escono settimane, non mesi, dopo il festival. La nostra lettura: **una finestra di settimane**, evitando di sovrapporsi ai saldi stagionali `euristica, prove contrastanti`.",
+                  "**Già sistemato grazie alla regola dei 6 mesi:** le 2 settimane minime di «Coming Soon» e i 21 giorni dal pagamento della quota sono passati da un pezzo. Resta solo da premere a mano il pulsante «Release App» `doc`."
+                ],
+                "en": [
+                  "**What's needed:** a build in review with every feature promised on the store page `doc`; price, launch discount and regional pricing set `heuristic`; launch date chosen relative to Next Fest and Steam's seasonal sales.",
+                  "**How long after Next Fest:** sources disagree. Some advise waiting a few weeks; others note that the best converters launch weeks, not months, after their fest. Our reading: **a window of weeks**, avoiding overlaps with seasonal sales `heuristic, mixed evidence`.",
+                  "**Already handled by the 6-month rule:** the minimum 2 weeks of “Coming Soon” and the 21 days since paying the fee are long gone. All that's left is pressing the “Release App” button by hand `doc`."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": { "it": "9. Fase 5 · Dopo il lancio (M14): cosa impariamo?", "en": "9. Phase 5 · After launch (M14): what do we learn?" },
+          "blocks": [
+            {
+              "list": {
+                "it": [
+                  "**Bug e patch**, subito: le prime recensioni arrivano nei primi giorni.",
+                  "**Calendario di aggiornamenti e saldi** per il primo anno `euristica`.",
+                  "**Postmortem basato sui dati:** wishlist, conversione, tempo di gioco, rimborsi, recensioni `euristica`. **Perché:** è così che questa pipeline migliora. Ogni lancio aggiorna questo documento, e le soglie dei cancelli del prossimo gioco partono dai numeri veri di questo."
+                ],
+                "en": [
+                  "**Bug fixes and patches**, right away: the first reviews arrive in the first days.",
+                  "**Update and sales calendar** for the first year `heuristic`.",
+                  "**Data-driven postmortem:** wishlists, conversion, playtime, refunds, reviews `heuristic`. **Why:** this is how the pipeline improves. Every launch updates this document, and the next game's gate thresholds start from this one's real numbers."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": { "it": "10. Pianificare a ritroso: un esempio", "en": "10. Workback planning: an example" },
+          "blocks": [
+            { "text": { "it": "Esempio illustrativo: lancio a luglio 2027 con il Next Fest di giugno 2027. Si parte dalla data che non si può spostare, il festival, e si torna indietro.", "en": "Illustrative example: a July 2027 launch with the June 2027 Next Fest. You start from the date that can't move, the fest, and work backwards." } },
+            {
+              "table": {
+                "it": [
+                  ["Quando", "Cosa", "Fonte"],
+                  ["Entro gennaio 2027", "Pagina Steam pubblica (almeno 6 mesi prima del lancio)", "`regola dello studio`"],
+                  ["~2 settimane prima della pagina", "Pagina in revisione; iscrizione e verifica fiscale già fatte", "`doc`"],
+                  ["Inverno–primavera 2027", "Demo Steam online, spinta di marketing, festival di terzi", "`sondaggio`"],
+                  ["25 aprile 2027", "Chiudono le iscrizioni al Next Fest; pagina, trailer e tag aggiornati", "`doc`"],
+                  ["3 maggio 2027", "Valve preleva i video per il trailer ufficiale", "`doc`"],
+                  ["17 maggio 2027", "Demo in revisione per l'anteprima stampa", "`doc`"],
+                  ["31 maggio 2027", "Ultima scadenza per la revisione della demo", "`doc`"],
+                  ["3 giugno 2027", "Inizia l'anteprima stampa", "`doc`"],
+                  ["14–21 giugno 2027", "Next Fest", "`doc`"],
+                  ["Luglio 2027", "Lancio", "`euristica`"]
+                ],
+                "en": [
+                  ["When", "What", "Source"],
+                  ["By January 2027", "Steam page public (at least 6 months before launch)", "`studio rule`"],
+                  ["~2 weeks before the page", "Page in review; onboarding and tax verification already done", "`doc`"],
+                  ["Winter–spring 2027", "Steam demo live, marketing push, third-party festivals", "`survey data`"],
+                  ["April 25, 2027", "Next Fest registration closes; page, trailer and tags updated", "`doc`"],
+                  ["May 3, 2027", "Valve pulls the videos for the official trailer", "`doc`"],
+                  ["May 17, 2027", "Demo in review for the Press Preview", "`doc`"],
+                  ["May 31, 2027", "Final deadline for demo review", "`doc`"],
+                  ["June 3, 2027", "Press Preview begins", "`doc`"],
+                  ["June 14–21, 2027", "Next Fest", "`doc`"],
+                  ["July 2027", "Launch", "`heuristic`"]
+                ]
+              }
+            },
+            { "text": { "it": "Letta dal fondo, la tabella spiega perché la regola dei 6 mesi e la demo «mesi prima» non sono capricci: per arrivare a giugno con abbastanza wishlist, la pagina deve essere online a gennaio, e la vertical slice (M4) deve essere pronta ancora prima.", "en": "Read from the bottom up, the table shows why the 6-month rule and the demo “months before” aren't whims: to reach June with enough wishlists, the page has to be live in January, and the vertical slice (M4) has to be ready even earlier." } }
+          ]
+        },
+        {
+          "title": { "it": "11. La North Star: il tempo di gioco della demo", "en": "11. The North Star: demo playtime" },
+          "blocks": [
+            { "text": { "it": [
+              "**Cos'è una North Star Metric** (metrica «stella polare»): un solo numero che tutto il team usa per capire se una modifica migliora il gioco. Serve a non inseguire dieci numeri diversi che tirano in direzioni diverse.",
+              "**La nostra** `regola dello studio`: per ogni build pubblica, demo o gioco completo, la metrica principale è **quanto tempo i giocatori passano nella demo**.",
+              "**Perché proprio questa:** misura direttamente se il core loop trattiene le persone. Ed è disponibile presto, dal primo playtest, mentre vendite e recensioni arrivano solo al lancio, quando è tardi per cambiare qualcosa di importante."
+            ], "en": [
+              "**What a North Star Metric is:** one number the whole team uses to tell whether a change makes the game better. It stops you chasing ten numbers pulling in different directions.",
+              "**Ours** `studio rule`: for every public build, demo or release, the primary metric is **how much time players spend in the demo**.",
+              "**Why this one:** it directly measures whether the core loop holds people. And it's available early, from the first playtest, while sales and reviews only arrive at launch, when it's too late to change anything important."
+            ] } },
+            { "title": { "it": "Come la usiamo · euristica", "en": "How we use it · heuristic" } },
+            {
+              "list": {
+                "it": [
+                  "**Guardiamo la mediana, non la media.** Poche sessioni lunghissime gonfiano la media e nascondono chi abbandona dopo due minuti.",
+                  "**La misuriamo con la telemetria nella build**, oltre che con i dati di Steamworks: così sappiamo anche *dove* le persone smettono.",
+                  "**La accoppiamo a una metrica di controllo** (*guardrail*): la conversione da giocatore della demo a wishlist. Una demo lunga che non converte forse sta regalando troppo del gioco.",
+                  "**Un riferimento:** nei dati di Zukowski sulle demo del Next Fest, la mediana è circa 14 minuti su tutte le demo e circa 38 per i giochi che hanno avuto successo `sondaggio`."
+                ],
+                "en": [
+                  "**We look at the median, not the mean.** A few very long sessions inflate the mean and hide the people who quit after two minutes.",
+                  "**We measure it with in-build telemetry**, as well as Steamworks data: that way we also know *where* people stop.",
+                  "**We pair it with a guardrail metric:** demo player → wishlist conversion. A long demo that doesn't convert may be giving away too much of the game.",
+                  "**A reference point:** in Zukowski's Next Fest demo data, the median is about 14 minutes across all demos and about 38 for games that went on to succeed `survey data`."
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "title": { "it": "12. Decidere cosa fare prima: il metodo RICE", "en": "12. Deciding what comes first: the RICE method" },
+          "blocks": [
+            { "text": { "it": [
+              "Ogni tappa ha più cose da fare che tempo. RICE è un metodo nato in Intercom per mettere in fila i compiti con un punteggio invece che a sensazione. Lo usiamo per ordinare i compiti **dentro ogni tappa**.",
+              "**Punteggio = (Reach × Impact × Confidence) / Effort**"
+            ], "en": [
+              "Every milestone has more to do than time to do it. RICE is a method from Intercom for ranking tasks with a score instead of gut feeling. We use it to order tasks **within each milestone**.",
+              "**Score = (Reach × Impact × Confidence) / Effort**"
+            ] } },
+            {
+              "table": {
+                "it": [
+                  ["Fattore", "Cosa misura", "Come si stima"],
+                  ["Reach (portata)", "Quante persone o situazioni tocca il compito, in un periodo definito", "Un numero: per esempio, giocatori della demo al mese che arrivano a quella parte"],
+                  ["Impact (impatto)", "Quanto sposta la metrica", "3 enorme, 2 alto, 1 medio, 0,5 basso, 0,25 minimo"],
+                  ["Confidence (fiducia)", "Quanto siamo sicuri delle altre stime", "100% (abbiamo i dati), 80% (abbiamo indizi), 50% (è un'intuizione)"],
+                  ["Effort (sforzo)", "Quanto lavoro serve", "Persone-settimana"]
+                ],
+                "en": [
+                  ["Factor", "What it measures", "How to estimate it"],
+                  ["Reach", "How many players or situations the task affects, in a defined period", "A number: e.g. demo players per month who reach that part"],
+                  ["Impact", "How much it moves the metric", "3 massive, 2 high, 1 medium, 0.5 low, 0.25 minimal"],
+                  ["Confidence", "How sure we are of the other estimates", "100% (we have data), 80% (we have hints), 50% (it's a hunch)"],
+                  ["Effort", "How much work it takes", "Person-weeks"]
+                ]
+              }
+            },
+            { "text": { "it": "**La nostra scelta:** l'impatto si misura sempre sulla North Star, il tempo di gioco della demo `euristica`. Così la priorità di ogni compito resta legata a un solo numero, e due persone che stimano lo stesso compito parlano della stessa cosa.", "en": "**Our choice:** impact is always measured against the North Star, demo playtime `heuristic`. That keeps every task's priority tied to a single number, and two people estimating the same task are talking about the same thing." } },
+            { "title": { "it": "Un esempio", "en": "An example" } },
+            { "text": { "it": "Una demo con circa 1.000 giocatori al mese; la telemetria dice che molti abbandonano nei primi 5 minuti. In lista ci sono tre compiti:", "en": "A demo with about 1,000 players a month; telemetry says many quit in the first 5 minutes. Three tasks are on the list:" } },
+            {
+              "table": {
+                "it": [
+                  ["Compito", "Reach", "Impact", "Confidence", "Effort", "Punteggio"],
+                  ["Rifare i primi 5 minuti", "1.000 (li vedono tutti)", "2", "80%", "1", "**1.600**"],
+                  ["Supporto al controller", "200 (chi gioca col pad)", "1", "80%", "2", "**80**"],
+                  ["Un nuovo tipo di nemico", "300 (chi arriva al livello 3)", "1", "50%", "2", "**75**"]
+                ],
+                "en": [
+                  ["Task", "Reach", "Impact", "Confidence", "Effort", "Score"],
+                  ["Rework the first 5 minutes", "1,000 (everyone sees them)", "2", "80%", "1", "**1,600**"],
+                  ["Controller support", "200 (gamepad players)", "1", "80%", "2", "**80**"],
+                  ["A new enemy type", "300 (players who reach level 3)", "1", "50%", "2", "**75**"]
+                ]
+              }
+            },
+            { "text": { "it": "Il nemico nuovo è il compito più divertente da fare, ma lo vede solo chi supera l'inizio: se l'inizio perde giocatori, sistemarlo vale venti volte di più. Il valore assoluto del punteggio non conta, conta l'ordine.", "en": "The new enemy is the most fun task to work on, but only people who get past the opening see it: if the opening is losing players, fixing it is worth twenty times more. The absolute score doesn't matter; the order does." } },
+            { "title": { "it": "Cosa RICE non fa · euristica", "en": "What RICE doesn't do · heuristic" } },
+            {
+              "tone": "con",
+              "list": {
+                "it": [
+                  "**Non sostituisce i cancelli.** Decide l'ordine dei compiti dentro una tappa, non se passare alla tappa dopo.",
+                  "**Non si applica ai vincoli.** Scadenze di Steam, obblighi legali e requisiti del Next Fest si fanno e basta: non si mettono in classifica.",
+                  "**Le stime invecchiano.** Dopo ogni playtest si rifà il conto con i dati nuovi, e la Confidence sale o scende."
+                ],
+                "en": [
+                  "**It doesn't replace the gates.** It decides the order of tasks within a milestone, not whether to move to the next one.",
+                  "**It doesn't apply to constraints.** Steam deadlines, legal obligations and Next Fest requirements just get done: they don't get ranked.",
+                  "**Estimates go stale.** After every playtest you redo the numbers with the new data, and Confidence goes up or down."
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "sources": ["steam-next-fest", "steam-next-fest-june-2027", "steam-release-process", "steam-onboarding", "steam-direct-fee", "steam-playtest", "gamalytic", "ziva-next-fest-2026", "presskit-next-fest", "steampageanalyzer-after-next-fest", "cinevva-next-fest", "unity-zukowski-next-fest", "how-to-market", "zukowski-demo-playtime", "intercom-rice"]
     }
   ]
 }

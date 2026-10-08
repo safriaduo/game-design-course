@@ -92,6 +92,7 @@ function indexById(items, where) {
 
 const families = indexById(topicsFile.families, 'topics.json › families');
 const topics = indexById(topicsFile.topics, 'topics.json › topics');
+const guides = indexById(topicsFile.guides, 'topics.json › guides');
 const games = indexById(gamesFile.games, 'games.json');
 const sources = indexById(library.sources, 'library.json');
 const projects = indexById(students.projects, 'students.json');
@@ -134,6 +135,26 @@ for (const [id, topic] of topics) {
     if (r === id) warn(where, 'a topic is related to itself');
     else if (!topics.has(r)) error(where, `unknown related topic "${r}"`);
   });
+  (topic.guides || []).forEach((g) => guides.has(g) || error(where, `unknown guide "${g}" (add it to "guides" in topics.json)`));
+}
+
+/* ---------- guides (deep dives shown inside one or more topics) ---------- */
+
+const GUIDE_BLOCKS = ['text', 'title', 'list', 'table'];
+for (const [id, guide] of guides) {
+  const where = `topics.json › guides › ${id}`;
+  if (!guide.title) error(where, 'missing "title"');
+  if (!guide.sections?.length) error(where, 'no "sections"');
+  (guide.sections || []).forEach((sec, si) => {
+    (sec.blocks || []).forEach((b, bi) => {
+      const at = `${where} › sections[${si}] › blocks[${bi}]`;
+      const kinds = GUIDE_BLOCKS.filter((k) => b[k] != null);
+      if (kinds.length !== 1) error(at, `needs exactly one of: ${GUIDE_BLOCKS.join(', ')}`);
+      if (b.tone != null && !['pro', 'con'].includes(b.tone)) error(at, `unknown tone "${b.tone}" (use: pro, con)`);
+    });
+  });
+  (guide.sources || []).forEach((s) => sources.has(s) || error(where, `unknown source "${s}" (add it to library.json)`));
+  if (![...topics.values()].some((tp) => (tp.guides || []).includes(id))) warn(where, 'not used by any topic');
 }
 
 /* ---------- games & sources ---------- */
@@ -222,7 +243,7 @@ const dynamic = [
   ...['all', ...GAME_KINDS].map((k) => `games.kind.${k}`),
   ...GAME_KINDS.map((k) => `games.kind1.${k}`),
   ...['topics', 'games', 'sources', 'projects'].map((k) => `home.box.${k}`),
-  ...['key', 'compare', 'mistakes', 'examples', 'exercises', 'sources', 'related'].map((k) => `topic.${k}`),
+  ...['key', 'compare', 'mistakes', 'examples', 'exercises', 'guides', 'sources', 'related'].map((k) => `topic.${k}`),
 ];
 for (const key of dynamic) if (!(key in ui)) error('ui.json', `missing key "${key}"`);
 

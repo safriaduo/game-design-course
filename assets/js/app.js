@@ -114,6 +114,7 @@ function indexContent(data) {
     topics: byId(data.topics.topics),
     games: byId(data.games.games),
     sources: byId(data.library.sources),
+    guides: byId(data.topics.guides),
     topicsByGame: new Map(),
     topicsBySource: new Map(),
   };
@@ -124,7 +125,8 @@ function indexContent(data) {
   for (const topic of data.topics.topics) {
     const games = new Set(examplesOf(topic).map((ex) => ex.game).filter(Boolean));
     games.forEach((id) => add(idx.topicsByGame, id, topic));
-    (topic.sources || []).forEach((id) => add(idx.topicsBySource, id, topic));
+    const cited = new Set([...(topic.sources || []), ...guidesOf(topic, idx).flatMap((g) => g.sources || [])]);
+    cited.forEach((id) => add(idx.topicsBySource, id, topic));
   }
   return idx;
 }
@@ -134,6 +136,9 @@ function examplesOf(topic) {
   if (topic.examples) return topic.examples;
   return (topic.games || []).map((game) => ({ game }));
 }
+
+/** The guides ("deep dives", topics.json → guides) a topic points to. One guide can serve several topics. */
+const guidesOf = (topic, idx = state.idx) => (topic.guides || []).map((id) => idx.guides.get(id)).filter(Boolean);
 
 const familyOf = (topic) => state.idx.families.get(topic?.family) || { shape: 'square', color: 'ink', name: '' };
 
@@ -426,7 +431,8 @@ function topicHaystack(topic) {
   const examples = examplesOf(topic).flatMap((ex) => [L(state.idx.games.get(ex.game)?.name), L(ex.title), L(ex.text)]);
   const compared = (topic.compare || []).flatMap((c) => [L(c.name), L(c.text), ...list(c.pros), ...list(c.cons)]);
   const exercises = (topic.exercises || []).flatMap((ex) => [L(ex.text), L(ex.bonus)]);
-  return norm([L(topic.title), L(topic.lead), ...list(topic.key), ...list(topic.mistakes), L(fam.name), ...compared, ...examples, ...exercises].join(' '));
+  const guides = guidesOf(topic).flatMap((g) => [L(g.title), L(g.lead)]);
+  return norm([L(topic.title), L(topic.lead), ...list(topic.key), ...list(topic.mistakes), L(fam.name), ...compared, ...examples, ...exercises, ...guides].join(' '));
 }
 
 function viewTopics(_, params) {
@@ -493,6 +499,7 @@ function viewTopic(id) {
   const mistakes = list(topic.mistakes);
   const examples = examplesOf(topic);
   const exercises = topic.exercises || [];
+  const guides = guidesOf(topic);
   const sources = (topic.sources || []).map((s) => state.idx.sources.get(s)).filter(Boolean);
   const toRead = sources.filter((s) => !['video', 'channel'].includes(s.kind));
   const toWatch = sources.filter((s) => ['video', 'channel'].includes(s.kind));
@@ -531,6 +538,43 @@ function viewTopic(id) {
     ${ex.bonus ? `<p class="bonus"><span class="bonus-tag">${esc(t('topic.bonus'))}</span><span>${md(L(ex.bonus))}</span></p>` : ''}
   </li>`;
 
+  // A guide is a list of sections; each section is a list of blocks:
+  // { "text": … } paragraphs · { "title": … } subheading · { "list": …, "tone": "pro" | "con" } · { "table": … } (first row = header)
+  const guideBlock = (b) => {
+    if (b.title) return `<h4 class="guide-sub">${esc(L(b.title))}</h4>`;
+    if (b.text) return list(b.text).map((p) => `<p>${md(p)}</p>`).join('');
+    if (b.list) {
+      const tone = ['pro', 'con'].includes(b.tone) ? ` ${b.tone}` : '';
+      return `<ul class="guide-list${tone}">${list(b.list).map((item) => `<li><span>${md(item)}</span></li>`).join('')}</ul>`;
+    }
+    if (b.table) {
+      const [head = [], ...rows] = list(b.table);
+      return `<table class="guide-table">
+        <thead><tr>${head.map((h) => `<th scope="col">${esc(h)}</th>`).join('')}</tr></thead>
+        <tbody>${rows.map((row) => `<tr>${row.map((cell, i) => `<td data-label="${esc(head[i] || '')}">${md(cell)}</td>`).join('')}</tr>`).join('')}</tbody>
+      </table>`;
+    }
+    return '';
+  };
+  const guide = (g) => {
+    const cited = (g.sources || []).map((s) => state.idx.sources.get(s)).filter(Boolean);
+    return `<details class="guide">
+      <summary>
+        <span class="guide-badge">${icon('book')}${esc(t('topic.guide'))}</span>
+        <span class="guide-title">${esc(L(g.title))}</span>
+        <span class="guide-hint">${esc(t('topic.guide.open'))}</span>
+      </summary>
+      <div class="guide-body">
+        ${g.lead ? `<div class="guide-lead"><span class="guide-lead-label">${esc(t('topic.guide.short'))}</span><p>${md(L(g.lead))}</p></div>` : ''}
+        ${(g.sections || []).map((sec) => `<section class="guide-section">
+          ${sec.title ? `<h3>${esc(L(sec.title))}</h3>` : ''}
+          ${(sec.blocks || []).map(guideBlock).join('')}
+        </section>`).join('')}
+        ${cited.length ? `<h3 class="deeper-title">${icon('book')}${esc(t('topic.guide.sources'))}</h3><ul class="sources">${cited.map((s) => sourceItem(s)).join('')}</ul>` : ''}
+      </div>
+    </details>`;
+  };
+
   const deeper = [
     toRead.length ? `<h3 class="deeper-title">${icon('book')}${esc(t('topic.read'))}</h3><ul class="sources">${toRead.map((s) => sourceItem(s)).join('')}</ul>` : '',
     toWatch.length ? `<h3 class="deeper-title">${icon('play')}${esc(t('topic.watch'))}</h3><ul class="sources">${toWatch.map((s) => sourceItem(s)).join('')}</ul>` : '',
@@ -564,6 +608,8 @@ function viewTopic(id) {
         ${examples.length ? section('examples', `<ul class="tokens">${examples.map(example).join('')}</ul>`) : ''}
 
         ${exercises.length ? section('exercises', `<ol class="exercises">${exercises.map(exercise).join('')}</ol>`) : ''}
+
+        ${guides.length ? section('guides', `<div class="guides">${guides.map(guide).join('')}</div>`) : ''}
 
         ${deeper ? section('sources', deeper) : ''}
 

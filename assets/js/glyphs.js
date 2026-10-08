@@ -67,6 +67,8 @@ export const GLYPHS = {
   matrix: '<rect x="12" y="12" width="44" height="44" class="a"/><circle cx="34" cy="34" r="9" class="c"/><rect x="64" y="12" width="44" height="44" class="g0"/><path d="M78 43 L86 26 L94 43 Z" class="a"/><rect x="12" y="64" width="44" height="44" class="g0"/><path d="M26 95 L34 78 L42 95 Z" class="b"/><rect x="64" y="64" width="44" height="44" class="b"/><rect x="79" y="79" width="14" height="14" class="c"/>',
   // the Indiana Jones notebook: rings, a couple of lines, a scribble
   notebook: '<rect x="26" y="10" width="74" height="100" rx="5" class="a"/><rect x="16" y="22" width="20" height="9" rx="4.5" class="b"/><rect x="16" y="55" width="20" height="9" rx="4.5" class="b"/><rect x="16" y="88" width="20" height="9" rx="4.5" class="b"/><rect x="46" y="28" width="40" height="8" class="c"/><rect x="46" y="44" width="28" height="8" class="c"/><path d="M46 80 Q54 64 62 80 T78 78 T88 70" class="sb" style="stroke-width:4"/>',
+  // a road through gates, up to the launch flag
+  flag: '<path d="M20 98 H50 V66 H80 V50" class="sb" stroke-dasharray="7 7"/><rect x="8" y="86" width="24" height="24" class="a" style="opacity:.4"/><rect x="38" y="54" width="24" height="24" class="a" style="opacity:.7"/><path d="M80 10 V54" class="sb" style="stroke-width:5"/><path d="M82 12 H112 L102 24 L112 36 H82 Z" class="a"/><rect x="66" y="52" width="28" height="10" class="b"/>',
   square: '<rect x="24" y="24" width="72" height="72" class="a"/>',
 };
 

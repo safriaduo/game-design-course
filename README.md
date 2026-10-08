@@ -73,6 +73,9 @@ Nei testi puoi usare un po' di Markdown: `*corsivo*`, `**grassetto**`, `` `codic
 | `exercises` | esercizi: `{ "text": …, "list": [ … ], "bonus": … }` (`list` e `bonus` sono facoltativi) |
 | `sources` | id delle fonti da `library.json`: al massimo 2 da leggere e 3 da guardare. Il sito le divide da solo in "Da leggere" (libri, articoli, siti) e "Da guardare" (video, canali) |
 | `related` | id di altri temi |
+| `guides` | facoltativo, "Approfondimento": id di guide pratiche definite in `guides` (in fondo a `topics.json`). Una guida si scrive una volta e si può mostrare in più temi |
+
+**Una guida pratica** (approfondimento): in `topics.json`, lista `guides`. Ha `id`, `title`, `lead` (la risposta breve), `sections` e `sources` (id da `library.json`). Ogni sezione ha un `title` e dei `blocks`, ognuno di un solo tipo: `{ "text": … }` (paragrafi), `{ "title": … }` (sottotitolo), `{ "list": …, "tone": "pro" | "con" }` (elenco, `tone` facoltativo) o `{ "table": … }` (righe di celle, la prima è l'intestazione). Nel tema compare come scheda espandibile; per esempio *Come capire se il core loop di un prototipo è validato*, mostrata in *Il core loop* e in *Il playtest*.
 
 Stile: niente nomi di autori nei punti chiave, e un termine tecnico solo se si usa davvero nel mestiere, spiegato la prima volta tra parentesi. Tutto il resto sta nella Biblioteca.
 
@@ -161,7 +164,7 @@ Any text in `content/*.json` is either a plain string (same in every language) o
 ### Editing content
 
 - **Teacher details:** `content/site.json` → `teacher`.
-- **Topics:** `content/topics.json`. Each page is intro (`lead`), key points (`key`), common mistakes (`mistakes`), examples (`examples`, each pointing at a game in `games.json`), exercises (`exercises`, with optional `list` and `bonus`), sources (`sources`, split automatically into "Read" and "Watch") and `related` topics. Keep it plain: 3–5 key points, no author names, jargon only when it's real industry vocabulary.
+- **Topics:** `content/topics.json`. Each page is intro (`lead`), key points (`key`), common mistakes (`mistakes`), examples (`examples`, each pointing at a game in `games.json`), exercises (`exercises`, with optional `list` and `bonus`), sources (`sources`, split automatically into "Read" and "Watch"), `related` topics and optional `guides`: ids of deep-dive guides defined once in the `guides` list of `topics.json` and shown as an expandable card in every topic that lists them (blocks: `text`, `title`, `list` with optional `tone`, `table`). Keep it plain: 3–5 key points, no author names, jargon only when it's real industry vocabulary.
 - **Sources:** `content/library.json`. `kind` is `book`, `paper`, `video`, `channel` or `web`; `evidence` is `research`, `theory` or `heuristic`. Without a `url`, the site links to a search (YouTube, Google Scholar or Open Library) and marks it with a magnifier — add a `url` once you have the exact link.
 - **Games:** `content/games.json` (`kind`: `board`, `video`, `classic`).
 - **Student projects:** photos in `assets/img/showcase/`, entry in `content/students.json` (example above). Entries with `"placeholder": true` are samples to delete.

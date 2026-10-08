@@ -420,6 +420,14 @@
       "note": { "it": "Perché pochi tester trovano la maggior parte dei problemi di usabilità — e perché per bilanciare non basta.", "en": "Why a few testers find most usability problems — and why that isn't enough for balancing." }
     },
     {
+      "id": "playtesting-101",
+      "kind": "paper",
+      "title": "Playtesting Games 101",
+      "search": "web",
+      "evidence": "heuristic",
+      "note": { "it": "Slide di un corso sulle basi del playtest, riassunte da *The Art of Game Design*: i quattro tipi di tester e i numeri delle sessioni di Valve per Half-Life.", "en": "Course slides on playtesting basics, drawn from *The Art of Game Design*: the four types of tester and Valve's session counts for Half-Life." }
+    },
+    {
       "id": "deterding-gamification",
       "kind": "paper",
       "title": "From Game Design Elements to Gamefulness: Defining “Gamification”",
@@ -525,6 +533,16 @@
       "publisher": "GDC",
       "evidence": "heuristic",
       "note": { "it": "Come Valve usa playtest e dati: ipotesi, osservazione, misura.", "en": "How Valve uses playtests and data: hypothesis, observation, measurement." }
+    },
+    {
+      "id": "rosewater-20-lessons",
+      "kind": "video",
+      "title": "Twenty Years, Twenty Lessons Learned",
+      "by": "Mark Rosewater",
+      "year": 2016,
+      "publisher": "GDC",
+      "evidence": "heuristic",
+      "note": { "it": "Venti lezioni dal lead designer di Magic: The Gathering. Tra queste: i giocatori sanno dirti dove fa male, non come curarlo.", "en": "Twenty lessons from the lead designer of Magic: The Gathering. Among them: players can tell you where it hurts, not how to cure it." }
     },
     {
       "id": "botw-gdc",
@@ -967,6 +985,158 @@
       "url": "https://howtomarketagame.com/",
       "evidence": "heuristic",
       "note": { "it": "Marketing per giochi indipendenti basato sui dati: wishlist, Steam, pagine del negozio.", "en": "Data-driven marketing for indie games: wishlists, Steam, store pages." }
+    },
+    {
+      "id": "sztajer-how-many",
+      "kind": "web",
+      "title": "How many players should you playtest with?",
+      "by": "Paul Sztajer",
+      "publisher": "Game Developer",
+      "evidence": "heuristic",
+      "note": { "it": "La regola dei 5 utenti applicata ai giochi: funziona, ma solo con sessioni strutturate e osservate.", "en": "The 5-user rule applied to games: it works, but only with structured, observed sessions." }
+    },
+    {
+      "id": "zukowski-retention",
+      "kind": "web",
+      "title": "Retention: the most important number you are not paying attention to",
+      "by": "Chris Zukowski",
+      "publisher": "How To Market A Game",
+      "evidence": "heuristic",
+      "note": { "it": "Perché quanto a lungo le persone giocano conta più di quello che dicono, e perché testare con sconosciuti e non con amici.", "en": "Why how long people play matters more than what they say, and why to test with strangers rather than friends." }
+    },
+    {
+      "id": "zukowski-demo-playtime",
+      "kind": "web",
+      "title": "What is a good median play time for a demo?",
+      "by": "Chris Zukowski",
+      "publisher": "How To Market A Game",
+      "evidence": "heuristic",
+      "note": { "it": "Il tempo di gioco mediano delle demo dello Steam Next Fest: circa 14 minuti in generale, circa 38 per i giochi di successo.", "en": "Median playtime of Steam Next Fest demos: about 14 minutes overall, about 38 for successful games." }
+    },
+    {
+      "id": "firstlook-playtesters",
+      "kind": "web",
+      "title": "Finding more playtesters",
+      "by": "firstlook.gg",
+      "evidence": "heuristic",
+      "note": { "it": "Dove trovare tester, e perché non usare altri sviluppatori.", "en": "Where to find playtesters, and why not to use other developers." }
+    },
+    {
+      "id": "steam-next-fest",
+      "kind": "web",
+      "title": "Steam Next Fest",
+      "by": "Valve",
+      "publisher": "Steamworks",
+      "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest",
+      "note": { "it": "Le regole ufficiali del festival delle demo: chi può partecipare, una volta sola per gioco, e il calendario tipo delle scadenze.", "en": "The official rules of the demo festival: who can take part, once per game, and the typical deadline timeline." }
+    },
+    {
+      "id": "steam-next-fest-june-2027",
+      "kind": "web",
+      "title": "Steam Next Fest: June 2027",
+      "by": "Valve",
+      "publisher": "Steamworks",
+      "url": "https://partner.steamgames.com/doc/marketing/upcoming_events/nextfest/june_2027",
+      "note": { "it": "Le date esatte dell'edizione di giugno 2027: iscrizioni, revisione della demo, anteprima stampa.", "en": "The exact dates of the June 2027 edition: registration, demo review, press preview." }
+    },
+    {
+      "id": "steam-release-process",
+      "kind": "web",
+      "title": "Release Process",
+      "by": "Valve",
+      "publisher": "Steamworks",
+      "url": "https://partner.steamgames.com/doc/store/releasing",
+      "note": { "it": "Come si arriva all'uscita: revisione della pagina e della build, le 2 settimane di «Coming Soon», il pulsante «Release App».", "en": "How you get to release: store page and build review, the 2 weeks of “Coming Soon”, the “Release App” button." }
+    },
+    {
+      "id": "steam-onboarding",
+      "kind": "web",
+      "title": "Onboarding",
+      "by": "Valve",
+      "publisher": "Steamworks",
+      "url": "https://partner.steamgames.com/doc/gettingstarted/onboarding",
+      "note": { "it": "L'iscrizione a Steamworks: verifica fiscale, i 21 giorni di attesa, i contenuti che Steam non accetta.", "en": "Signing up for Steamworks: tax verification, the 21-day wait, the content Steam doesn't accept." }
+    },
+    {
+      "id": "steam-direct-fee",
+      "kind": "web",
+      "title": "Steam Direct Fee",
+      "by": "Valve",
+      "publisher": "Steamworks",
+      "url": "https://partner.steamgames.com/doc/gettingstarted/appfee",
+      "note": { "it": "100 $ per gioco, restituiti dopo i primi 1.000 $ di ricavi.", "en": "$100 per game, paid back after the first $1,000 in revenue." }
+    },
+    {
+      "id": "steam-playtest",
+      "kind": "web",
+      "title": "Steam Playtest",
+      "by": "Valve",
+      "publisher": "Steamworks",
+      "url": "https://partner.steamgames.com/doc/features/playtest",
+      "note": { "it": "Playtest aperti su Steam senza toccare recensioni e wishlist del gioco: come funzionano e quando usarli.", "en": "Open playtests on Steam that don't touch the game's reviews and wishlists: how they work and when to use them." }
+    },
+    {
+      "id": "gamalytic",
+      "kind": "web",
+      "title": "Gamalytic",
+      "url": "https://gamalytic.com/",
+      "note": { "it": "Stime di vendite e ricavi dei giochi Steam, filtrabili per genere e tag: per capire se un genere vende davvero.", "en": "Sales and revenue estimates for Steam games, filterable by genre and tag: to check whether a genre really sells." }
+    },
+    {
+      "id": "ziva-next-fest-2026",
+      "kind": "web",
+      "title": "Steam Next Fest 2026: What the Data Actually Says",
+      "by": "Ziva",
+      "url": "https://ziva.sh/blogs/steam-next-fest-2026",
+      "evidence": "heuristic",
+      "note": { "it": "I numeri del sondaggio di febbraio 2026: demo uscite prima del festival, wishlist mediane, correlazione tra prima e durante.", "en": "The numbers from the February 2026 survey: demos released before the fest, median wishlists, the before/during correlation." }
+    },
+    {
+      "id": "presskit-next-fest",
+      "kind": "web",
+      "title": "Analyzing Next Fest Results",
+      "by": "presskit.gg",
+      "url": "https://presskit.gg/field-guides/analyzing-next-fest-results",
+      "evidence": "heuristic",
+      "note": { "it": "Come leggere i risultati del proprio Next Fest, e cosa decidere dopo.", "en": "How to read your own Next Fest results, and what to decide next." }
+    },
+    {
+      "id": "steampageanalyzer-after-next-fest",
+      "kind": "web",
+      "title": "After Steam Next Fest",
+      "by": "Steam Page Analyzer",
+      "url": "https://www.steampageanalyzer.com/blog/after-steam-next-fest",
+      "evidence": "heuristic",
+      "note": { "it": "Cosa fare dopo il festival, e quanto aspettare prima di lanciare.", "en": "What to do after the fest, and how long to wait before launching." }
+    },
+    {
+      "id": "cinevva-next-fest",
+      "kind": "web",
+      "title": "Steam Next Fest Strategy in 2026",
+      "by": "Cinevva",
+      "url": "https://app.cinevva.com/guides/steam-next-fest-strategy-gamedeveloper",
+      "evidence": "heuristic",
+      "note": { "it": "Una strategia per il Next Fest, dalla preparazione della demo al lancio.", "en": "A Next Fest strategy, from preparing the demo to launch." }
+    },
+    {
+      "id": "unity-zukowski-next-fest",
+      "kind": "web",
+      "title": "5 pro tips for succeeding at Steam Next Fest",
+      "by": "Chris Zukowski",
+      "publisher": "Unity",
+      "url": "https://unity.com/en/blog/steam-next-fest-developer-tips-unity",
+      "evidence": "heuristic",
+      "note": { "it": "Intervista: perché la demo non deve debuttare al Next Fest, e come arrivarci con le wishlist giuste.", "en": "Interview: why the demo shouldn't debut at Next Fest, and how to get there with the right wishlists." }
+    },
+    {
+      "id": "intercom-rice",
+      "kind": "web",
+      "title": "RICE: Simple prioritization for product managers",
+      "by": "Sean McBride",
+      "publisher": "Intercom",
+      "url": "https://www.intercom.com/blog/rice-simple-prioritization-for-product-managers/",
+      "evidence": "heuristic",
+      "note": { "it": "L'articolo originale del metodo RICE: portata, impatto, fiducia, sforzo.", "en": "The original RICE article: reach, impact, confidence, effort." }
     },
     {
       "id": "emily-short",
